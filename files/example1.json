@@ -1,0 +1,128 @@
+{
+    "name": "Example 1",
+    "cusstomTheme": {
+        "backgroundColor": "",
+        "background": "",
+        "node": {
+            "color": "",
+            "borderColor": ""
+        },
+        "edge": {
+            "borderColor": ""
+        },
+        "color": {
+            "color": ""
+        },
+        "title": {
+            "color": ""
+        },
+        "txtcolor": {
+            "color": ""
+        }
+    },
+    "settings": {
+        "currency": "usd",
+        "decimals": 0,
+        "symbol": "u$s",
+        "date": "2025-01-01",
+        "unit": "year",
+        "periods": 12
+    },
+    "state": {
+        "selectedPeriod": 3,
+        "zoom": 1
+    },
+    "nodeDataArray": [
+        {
+            "data": {
+                "id": "5b68a3e2-2af9-4765-a8ac-03ffe99de419",
+                "title": "",
+                "name": "incomes",
+                "kind": null,
+                "hidden": false,
+                "valueType": "formula",
+                "valueData": "share*market/100",
+                "textColor": "#000000",
+                "linkColor": "#000000",
+                "linkAuto": "",
+                "notes": "",
+                "value": 5,
+                "size": 255,
+                "borderOpacity": 0.3,
+                "nodeOpacity": 0.5,
+                "level": 1,
+                "shown": true
+            }
+        },
+        {
+            "data": {
+                "id": "7244b13a-6dcb-42a8-9d91-700b96e3c0f9",
+                "title": "",
+                "name": "share",
+                "kind": null,
+                "hidden": false,
+                "valueType": "constant",
+                "valueData": "1",
+                "objectColor": "red",
+                "objectOpacity": 0.1,
+                "textColor": "#000000",
+                "linkColor": "#000000",
+                "linkAuto": "",
+                "notes": "",
+                "value": 1,
+                "size": 59,
+                "borderOpacity": 0.3,
+                "nodeOpacity": 0.5,
+                "level": 0,
+                "shown": true,
+                "parentId": "5b68a3e2-2af9-4765-a8ac-03ffe99de419"
+            }
+        },
+        {
+            "data": {
+                "id": "5b68a3e2-2af9-4765-a8ac-03ffe99de415",
+                "title": "",
+                "name": "market",
+                "kind": null,
+                "hidden": true,
+                "valueType": "serie",
+                "valueData": "10 11 12 13 14 15 16 17 18 19 20 18 14",
+                "textColor": "#000000",
+                "linkColor": "#000000",
+                "linkAuto": "",
+                "notes": "",
+                "value": 10,
+                "size": 500,
+                "borderOpacity": 0.15,
+                "nodeOpacity": 0.1,
+                "level": 0,
+                "parentId": "7244b13a-6dcb-42a8-9d91-700b96e3c0f9",
+                "shown": true
+            }
+        }
+    ],
+    "edgeDataArray": [
+        {
+            "data": {
+                "source": "5b68a3e2-2af9-4765-a8ac-03ffe99de419",
+                "target": "5b68a3e2-2af9-4765-a8ac-03ffe99de415",
+                "value": 0,
+                "hidden": true,
+                "id": "2a7b0d05-5255-4b1b-8fe3-fe0fea9a0175",
+                "shown": true
+            }
+        },
+        {
+            "data": {
+                "source": "5b68a3e2-2af9-4765-a8ac-03ffe99de419",
+                "target": "7244b13a-6dcb-42a8-9d91-700b96e3c0f9",
+                "value": 0,
+                "hidden": true,
+                "id": "fe2d5660-7753-49b3-906a-bf5f6defb7cd",
+                "shown": true
+            }
+        }
+    ],
+    "minNodeValue": 1,
+    "maxNodeValue": 10
+}

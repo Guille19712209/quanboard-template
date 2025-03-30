@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="LIGHT">
+	
+	<head>
+    	
+		<!-- Bootstrap 5 -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	
+		<!-- FONT POPPINS-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		
+		<!-- OWN LINKS -->
+		<link href="quanboard.css" rel="stylesheet">
+		
+		<title>Quanboard theme</title>
+		<meta charset="UTF-8">
+   		
+	</head>
+
+	<body>
+		<div class="container"> 
+		
+			<!-- NAVBAR -->
+			
+			<p class="fs-6  fw-light ">NAVBAR</p>
+			
+			<nav class="navbar navbar-expand-md bg-body-tertiary rounded" aria-label="Thirteenth navbar example">
+				<div class="container-fluid">
+				  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				  </button>
+		  
+				  <div class="collapse navbar-collapse d-lg-flex" id="navbars">
+					<a class="navbar-brand col-lg-3 me-0" href="#">
+						<img src = "assets\quanboardLogoBlack.png" alt="logo" height="48" id="logo" style="opacity: 0.5">
+					</a>
+					
+					<ul class="navbar-nav col-lg-6 justify-content-lg-center">
+					  <li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">Home</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="#">About us</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" href="#">Pricing</a>
+					  </li>
+					  <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
+						<ul class="dropdown-menu">
+						  <li><a class="dropdown-item" href="#">Tutorials</a></li>
+						  <li><a class="dropdown-item" href="#">Cases</a></li>
+						  <li><a class="dropdown-item" href="#">Support</a></li>
+						</ul>
+					  </li>
+					</ul>
+					<div class="d-lg-flex col-lg-3 justify-content-lg-end">
+						<button class="btn btn-success me-1">Buy now!</button>
+						<button class="btn btn-dark">Sign In</button>
+					</div>
+				  </div>
+				</div>
+			  </nav>
+			  <hr>
+			
+
+			<!-- DARK/LIGHT OPTION -->
+
+			<p class="fs-6  fw-light ">DARK/LIGHT SWITCH</p>
+
+			<div class="container  d-flex justify-content-between align-items-center">
+				<div class="form-check form-switch mx-auto">
+					<input class="form-check-input" type="checkbox" id="themeSwitch">
+					<label class="form-check-label" for="themeSwitch">Modo Oscuro</label>
+				</div>
+			</div>	
+			<hr>
+
+			<!-- CAROUSEL -->
+
+			<p class="fs-6  fw-light ">CAROUSEL</p>
+
+			<div id="carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+				<div class="carousel-indicators">
+				  <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				  <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				  <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				</div>
+				<div class="carousel-inner">
+				  <div class="carousel-item active">
+					<img src="assets\greenboard.png" class="d-block w-100" alt="greenboard">		
+					<div class="carousel-caption d-none d-md-block text-start">
+						<p class="big-title">Cómo funciona tu idea?</p>
+						<p class="sub-title">Crea modelos analiticos visualmente</p>
+						<h5>Tan simple como hacerlo un dibujo en una servilleta</h5>
+					</div>
+			
+				  </div>
+				  <div class="carousel-item">
+					<img src="assets\whiteboard.png" class="d-block w-100" alt="whiteboard">
+					<div class="carousel-caption d-none d-md-block text-end">
+						<p class="big-title">Cómo funciona tu idea?</p>
+						<p class="sub-title">Crea modelos analiticos visualmente</p>
+						<h5>Tan simple como hacerlo un dibujo en una servilleta</h5>
+					</div>	
+					
+				  </div>
+				  <div class="carousel-item">
+					<img src="assets\blackboard.png" class="d-block w-100 h-50" alt="blackboard">
+					<div class="carousel-caption d-none d-md-block">
+						<p class="big-title">Cómo funciona tu idea?</p>
+						<p class="sub-title">Crea modelos analiticos visualmente</p>
+						<h5>Tan simple como hacerlo un dibujo en una servilleta</h5>
+					</div>
+					
+					
+				  </div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Next</span>
+				</button>
+			  </div>
+
+			
+			<hr>
+
+			<!-- FEATURES -->
+
+			<p class="fs-6  fw-light ">FEATURES</p>
+			
+			<hr>
+			
+			<!-- TABLE -->
+			<p class="fs-6  fw-light ">TABLE</p>
+			<p class="fs-4  fw-light text-center">COMPARISION</p>
+			<div class="container" style="width: 80%">
+
+				<table class="table table-hover table-bordered">
+					<thead>
+					<tr>
+						<th scope="col">Feature </th>
+						<th scope="col"class="text-center">Free Trial</th>
+						<th scope="col" class="text-center">Pro</th>
+						<th scope="col"class="text-center">Team</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<th scope="row">1</th>
+						<td class="text-center"><i class="bi bi-check-square-fill text-success"></i></td>
+						<td class="text-center"><i class="bi bi-check-square-fill"></i></td>
+						<td class="text-center"><i class="bi bi-check-square-fill"></i></td>
+					</tr>
+					<tr>
+						<th scope="row">2</th>
+						<td class="text-center"><i class="bi bi-check-square-fill"></i></td>
+						<td class="text-center"><i class="bi bi-check-square-fill text-success"></i></td>
+						<td class="text-center"><i class="bi bi-check-square-fill"></i></td>
+					</tr>
+					<tr>
+						<th scope="row">3</th>
+						<td class="text-center"><i class="bi bi-check-square-fill"></i></td>
+						<td class="text-center"><i class="bi bi-check-square-fill text-success"></i></td>
+						<td class="text-center"><i class="bi bi-check-square-fill text-success"></i></td>
+					</tr>
+					<tr>
+						<th scope="row">4</th>
+						<td class="text-center"><i class="bi bi-check-square-fill"></i></td>
+						<td class="text-center"><i class="bi bi-check-square-fill"></i></td>
+						<td class="text-center"><i class="bi bi-check-square-fill"></i></td>
+					</tr>
+					<tr>
+						<th scope="row">5</th>
+						<td class="text-center"><i class="bi bi-check-square-fill"></i></td>
+						<td class="text-center"><i class="bi bi-check-square-fill text-success"></i></td>
+						<td class="text-center"><i class="bi bi-check-square-fill"></i></td>
+					</tr>
+					<tr>
+						<th scope="row">6</th>
+						<td class="text-center"><i class="bi bi-check-square-fill"></i></td>
+						<td class="text-center"><i class="bi bi-check-square-fill"></i></td>
+						<td class="text-center"><i class="bi bi-check-square-fill"></i></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<hr>
+			
+			<!-- PRICING -->
+
+			<p class="fs-6  fw-light ">PRICING</p>
+			<p class="fs-4  fw-light text-center">OPTIONS</p>
+			
+			<div class="container" style="width: 80%">
+				<main>
+					<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+						<div class="col">
+							<div class="card mb-4 rounded-3 shadow-sm">
+								<div class="card-header py-3">
+									<h4 class="my-0 fs-5 fw-bold">Free</h4>
+								</div>
+								<div class="card-body">
+									<h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1>
+									<ul class="list-unstyled mt-3 fs-6 mb-4">
+									<li>10 users included</li>
+									<li>2 GB of storage</li>
+									<li>Email support</li>
+									<li>Help center access</li>
+									</ul>
+									<button type="button" class="w-100 btn btn-lg fw-light fs-6 btn-outline-success">Sign up for free</button>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card mb-4 rounded-3 shadow-sm">
+								<div class="card-header py-3">
+									<h4 class="my-0 fw-normal">Pro</h4>
+								</div>
+								<div class="card-body">
+									<h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/mo</small></h1>
+									<ul class="list-unstyled mt-3 mb-4">
+									<li>20 users included</li>
+									<li>10 GB of storage</li>
+									<li>Priority email support</li>
+									<li>Help center access</li>
+									</ul>
+									<button type="button" class="w-100 btn btn-lg btn-success">Get started</button>
+								</div>
+							</div>
+						</div>
+					<div class="col">
+						<div class="card mb-4 rounded-3 shadow-sm border-success">
+							<div class="card-header py-3 text-white bg-success border-success">
+								<h4 class="my-0 fw-normal">Enterprise</h4>
+								</div>
+								<div class="card-body">
+									<h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h1>
+									<ul class="list-unstyled mt-3 mb-4">
+									<li>30 users included</li>
+									<li>15 GB of storage</li>
+									<li>Phone and email support</li>
+									<li>Help center access</li>
+									</ul>
+									<button type="button" class="w-100 btn btn-lg btn-success">Contact us</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			
+			<hr>
+
+			<!-- RESOURCES -->
+
+			<p class="fs-6  fw-light ">RESOURCES</p>
+
+			
+			
+			<hr>
+
+			<!-- CONTENT -->
+
+			<p class="fs-6  fw-light ">CONTENT</p>
+
+			
+			
+			<hr>
+
+			<!-- MODALS -->
+
+			<p class="fs-6  fw-light ">MODALS</p>
+
+
+			<hr>
+
+			<!-- SIDEBAR -->
+
+			<p class="fs-6  fw-light ">SIDEBAR</p>
+
+
+			<hr>
+
+		
+			<!-- TOOLTIP -->
+
+			<p class="fs-6  fw-light ">TOOLTIP</p>
+
+			
+
+			<hr>
+
+			<!-- FOOTER -->
+
+			<p class="fs-6  fw-light ">FOOTER</p>
+
+			
+
+			<hr>
+
+			
+			
+		
+		
+			
+			<script src="./lib/quanboard-theme.js"></script>
+
+		</div>
+	</body>
+</html>
+

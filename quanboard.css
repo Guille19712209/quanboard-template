@@ -1,0 +1,65 @@
+
+
+        
+    
+    :root {
+        --bs-body-font-family: 'Poppins', sans-serif;
+    }
+    
+    .form-check-input:checked {
+        background-color: var(--bs-success);
+        border-color: var(--bs-secondary);
+    }
+
+    .form-check-input {
+        background-color: var(--bs-success);
+        border-color: var(--bs-secondary);
+    }
+
+    .big-title{
+        font-size: 4em;
+        font-weight: 100;
+        line-height: 0.8em;
+    }
+
+    .sub-title{
+        font-size: 2.5em;
+        font-weight: 300;
+        line-height: 0.8em;
+    }
+    .carousel-caption {
+        height: 83%;
+        display: flex;
+        mix-blend-mode:difference;
+    }
+
+    .carousel-inner {
+        height: 400px; 
+    }
+    
+    .carousel-item img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-control-prev,
+    .carousel-indicators,
+    .carousel-control-next {
+        mix-blend-mode:difference;
+    }
+
+    [data-bs-theme="dark"] .carousel-caption {
+        background-color: rgba(0, 0, 0, 0.5) !important; /* Fondo semitransparente */
+        color: white !important;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      }
+      
+      [data-bs-theme="dark"] .carousel-control-prev,
+      [data-bs-theme="dark"] .carousel-indicators,
+      [data-bs-theme="dark"] .carousel-control-next {
+        filter: invert(1) brightness(200%); /* Hace los íconos de las flechas más visibles en fondo oscuro */
+      }
+
+    table.table {
+    table-layout: fixed; }
+      
