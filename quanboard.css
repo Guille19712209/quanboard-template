@@ -62,4 +62,10 @@
 
     table.table {
     table-layout: fixed; }
+
+
+    #cy {
+        width: 100%;
+        height: 700px;
+    }
       

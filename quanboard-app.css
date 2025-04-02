@@ -1,0 +1,67 @@
+
+
+        
+    
+    :root {
+        --bs-body-font-family: 'Poppins', sans-serif;
+    }
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    #cy {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .btn-round {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        background-color:#495057;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Estilo del badge (número) */
+    .badge-number {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background-color:  #343a40 ;
+        color: #dee2e6;
+        font-size: 12px;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .btn-model-container {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 9999;        
+    }
+
+    .btn-outputs-container {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 9999;        
+    }
+
+    .darkmode-container {
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        z-index: 9999;        
+    }
