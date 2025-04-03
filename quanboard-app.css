@@ -29,6 +29,17 @@
         justify-content: center;
     }
 
+    .btn-new {
+        position: relative;
+        width: 84px;
+        height: 84px;
+        background-color:#495057;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     /* Estilo del badge (número) */
     .badge-number {
         position: absolute;
@@ -62,10 +73,30 @@
 
     .container-btn-time {
         position: absolute;
+        border-radius: 45px;
+        background-color: #bebebe;
+        opacity: .7;
         bottom: 15px;
         left: 15px;
-        z-index: 2000; 
-        width: 500px;       
+        z-index: 1900; 
+        width: 400px; 
+        Height:84px;    
+        padding:7px;  
+        align-content: center;
+    }
+
+    .container-controls {
+        position: absolute;
+        border-radius: 45px;
+        background-color: #bebebe;
+        opacity: .7;
+        top: 100px;
+        right: 15px;
+        z-index: 1900; 
+        width: 84px; 
+        Height:300px;    
+        padding:7px;  
+        align-content: center;
     }
 
     .container-btn-new {
