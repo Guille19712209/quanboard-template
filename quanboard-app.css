@@ -20,8 +20,8 @@
 
     .btn-round {
         position: relative;
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
         background-color:#495057;
         border-radius: 50%;
         display: flex;
@@ -45,18 +45,34 @@
         justify-content: center;
     }
     
-    .btn-model-container {
+    .container-btn-model {
         position: absolute;
-        top: 10px;
-        left: 10px;
-        z-index: 9999;        
+        top: 15px;
+        left: 15px;
+        z-index: 2000; 
+        width: 500px;       
     }
 
-    .btn-outputs-container {
+    .container-btn-outputs {
         position: absolute;
-        top: 10px;
-        right: 10px;
-        z-index: 9999;        
+        top: 15px;
+        right: 15px;
+        z-index: 2000;        
+    }
+
+    .container-btn-time {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        z-index: 2000; 
+        width: 500px;       
+    }
+
+    .container-btn-new {
+        position: absolute;
+        bottom: 15px;
+        right: 15px;
+        z-index: 2000;        
     }
 
     .darkmode-container {
@@ -65,3 +81,14 @@
         left: 10px;
         z-index: 9999;        
     }
+
+    .model-name {
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        z-index: 9999;        
+    }
+
+    
+    
+
