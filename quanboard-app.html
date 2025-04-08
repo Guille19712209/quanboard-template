@@ -38,9 +38,9 @@
 								<img src="assets/qb-icon-02.svg" alt="Imagen" style="height: 100%; object-fit: cover;">
 						</button>
 					</div>
-					<div class="col-10">
-						<h1 class="fw-light mt-2"  id="model-name">Model Name</h1>
-						<p class="fw-light mb-0"  id="version">V 1.1</h1>
+					<div class="col-10 mx-0">
+						<h1 class="fw-light mt-2 mx-0"  id="model-name">Model Name</h1>
+						<p class="fw-light mb-0 lh-1"  id="model-version">V 1.1</h1>
 					</div>
 				</div>			
 			</div>
@@ -68,7 +68,6 @@
 				<button type="button" class="btn btn-round btn-dark fs-1 my-auto" id="btn-new" data-bs-toggle="modal" data-bs-target="#newModal"> +
 				</button>
 			</div>
-				
 			
 		</div>
 
@@ -77,14 +76,14 @@
 		  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasModel" aria-labelledby="offcanvasModelLabel">
 			<div class="offcanvas-header">
 			  <img class="mt-1" src="assets/quanboard-grey.svg" alt="Logo" style="height: 45px; object-fit: cover;">
-		
 			</div>
+			<P class="fs-6 fw-light small">V 1.0</P>
 			<hr>
 			<div class="offcanvas-body">
-				<h6 class="offcanvas-title mt-10 fs-6 fw-bold" id="offcanvasModelLabel">Model Operation</h6>
+				<h6 class="offcanvas-title mt-10 fs-6 fw-bold" id="offcanvasModelLabel">Model File</h6>
 			  <div>
-				<ul class="nav flex-column small dark ">
-					<li class="nav-item">
+				<ul class="nav flex-column">
+					<li class="nav-item small ">
 					  <a class="nav-link active" aria-current="page" href="#">Load</a>
 					</li>
 					<li class="nav-item">
@@ -94,19 +93,22 @@
 					  <a class="nav-link" href="#">New</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Style</a>
+					  <a class="nav-link" href="#">Style</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Close</a>
+					  
+						<div class="row justify-content-start">
+							<div class="col-3">
+								<a class="nav-link" href="#">Dark Mode</a>
+							</div>
+							<div class="col-1">
+								<input class="form-check-input align-content-center" type="checkbox" id="darkMode" value="">
+							</div>
+						</div>	
 					</li>
 				  </ul>
 			  </div>
-			  <hr>
-			  <h6 class="offcanvas-title mt-10 fs-6 fw-bold" id="offcanvasModelLabel">Model Operation</h6>
-			  <div>
-				<label class="form-check-label" for="darkMode">Dark Mode</label>	
-				<input class="form-check-input" type="checkbox" id="darkMode" value="">
-			  </div>
+
 			  <hr>
 	
 			</div>

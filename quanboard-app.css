@@ -4,7 +4,6 @@
     
 :root {
     --bs-body-font-family: 'Poppins', sans-serif;
-    --bs-primary: #00a149; 
 }
 
 body, html {
@@ -119,78 +118,6 @@ body, html {
     z-index: 9999;        
 }
 
-/* Range*/
-input[type="range"]::-webkit-slider-thumb {
-    background-color: #00a149; /* Color de la bolita en Chrome y Safari */
-    border: 2px solid #00a149;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
- input[type="range"]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 8px;
-    border-radius: 4px;
-    background: #b3b3b3; /* Color de la barra */
-  }
-
- /* checkbox */
-
-.form-check-input {
-    appearance: none; /* Elimina el estilo predeterminado */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    width: 1.2em;
-    height: 1.2em;
-    border-radius: 4px;
-    border: 2px solid #aaa;
-    background-color: #fff;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .form-check-input:checked {
-    background-color: #00a149 !important; /* Fondo cuando está activado */
-    border-color: #00a149 !important;
-  }
-  
-  .form-check-input:checked::before {
-    content: "✔"; /* Símbolo check */
-    font-size: 14px;
-    color: white; /* Color del check */
-    font-weight: bold;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .form-check-input:hover {
-    background-color: #f0f0f0 !important;
-  }
-  
-  .form-check-input:checked:hover {
-    background-color: #00a149 !important;
-    border-color: #00a149 !important;
-  }
-  
-  .form-check-input:focus {
-    box-shadow: 0 0 5px #00682f !important;
-    border-color: #00a149 !important;
-    outline: none !important;
-  }
-  
-  .form-check-input:disabled {
-    background-color: #bbb !important;
-    border-color: #999 !important;
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-
-
 .offcanvas {
     width: 300px !important; 
     height: 100vh !important; 
@@ -201,3 +128,6 @@ input[type="range"]::-webkit-slider-thumb {
     z-index: 2500 !important;
   }
 
+.fs-7 {
+  font-size: 0.75rem; 
+}
