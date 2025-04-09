@@ -119,7 +119,7 @@ body, html {
 }
 
 .offcanvas {
-    width: 300px !important; 
+    width: 280px !important; 
     height: 100vh !important; 
     z-index: 3000 !important; 
   }  
@@ -129,5 +129,17 @@ body, html {
   }
 
 .fs-7 {
-  font-size: 0.75rem; 
+  font-size: 0.85rem; 
+}
+
+.nav-item {
+
+  font-size: 1rem; 
+  line-height: 0.8rem;
+  align-items: center;
+}
+
+hr {
+  margin: 8px;
+  opacity: 0.1;
 }
