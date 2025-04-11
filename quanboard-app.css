@@ -104,12 +104,6 @@ body, html {
     z-index: 2000;        
 }
 
-.darkmode-container {
-    position: absolute;
-    top: 50px;
-    left: 10px;
-    z-index: 9999;        
-}
 
 .model-name {
     position: absolute;
@@ -133,13 +127,53 @@ body, html {
 }
 
 .nav-item {
-
   font-size: 1rem; 
   line-height: 0.8rem;
-  align-items: center;
 }
 
+.nav-link:hover {
+    color: #b8b8b8;
+  }
+
 hr {
-  margin: 8px;
   opacity: 0.1;
+  margin: 5px;
+}
+
+.form-control-color {
+ width: 30px;
+ height: 30px;
+ padding: 0px;
+}
+
+.levels {
+    position: absolute;
+    border-radius: 25px;
+    background-color: #b1b1b1;
+    opacity: .7;
+    top: 100px;
+    right: 25px;
+    width: 50px;
+    z-index: 1500;     
+    padding: 5px;   
+}
+
+.btn-level {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color:#495057;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-time-control {
+margin-top: 5px;
+}
+
+.col {
+    padding:0px;
+    margin: 0px;
 }
