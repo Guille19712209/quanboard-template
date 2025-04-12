@@ -115,16 +115,24 @@ body, html {
 .offcanvas {
     width: 280px !important; 
     height: 100vh !important; 
-    z-index: 3000 !important; 
+    z-index: 3500 !important; 
   }  
 
-.offcanvas-backdrop {
-    z-index: 2500 !important;
+.modal {
+    z-index: 3500 !important; 
+  }  
+
+.offcanvas-backdrop, .modal-backdrop {
+    z-index: 3000 !important;
   }
 
 .fs-7 {
-  font-size: 0.85rem; 
+  font-size: 0.75rem; 
 }
+
+.fs-6 {
+    font-size: 0.85rem; 
+  }
 
 .nav-item {
   font-size: 1rem; 
@@ -137,7 +145,7 @@ body, html {
 
 hr {
   opacity: 0.1;
-  margin: 5px;
+  margin: 3px;
 }
 
 .form-control-color {

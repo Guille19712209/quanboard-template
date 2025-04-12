@@ -104,9 +104,9 @@
 	
 				<div class="offcanvas-header border-bottom">
 					
-					<div class="row p-2">
+					<div class="row mx-auto my-0">
 						<div class="col-12 p-0">
-							<img class="mt-1 mx-auto" src="assets/quanboard-grey.svg" alt="Logo" style="height: 45px; object-fit: cover;">
+							<img class="mt-1" src="assets/quanboard-grey.svg" alt="Logo" style="height: 45px; object-fit: cover;">
 						</div>
 
 						<div class="col-12">
@@ -118,29 +118,33 @@
 
 				<div class="offcanvas-body">	
 					
-					<h6 class="offcanvas-title fs-6 fw-bold">File</h6>
+					<p class="offcanvas-title fs-7 fw-bold">Model</p>
 					<hr>
-					<div class="row ms-1">
-						<a class="nav-link fs-7" href="#">Load Model</a>
+					<div class="row ms-2">
+						<a class="nav-link fs-7" href="#">Load </a>
 					</div>
 					<hr>
-					<div class="row ms-1">
-						<a class="nav-link fs-7" href="#">New Model</a>
+					<div class="row ms-2">
+						<a class="nav-link fs-7" href="#">New</a>
 					</div>
 					<hr>
-					<div class="row ms-1">
+					<div class="row ms-2">
 						<a class="nav-link fs-7" href="#">New version</a>
 					</div>
 					<hr>
-					<div class="row ms-1">
-						<a class="nav-link fs-7 align-item-center" href="#">Close model</a>
+					<div class="row ms-2">
+						<a class="nav-link fs-7 align-item-center" href="#">Info</a>
+					</div>
+					<hr>
+					<div class="row ms-2">
+						<a class="nav-link fs-7 align-item-center" href="#">Close</a>
 					</div>
 					<hr>
 					<p></p>
-					<h6 class="offcanvas-title fs-6 fw-bold">Settings</h6>
+					<p class="offcanvas-title fs-7 fw-bold">Settings</p>
 					<hr>
 					
-					<div class="row ms-1">
+					<div class="row ms-2">
 						<div class="col-10 m-0 p-0">				
 							<label class="fs-7">Dark Mode</label>
 						</div>
@@ -150,7 +154,7 @@
 						</div>
 					</div>	
 					<hr>
-					<div class="row ms-1">
+					<div class="row ms-2">
 						<div class="col-10 m-0 p-0" >
 							<label class="fs-7">Show hidden</label>
 						</div>
@@ -159,46 +163,31 @@
 						</div>
 					</div>	
 					<hr>
-					<div class="row ms-1">
-						<a class="nav-link fs-7" href="#">Default colors & background</a>	
+					<div class="row ms-2">
+						<a class="nav-link fs-7" href="#">Colors & background</a>	
 					</div>
 					<hr>
-					<div class="row ms-1">
+					<div class="row ms-2">
 						<a class="nav-link fs-7  align-item-center" href="#">Object sizes</a>
 					</div>
 					<hr>
-					<div class="row ms-1">
+					<div class="row ms-2">
 						<a class="nav-link fs-7 align-item-center" href="#">Format</a>
 					</div>
 					<hr>
-					<p></p>
-					<h6 class="offcanvas-title fs-6 fw-bold">Info</h6>
-					<hr>
-		
-					<div class="row ms-1">
-						<div class="col-6 m-0 p-0">	
-							<a class="nav-link fs-7 align-item-center" href="#">Model Data</a>
-						</div>
-					</div>
-					<hr>
-					<div class="row ms-1">
-						<div class="col-6 m-0 p-0">	
-							<a class="nav-link fs-7 align-item-center" href="#">Notes </a>
-						</div>
-					</div>
-					<hr>
+					
 					<div class="text-end">
 						<button type="button" class="btn btn-secondary fs-7 mt-1 me-2 " data-bs-dismiss="offcanvas" aria-label="Close">Close</button>
 					</div>
 
 					<div class="position-absolute bottom-0 start-0 end-0 border-top">
 						
-						<div class="row align-items-center p-2">
-							<div class="col-3 ms-0 p-2">
-								<img src="https://github.com/mdo.png" alt="" width="45" height="45" class="rounded-circle ms-3">
+						<div class="row align-items-center p-1">
+							<div class="col-3 ms-2 p-2">
+								<img src="https://github.com/mdo.png" alt="" width="40" height="40" class="rounded-circle ms-3">
 							</div>
-							<div class="col-5  p-2">
-								<label class="fs-6 fw-bold" id="user">Active User</label>
+							<div class="col-5  p-1">
+								<label class="fs-7 fw-bold" id="user">Active User</label>
 							</div>
 					
 						</div>	
@@ -241,7 +230,7 @@
 					...
 					</div>
 					<div class="modal-footer">
-					<button type="button" class="btn btn-primary fs-7">Save changes</button>
+						<button type="button" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Save changes</button>
 					</div>
 				</div>
 				</div>
@@ -259,13 +248,11 @@
 					...
 					</div>
 					<div class="modal-footer">
-					<button type="button" class="btn btn-success fs-6 fw-light">Save changes</button>
+						<button type="button" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Save changes</button>
 					</div>
 				</div>
 				</div>
 			</div>
-
-		
 
 		<script src="./lib/quanboard-app.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -294,11 +281,11 @@
 </div>
 
 <div class="col-3">
-						<input type="color"  class="form-control form-control-color ms-10" id="objectsColor" name="head" value="#e66465" />
+						<input type="color"  class="form-control form-control-color ms-20" id="objectsColor" name="head" value="#e66465" />
 					</div>
 
 
-				<div class="row ms-1">
+				<div class="row ms-2">
 						<div class="col-4 m-0 p-0">				
 							<label class="fs-7">Name:</label>
 						</div>
@@ -307,7 +294,7 @@
 						</div>
 					</div>	
 					
-					<div class="row ms-1">
+					<div class="row ms-2">
 						<div class="col-4 m-0 p-0">				
 							<label class="fs-7">Author:</label>
 						</div>
@@ -316,7 +303,7 @@
 						</div>
 					</div>	
 					
-					<div class="row ms-1">
+					<div class="row ms-2">
 						<div class="col-4 m-0 p-0">				
 							<label class="fs-7">Creation:</label>
 						</div>
@@ -325,7 +312,7 @@
 						</div>
 					</div>	
 					
-					<div class="row ms-1">
+					<div class="row ms-2">
 						<div class="col-4 m-0 p-0">				
 							<label class="fs-7">Version:</label>
 						</div>
@@ -333,6 +320,21 @@
 							<label class="fs-7 fw-bold" id="infoVersion">1.1</label>
 						</div>
 					</div
-
+<p></p>
+					<h6 class="offcanvas-title fs-6 fw-bold">Info</h6>
+					<hr>
+		
+					<div class="row ms-2">
+						<div class="col-6 m-0 p-0">	
+							<a class="nav-link fs-7 align-item-center" href="#">Model Data</a>
+						</div>
+					</div>
+					<hr>
+					<div class="row ms-2">
+						<div class="col-6 m-0 p-0">	
+							<a class="nav-link fs-7 align-item-center" href="#">Notes </a>
+						</div>
+					</div>
+					<hr>
 -->
 
