@@ -34,45 +34,45 @@
 			<div class="container-btn-model">
 				<div class="row justify-content-start">
 					<div class="col-2">
-						<button type="button" class="btn btn-round btn-dark fs-1" id="btn-model" data-bs-toggle="offcanvas" data-bs-target="#offcanvasModel" aria-controls="offcanvasModel">
+						<button type="button" class="btn btn-round btn-dark fs-1" id="btn-model" data-bs-toggle="offcanvas" data-bs-target="#o-model-model" aria-controls="offcanvasModel">
 								<img src="assets/qb-icon-02.svg" alt="Imagen" style="height: 100%; object-fit: cover;">
 						</button>
 					</div>
 					<div class="col-10 mx-0">
-						<h1 class="fw-light mt-2 mx-0"  id="model-name">Model Name</h1>
-						<p class="fw-light mb-0 lh-1"  id="model-version">V 1.1</h1>
+						<h1 class="fw-light mt-2 mx-0"  id="d-name-model">Model Name</h1>
+						<p class="fw-light mb-0 lh-1"  id="d-version-model">V 1.1</h1>
 					</div>
 				</div>			
 			</div>
 				
 			<div class="container-btn-outputs">
-				<button type="button" class="btn btn-round btn-dark fs-1" id="btn-outputs" data-bs-toggle="offcanvas" data-bs-target="#offcanvasOutputs" aria-controls="offcanvasOutputs"> > </button>
+				<button type="button" class="btn btn-round btn-dark fs-1" id="btn-outputs" data-bs-toggle="offcanvas" data-bs-target="#o-functions-model" aria-controls="offcanvasOutputs"> > </button>
 			</div>
 
 			<div class="container-btn-time">
 				<div class="row justify-content-start">
 					<div class="col-2">
-						<button type="button" class="btn btn-round btn-dark fs-3 mx-auto" id="btn-time" data-bs-toggle="modal" data-bs-target="#timeModal"> 108
+						<button type="button" class="btn btn-round btn-dark fs-3 mx-auto" id="d-btn-time" data-bs-toggle="modal" data-bs-target="#m-time-model"> 108
 							<span class="badge-number badge-light">120</span>
 						</button>
 					</div>
-					<div class="col-8 d-flex flex-column ms-4">
+					<div class="col-7 d-flex flex-column ms-4">
 						
 						
 						<div class="row align-item-start">	
 
-							<div class="col-6 mt-3 light" id="label-time-unit">YEARS</div>
+							<div class="col-6 mt-3 light" id="a-time-unit">YEARS</div>
 							<div class="col-2 mt-1">
-								<button type="button" class="btn btn-time-control" id="levelUp"><</button>
+								<button type="button" class="btn btn-time-control" id="b-timeBack-model"><</button>
 							</div>
 							<div class="col-2 mt-1">
-								<button type="button" class="btn btn-time-control" id="levelUp">></button>
+								<button type="button" class="btn btn-time-control" id="b-timeForward-model">></button>
 							</div>
 							<div class="col-2 mt-1">
-								<button type="button" class="btn btn-time-control" id="levelDown">>></button>
+								<button type="button" class="btn btn-time-control" id="b-timeRol-model">>></button>
 						</div>		
 
-						<input type="range" class="form-range ms-2" id="timeline-control" min="1" max="120" step="1" value="60">
+						<input type="range" class="form-range ms-2" id="v-timeline-model" min="1" max="120" step="1" value="60">
 							
 						</div>
 					</div>
@@ -80,7 +80,7 @@
 			</div>
 
 			<div class="container-btn-new">		
-				<button type="button" class="btn btn-round btn-dark fs-1 my-auto" id="btn-new" data-bs-toggle="modal" data-bs-target="#newModal"> +
+				<button type="button" class="btn btn-round btn-dark fs-1 my-auto" id="b-new-object" data-bs-toggle="modal" data-bs-target="#m-new-object"> +
 				</button>
 			</div>
 			
@@ -90,18 +90,17 @@
 		<!-- Levels -->
 
 		<div class="levels">
-			<button type="button" class="btn btn-level btn-dark fs-3" id="levelUp">+</button>
+			<button type="button" class="btn btn-level btn-dark fs-3" id="b-levelUp-model">+</button>
 			<p class="mt-0 mb-0 text-center p-1 fs-7">LEVEL</p>
-			<button type="button" class="btn btn-level btn-dark fs-3" id="levelDown">-</button>
+			<button type="button" class="btn btn-level btn-dark fs-3" id="b-levelDown-model">-</button>
 		</div>
 
 
-		<!-- Offcanvas Model -->
+		<!-- o-model -->
 
-
-		<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasModel" aria-labelledby="offcanvasModelLabel">
+		<div class="offcanvas offcanvas-start" tabindex="-1" id="o-model-model" aria-aledby="offcanvasModela">
 			<div class="container p-2">
-	
+
 				<div class="offcanvas-header border-bottom">
 					
 					<div class="row mx-auto my-0">
@@ -114,30 +113,34 @@
 						</div>
 					</div>
 				</div>	
-		
+	
 
 				<div class="offcanvas-body">	
 					
 					<p class="offcanvas-title fs-7 fw-bold">Model</p>
 					<hr>
 					<div class="row ms-2">
-						<a class="nav-link fs-7" href="#">Load </a>
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-load-model">Load </a>
 					</div>
 					<hr>
 					<div class="row ms-2">
-						<a class="nav-link fs-7" href="#">New</a>
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-new-model">New</a>
 					</div>
 					<hr>
 					<div class="row ms-2">
-						<a class="nav-link fs-7" href="#">New version</a>
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-newVersion-model">New version</a>
 					</div>
 					<hr>
 					<div class="row ms-2">
-						<a class="nav-link fs-7 align-item-center" href="#">Info</a>
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-info-model">Info</a>
 					</div>
 					<hr>
 					<div class="row ms-2">
-						<a class="nav-link fs-7 align-item-center" href="#">Close</a>
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-export-model">Export</a>
+					</div>
+					<hr>
+					<div class="row ms-2">
+						<a class="nav-link fs-7" href="#">Close</a>
 					</div>
 					<hr>
 					<p></p>
@@ -146,38 +149,38 @@
 					
 					<div class="row ms-2">
 						<div class="col-10 m-0 p-0">				
-							<label class="fs-7">Dark Mode</label>
+							<label class="fs-7" for="b-darkMode">Dark Mode</label>
 						</div>
 
 						<div class="col-1 m-0 p-0 form-check form-switch">
-							<input class="form-check-input" type="checkbox" role="switch" id="darkMode" value="">
+							<input class="form-check-input" type="checkbox" role="switch" id="b-darkMode" value="">
 						</div>
 					</div>	
 					<hr>
 					<div class="row ms-2">
 						<div class="col-10 m-0 p-0" >
-							<label class="fs-7">Show hidden</label>
+							<label class="fs-7" for="b-showHidden">Show hidden</label>
 						</div>
 						<div class="col-1 m-0 p-0 form-check form-switch">
-							<input class="form-check-input" type="checkbox" role="switch" id="showHidden" value="">
+							<input class="form-check-input" type="checkbox" role="switch" id="b-showHidden" value="">
 						</div>
 					</div>	
 					<hr>
 					<div class="row ms-2">
-						<a class="nav-link fs-7" href="#">Colors & background</a>	
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-style-model">Style</a>	
 					</div>
 					<hr>
 					<div class="row ms-2">
-						<a class="nav-link fs-7  align-item-center" href="#">Object sizes</a>
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-sizes-model">Object sizes</a>
 					</div>
 					<hr>
 					<div class="row ms-2">
-						<a class="nav-link fs-7 align-item-center" href="#">Format</a>
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-format-model">Format</a>
 					</div>
 					<hr>
 					
 					<div class="text-end">
-						<button type="button" class="btn btn-secondary fs-7 mt-1 me-2 " data-bs-dismiss="offcanvas" aria-label="Close">Close</button>
+						<button type="button" class="btn btn-secondary fs-7 mt-1 me-2 " data-bs-dismiss="offcanvas" aria-a="Close">Close</button>
 					</div>
 
 					<div class="position-absolute bottom-0 start-0 end-0 border-top">
@@ -186,45 +189,153 @@
 							<div class="col-3 ms-2 p-2">
 								<img src="https://github.com/mdo.png" alt="" width="40" height="40" class="rounded-circle ms-3">
 							</div>
-							<div class="col-5  p-1">
-								<label class="fs-7 fw-bold" id="user">Active User</label>
+							<div class="col-5 p-1 mt-3">
+								<p class="fs-7 fw-bold" id="b-user-model">Active User</p>
 							</div>
 					
 						</div>	
 					</div>
 
 				</div>
-
-				
+			
 			</div>
 		</div>
 
-		
-		
 
-			<!-- Offcanvas > -->
-		
-			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasOutputs" aria-labelledby="offcanvasOutputsLabel">
-				<div class="offcanvas-header">
-					<h4 class="offcanvas-title mt-10 fw-light" id="offcanvasOutputslLabel">OUTPUTS </h4>
-					<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+		<!-- o-functions > -->
+	
+		<div class="offcanvas offcanvas-end" tabindex="-1" id="o-functions-model" aria-aledby="o-functions-model">
+			<div class="offcanvas-header">
+				<h4 class="offcanvas-title mt-10 fw-light" id="offcanvasOutputsla">FUNCTIONS </h4>
+				<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-a="Close"></button>
+			</div>
+			<hr>
+			<div class="offcanvas-body">
+				<div>
+				Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
 				</div>
-				<hr>
-				<div class="offcanvas-body">
-					<div>
-					Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-					</div>
+	
+			</div>
+		</div>
 		
+		<!-- m-new-object -->
+		<div class="modal fade" id="m-new-object" tabindex="-1" aria-aledby="newModala" aria-hidden="true">
+			<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				<h5 class="modal-title fs-4 fw-light" id="d-a-newObjectModal">NEW OBJECT</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
+				</div>
+				<div class="modal-body">
+
+				
+					<div class="row ms-2">
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-style-model">Style</a>	
+					</div>
+					<hr>
+					<div class="row ms-2">
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-sizes-model">Object sizes</a>
+					</div>
+					<hr>
+					<div class="row ms-2">
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-format-model">Format</a>
+					</div>
+					<hr>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Save changes</button>
 				</div>
 			</div>
-		
-			<!-- Modal New/Edit Object-->
-			<div class="modal fade" id="newModal" tabindex="-1" aria-labelledby="newModalLabel" aria-hidden="true">
-				<div class="modal-dialog">
+			</div>
+		</div>
+
+		<!-- m-info-model -->
+		<div class="modal fade" id="m-info-model" tabindex="-1" aria-aledby="m-info-model" aria-hidden="true">
+			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-					<h5 class="modal-title fs-4 fw-light" id="newModalLabel">NEW OBJECT</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					<h5 class="modal-title fs-4 fw-light" id="v-a-newObjectModal">MODEL INFO</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
+					</div>
+						<div class="modal-body">
+							<p></p>
+							<p class="offcanvas-title fs-7 fw-bold">Data</p>
+							<hr>
+							
+							<div class="row ms-2">
+								<div class="col-3 m-0 p-0">				
+									<p class="fs-7">Name:</p>
+								</div>
+								<div class="col-4 m-0 p-0">				
+									<p class="fs-7 fw-bold" id="d-name-infoM">Model name</p>
+								</div>
+								<div class="col-3 m-0 p-0">				
+									<p class="fs-7">Version:</p>
+								</div>
+								<div class="col-2 m-0 p-0">				
+									<p class="fs-7 fw-bold" id="d-version-infoM">1.1</p>
+								</div>
+							</div>	
+
+							<hr>	
+							<div class="row ms-2">
+								<div class="col-3 m-0 p-0">				
+									<p class="fs-7">Creation:</p>
+								</div>
+								<div class="col-4 m-0 p-0">				
+									<p class="fs-7 fw-bold" id="d-date-create-infoM">26/06/71</p>
+								</div>
+								<div class="col-3 m-0 p-0">				
+									<p class="fs-7">Author:</p>
+								</div>
+								<div class="col-2 m-0 p-0">				
+									<p class="fs-7 fw-bold" id="d-author-infoM">Guille</p>
+								</div>
+							</div>	
+							<hr>
+							<div class="row ms-2">
+								<div class="col-3 m-0 p-0">				
+									<p class="fs-7">Last change:</p>
+								</div>
+								<div class="col-4 m-0 p-0">				
+									<p class="fs-7 fw-bold" id="d-date-modif-infoM">26/06/71</p>
+								</div>
+
+								<div class="col-3 m-0 p-0">				
+									<p class="fs-7">By:</p>
+								</div>
+								<div class="col-2 m-0 p-0">				
+									<p class="fs-7 fw-bold" id="d-who-modif-infoM">Maxi<p>
+								</div>
+							</div>
+							<hr>		
+
+							<p></p>
+							<p class="offcanvas-title fs-7 fw-bold">Notes</p>
+							<p></p>
+							<form>
+								<div class="mb-3">			
+									<textarea class="form-control fs-7 bg-body-secondary" id="d-notes-infoM" rows="10" placeholder="Model version comments..."></textarea>
+								</div>
+							</form>
+
+						</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- m-load-model -->
+		<div class="modal fade" id="m-load-model" tabindex="-1" aria-aledby="newModala" aria-hidden="true">
+			<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				<h5 class="modal-title fs-4 fw-light" id="newModala">LOAD MODEL</h5>
+				<form>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
 					</div>
 					<div class="modal-body">
 					...
@@ -232,27 +343,63 @@
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Save changes</button>
 					</div>
-				</div>
-				</div>
+				</form>
 			</div>
+			</div>
+		</div>
 
-			<!-- Modal Time-->
-			<div class="modal modal-lg fade" id="timeModal" tabindex="-1" aria-labelledby="timeModalLabel" aria-hidden="true">
-				<div class="modal-dialog">
+		<!-- m-new-model -->
+		<div class="modal fade" id="m-new-model" tabindex="-1"aria-hidden="true">
+			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-					<h5 class="modal-title fs-4 fw-light" id="timeModalLabel">TIME</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						<h5 class="modal-title fs-4 fw-light">NEW MODEL</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
 					</div>
-					<div class="modal-body">
-					...
-					</div>
+						<div class="modal-body">	
+							<form class="my-1 mx-2">
+								<div class="row  g-0 m-0 p-0 align-item-center">
+									<div class="col-3 mt-1 p-0">	
+										<labe for="d-newName-model" class="form-a fs-7">Model name</label>
+									</div>
+									<div class="col-9 m-0 p-0">	
+										<input type="text" class="form-control fs-7 bg-body-secondary" id="d-newName-model" placeholder="">
+								</div>
+							</form>		
+						</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Save changes</button>
+						<button type="button" class="btn btn-secondary fs-7 fw-light me-0" data-bs-dismiss="modal">Create</button>
 					</div>
-				</div>
 				</div>
 			</div>
+		</div>
+
+		<!-- m-newVersion-model -->
+		<div class="modal fade" id="m-newVersion-model" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title fs-4 fw-light">NEW VERSION</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
+					</div>
+						<div class="modal-body">	
+							<form class="my-1 mx-2">
+								<div class="row  g-0 m-0 p-0 align-item-center">
+									<div class="col-3 mt-1 p-0">	
+										<label for="d-newVersion-model" class="form-a fs-7">New version name</label>
+									</div>
+									<div class="col-9 m-0 p-0">	
+										<input type="text" class="form-control fs-7 bg-body-secondary" id="d-newVersion-model" placeholder="">
+								</div>
+							</form>		
+						</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Create</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
 
 		<script src="./lib/quanboard-app.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -263,11 +410,11 @@
 
 <div class="form-check form-switch mx-auto mt-5">
 	<input class="form-check-input" type="checkbox" id="themeSwitch">
-	<label class="form-check-label" for="themeSwitch">Modo Oscuro</label>
+	<a class="form-check-a" for="themeSwitch">Modo Oscuro</a>
 </div>
 
 <div class="col-1 d-flex flex-column">
-	<div class="mt-auto" id="label-time-unit"> >> </div>
+	<div class="mt-auto" id="a-time-unit"> >> </div>
 	<div class="form-check form-switch">
 		<input class="form-check-input" type="checkbox" id="flow-Switch">
 </div>
@@ -287,37 +434,37 @@
 
 				<div class="row ms-2">
 						<div class="col-4 m-0 p-0">				
-							<label class="fs-7">Name:</label>
+							<a class="fs-7">Name:</a>
 						</div>
 						<div class="col-8 m-0 p-0">				
-							<label class="fs-7 fw-bold" id="infoName">Model name</label>
+							<a class="fs-7 fw-bold" id="infoName">Model name</a>
 						</div>
 					</div>	
 					
 					<div class="row ms-2">
 						<div class="col-4 m-0 p-0">				
-							<label class="fs-7">Author:</label>
+							<a class="fs-7">Author:</a>
 						</div>
 						<div class="col-8 m-0 p-0">				
-							<label class="fs-7 fw-bold" id="infoWho">Guille</label>
+							<a class="fs-7 fw-bold" id="infoWho">Guille</a>
 						</div>
 					</div>	
 					
 					<div class="row ms-2">
 						<div class="col-4 m-0 p-0">				
-							<label class="fs-7">Creation:</label>
+							<a class="fs-7">Creation:</a>
 						</div>
 						<div class="col-8 m-0 p-0">				
-							<label class="fs-7 fw-bold" id="infoDate">26/06/71</label>
+							<a class="fs-7 fw-bold" id="infoDate">26/06/71</a>
 						</div>
 					</div>	
 					
 					<div class="row ms-2">
 						<div class="col-4 m-0 p-0">				
-							<label class="fs-7">Version:</label>
+							<a class="fs-7">Version:</a>
 						</div>
 						<div class="col-8 m-0 p-0">				
-							<label class="fs-7 fw-bold" id="infoVersion">1.1</label>
+							<a class="fs-7 fw-bold" id="infoVersion">1.1</a>
 						</div>
 					</div
 <p></p>
@@ -336,5 +483,28 @@
 						</div>
 					</div>
 					<hr>
+-->
+
+<!-- NOTE ABOUT ID NAMING RULES
+
+Type of element (Modal, offset, variable, etc) - issue - parent
+
+	ie. m-load-model
+
+1 - Types of elements 
+
+	m - Modal
+	o - offside
+	s - switch
+	b - Button
+	v - Variables
+	d - data
+
+2 - Issue 
+	Defines the specific matter
+
+3 - Parent
+	Defines what it belongs to
+
 -->
 

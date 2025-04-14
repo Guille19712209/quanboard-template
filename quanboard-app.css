@@ -109,7 +109,7 @@ body, html {
     position: absolute;
     top: 50px;
     left: 10px;
-    z-index: 9999;        
+    z-index: 3000;        
 }
 
 .offcanvas {
@@ -119,11 +119,15 @@ body, html {
   }  
 
 .modal {
-    z-index: 3500 !important; 
+    z-index: 4000 !important; 
   }  
 
-.offcanvas-backdrop, .modal-backdrop {
+.offcanvas-backdrop {
     z-index: 3000 !important;
+  }
+
+.modal-backdrop {
+    z-index: 3550 !important;
   }
 
 .fs-7 {
