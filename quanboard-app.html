@@ -128,7 +128,7 @@
 					</div>
 					<hr>
 					<div class="row ms-2">
-						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-newVersion-model">New version</a>
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-vers-model">New version</a>
 					</div>
 					<hr>
 					<div class="row ms-2">
@@ -331,20 +331,20 @@
 		<!-- m-load-model -->
 		<div class="modal fade" id="m-load-model" tabindex="-1" aria-aledby="newModala" aria-hidden="true">
 			<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-				<h5 class="modal-title fs-4 fw-light" id="newModala">LOAD MODEL</h5>
-				<form>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title fs-4 fw-light" id="newModala">LOAD MODEL</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
 					</div>
-					<div class="modal-body">
-					...
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Save changes</button>
-					</div>
-				</form>
-			</div>
+					<form>
+						<div class="modal-body">
+						...
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Save changes</button>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
 
@@ -356,17 +356,18 @@
 						<h5 class="modal-title fs-4 fw-light">NEW MODEL</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
 					</div>
-						<div class="modal-body">	
-							<form class="my-1 mx-2">
-								<div class="row  g-0 m-0 p-0 align-item-center">
-									<div class="col-3 mt-1 p-0">	
-										<labe for="d-newName-model" class="form-a fs-7">Model name</label>
-									</div>
-									<div class="col-9 m-0 p-0">	
-										<input type="text" class="form-control fs-7 bg-body-secondary" id="d-newName-model" placeholder="">
+					<div class="modal-body">	
+						<form class="my-1 mx-2">
+							<div class="row  g-0 m-0 p-0 align-item-center">
+								<div class="col-3 mt-1 p-0">	
+									<labe for="d-newName-model" class="form-a fs-7">Model name</label>
 								</div>
-							</form>		
-						</div>
+								<div class="col-9 m-0 p-0">	
+								<input type="text" class="form-control fs-7 bg-body-secondary" id="d-newName-model" placeholder="">
+								</div>
+							</div>	
+						</form>		
+					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary fs-7 fw-light me-0" data-bs-dismiss="modal">Create</button>
 					</div>
@@ -374,31 +375,52 @@
 			</div>
 		</div>
 
-		<!-- m-newVersion-model -->
-		<div class="modal fade" id="m-newVersion-model" aria-hidden="true">
+		<!-- m-vers-model -->
+		 
+		<div class="modal fade" id="m-vers-model" tabindex="-1" aria-aledby="newVersion" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title fs-4 fw-light">NEW VERSION</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
 					</div>
-						<div class="modal-body">	
-							<form class="my-1 mx-2">
-								<div class="row  g-0 m-0 p-0 align-item-center">
-									<div class="col-3 mt-1 p-0">	
-										<label for="d-newVersion-model" class="form-a fs-7">New version name</label>
-									</div>
-									<div class="col-9 m-0 p-0">	
-										<input type="text" class="form-control fs-7 bg-body-secondary" id="d-newVersion-model" placeholder="">
-								</div>
-							</form>		
+					<div class="modal-body">
+						<div class="row ms-2">
+							<div class="col-4 m-0 p-0">				
+								<p class="fs-7 fw-bold">Name</p>
+							</div>
+							<div class="col-3 m-0 p-0">				
+								<p class="fs-7" id="d-name-model">Model Name</p>
+							</div>
 						</div>
+						<div class="row ms-2">
+							<div class="col-4 m-0 p-0">				
+								<p class="fs-7 fw-bold">Current Version</p>
+							</div>
+							<div class="col-3 m-0 p-0">				
+								<p class="fs-7" id="d-current-versM">1.1</p>
+							</div>
+						</div>
+						<hr>	
+						<form>
+							<div class="row  g-0 m-0 p-0 align-item-center">
+								<div class="col-3 mt-2 p-0">	
+									<labe for="d-newName-model" class="form-a fs-7">New version name</label>
+								</div>
+								<div class="col-6 m-0 p-0">	
+								<input type="text" class="form-control fs-7 bg-body-secondary" id="d-newName-model" placeholder="">
+								</div>
+							</div>			
+						</form>
+					</div>	
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Create</button>
+						<button type="button" class="btn btn-secondary fs-7 fw-light me-0" data-bs-dismiss="modal">Create</button>
 					</div>
 				</div>
 			</div>
 		</div>
+		
+		
 	
 
 		<script src="./lib/quanboard-app.js"></script>
