@@ -149,7 +149,9 @@ body, html {
 
 hr {
   opacity: 0.1;
-  margin: 3px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  border:  0.015em dashed #000;
 }
 
 .form-control-color {
@@ -188,4 +190,8 @@ margin-top: 5px;
 .col {
     padding:0px;
     margin: 0px;
+}
+
+p {
+  margin-bottom: 0px;
 }

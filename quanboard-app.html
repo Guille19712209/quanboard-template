@@ -258,64 +258,64 @@
 					<h5 class="modal-title fs-4 fw-light" id="v-a-newObjectModal">MODEL INFO</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
 					</div>
-						<div class="modal-body">
-							<p></p>
-							<p class="offcanvas-title fs-7 fw-bold">Data</p>
-							<hr>
+						<div class="modal-body my-auto">
+							<form class=" mx-2">
+								<p></p>
+								<p class="offcanvas-title fs-7 fw-bold">Data</p>
+								<hr>
+								
+								<div class="row ms-2">
+									<div class="col-3 p-0">				
+										<p class="fs-7">Name:</p>
+									</div>
+									<div class="col-4 m-0 p-0">				
+										<p class="fs-7 fw-bold" id="d-name-infoM">Model name</p>
+									</div>
+									<div class="col-3 m-0 p-0">				
+										<p class="fs-7">Version:</p>
+									</div>
+									<div class="col-2 m-0 p-0">				
+										<p class="fs-7 fw-bold" id="d-version-infoM">1.1</p>
+									</div>
+								</div>	
+
+								<hr>	
+								<div class="row ms-2">
+									<div class="col-3 m-0 p-0">				
+										<p class="fs-7">Creation:</p>
+									</div>
+									<div class="col-4 m-0 p-0">				
+										<p class="fs-7 fw-bold" id="d-date-create-infoM">26/06/71</p>
+									</div>
+									<div class="col-3 m-0 p-0">				
+										<p class="fs-7">Author:</p>
+									</div>
+									<div class="col-2 m-0 p-0">				
+										<p class="fs-7 fw-bold" id="d-author-infoM">Guille</p>
+									</div>
+								</div>	
+								<hr>
+								<div class="row ms-2">
+									<div class="col-3 m-0 p-0">				
+										<p class="fs-7">Last change:</p>
+									</div>
+									<div class="col-4 m-0 p-0">				
+										<p class="fs-7 fw-bold" id="d-date-modif-infoM">26/06/71</p>
+									</div>
+
+									<div class="col-3 m-0 p-0">				
+										<p class="fs-7">By:</p>
+									</div>
+									<div class="col-2 m-0 p-0">				
+										<p class="fs-7 fw-bold" id="d-who-modif-infoM">Maxi<p>
+									</div>
+								</div>
+								<hr>		
+
+								<p></p>
+								<p class="offcanvas-title fs-7 fw-bold">Notes</p>
 							
-							<div class="row ms-2">
-								<div class="col-3 m-0 p-0">				
-									<p class="fs-7">Name:</p>
-								</div>
-								<div class="col-4 m-0 p-0">				
-									<p class="fs-7 fw-bold" id="d-name-infoM">Model name</p>
-								</div>
-								<div class="col-3 m-0 p-0">				
-									<p class="fs-7">Version:</p>
-								</div>
-								<div class="col-2 m-0 p-0">				
-									<p class="fs-7 fw-bold" id="d-version-infoM">1.1</p>
-								</div>
-							</div>	
-
-							<hr>	
-							<div class="row ms-2">
-								<div class="col-3 m-0 p-0">				
-									<p class="fs-7">Creation:</p>
-								</div>
-								<div class="col-4 m-0 p-0">				
-									<p class="fs-7 fw-bold" id="d-date-create-infoM">26/06/71</p>
-								</div>
-								<div class="col-3 m-0 p-0">				
-									<p class="fs-7">Author:</p>
-								</div>
-								<div class="col-2 m-0 p-0">				
-									<p class="fs-7 fw-bold" id="d-author-infoM">Guille</p>
-								</div>
-							</div>	
-							<hr>
-							<div class="row ms-2">
-								<div class="col-3 m-0 p-0">				
-									<p class="fs-7">Last change:</p>
-								</div>
-								<div class="col-4 m-0 p-0">				
-									<p class="fs-7 fw-bold" id="d-date-modif-infoM">26/06/71</p>
-								</div>
-
-								<div class="col-3 m-0 p-0">				
-									<p class="fs-7">By:</p>
-								</div>
-								<div class="col-2 m-0 p-0">				
-									<p class="fs-7 fw-bold" id="d-who-modif-infoM">Maxi<p>
-								</div>
-							</div>
-							<hr>		
-
-							<p></p>
-							<p class="offcanvas-title fs-7 fw-bold">Notes</p>
-							<p></p>
-							<form>
-								<div class="mb-3">			
+								<div class="mb-3 mt-2">			
 									<textarea class="form-control fs-7 bg-body-secondary" id="d-notes-infoM" rows="10" placeholder="Model version comments..."></textarea>
 								</div>
 							</form>
@@ -358,14 +358,23 @@
 					</div>
 					<div class="modal-body">	
 						<form class="my-1 mx-2">
-							<div class="row  g-0 m-0 p-0 align-item-center">
+							<div class="row  ms-2">
 								<div class="col-3 mt-1 p-0">	
-									<labe for="d-newName-model" class="form-a fs-7">Model name</label>
+									<labe for="d-newName-model" class="form-a fs-7 fw-bold">Model name</label>
 								</div>
-								<div class="col-9 m-0 p-0">	
+								<div class="col-9 ms-0 ">	
 								<input type="text" class="form-control fs-7 bg-body-secondary" id="d-newName-model" placeholder="">
 								</div>
-							</div>	
+							</div>
+							<hr>
+							<div class="row  ms-2">
+								<div class="col-3 mt-1 p-0">	
+									<labe for="d-Vers-model" class="form-a fs-7 fw-bold">Version name</label>
+								</div>
+								<div class="col-9 ms-0">	
+								<input type="text" class="form-control fs-7 bg-body-secondary me-0" id="d-Vers-model" placeholder="">
+								</div>
+							</div>		
 						</form>		
 					</div>
 					<div class="modal-footer">
@@ -385,30 +394,32 @@
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
 					</div>
 					<div class="modal-body">
-						<div class="row ms-2">
-							<div class="col-4 m-0 p-0">				
-								<p class="fs-7 fw-bold">Name</p>
-							</div>
-							<div class="col-3 m-0 p-0">				
-								<p class="fs-7" id="d-name-model">Model Name</p>
-							</div>
-						</div>
-						<div class="row ms-2">
-							<div class="col-4 m-0 p-0">				
-								<p class="fs-7 fw-bold">Current Version</p>
-							</div>
-							<div class="col-3 m-0 p-0">				
-								<p class="fs-7" id="d-current-versM">1.1</p>
-							</div>
-						</div>
-						<hr>	
-						<form>
-							<div class="row  g-0 m-0 p-0 align-item-center">
-								<div class="col-3 mt-2 p-0">	
-									<labe for="d-newName-model" class="form-a fs-7">New version name</label>
+						<form class="my-2 mx-2">
+							<div class="row ms-2">
+								<div class="col-md-3 m-0 p-0">				
+									<p class="fs-7 fw-bold">Name</p>
 								</div>
-								<div class="col-6 m-0 p-0">	
-								<input type="text" class="form-control fs-7 bg-body-secondary" id="d-newName-model" placeholder="">
+								<div class="col-3 ms-3 p-0">				
+									<p class="fs-7" id="d-name-model">Model Name</p>
+								</div>
+							</div>
+							<p></p>
+							<div class="row ms-2">
+								<div class="col-3 mt-2 p-0">				
+									<p class="fs-7 fw-bold">Current version</p>
+								</div>
+								<div class="col-3 ms-3 mt-2 p-0">				
+									<p class="fs-7" id="d-current-versM">1.1</p>
+								</div>
+							</div>
+							<hr>	
+							<p></p>
+							<div class="row  ms-2">
+								<div class="col-3 my-auto p-0">	
+									<labe for="d-newName-model" class="form-a fs-7 fw-bold">New version</label>
+								</div>
+								<div class="col-9 ms-0">	
+								<input type="text" class="form-control fs-7 bg-body-secondary me-0" id="d-newVers-model" placeholder="">
 								</div>
 							</div>			
 						</form>
