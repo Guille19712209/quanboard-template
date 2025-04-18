@@ -9,6 +9,10 @@
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
+	<!-- Color Pickr -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css"/>
+	<script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr"></script>
+
 
 	<!-- Cytoscape -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.24.0/cytoscape.min.js"></script>
@@ -408,7 +412,6 @@
 	
 						</div>
 					
-						
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Close</button>
 					</div>
@@ -498,6 +501,97 @@
 					</div>	
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary fs-7 fw-light me-0" data-bs-dismiss="modal">Create</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- m-style-model -->
+		<div class="modal fade" id="m-style-model" tabindex="-1"aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title fs-4 fw-light">MODEL STYLE</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
+					</div>
+					<div class="modal-body">	
+						<form class="my-1 mx-2">
+						
+							<div class="row  ms-2">
+								<div class="col-4 mt-1 p-0">	
+									<labe for="d-bgcolor-model" class="form-a fs-7 fw-bold">Background color</label>
+								</div>
+								<div class="col-1 ms-0">
+									<div id="picker-1" class="mb-4"></div>
+								</div>
+								<div class="col-6 ms-0">
+									<input type="text" id="d-bgColor-model" class="fs-7 bg-body-clear mt-1 border-0" placeholder="rgba(255,0,0,0.1)">
+								</div>
+							</div>	
+							<hr>	
+							<div class="row  ms-2">
+								<div class="col-4 mt-1 p-0">	
+									<labe for="d-bgimage-model" class="form-a fs-7 fw-bold">Background image</label>
+								</div>
+			
+								<div class="col-8 ms-0">
+									<div class="input-group">
+										<input type="text" id="d-bgimage-model" class="form-control fs-7 bg-body-secondary" placeholder="Add image file...">
+										<button class="btn btn-outline-secondary fs-7 text-end" type="button" id="addImgModel">Load</button>
+									</div>
+								</div>
+							
+							</div>		
+							<hr>
+							<div class="row  ms-2">
+								<div class="col-4 mt-1 p-0">	
+									<labe for="d-textColor-model" class="form-a fs-7 fw-bold">Text color</label>
+								</div>	
+								<div class="col-1 ms-0">
+									<div id="picker-2" class="mb-4"></div>
+								</div>
+								<div class="col-6 ms-0">
+									<input type="text" id="d-textColor-model" class="fs-7 bg-body-clear mt-1 border-0" placeholder="rgba(255,0,0,0.1)">
+								</div>
+							</div>
+							<hr>
+							<div class="row  ms-2">
+								<div class="col-4 mt-1 p-0">	
+									<labe for="d-edgesColor-model" class="form-a fs-7 fw-bold">Edges color</label>
+								</div>
+								<div class="col-1 ms-0">
+									<div id="picker-3" class="mb-4"></div>
+								</div>
+								<div class="col-6 ms-0 text-center">
+									<input type="text" id="d-edgesColor-model" class="form-control fs-7 bg-body-secondary" placeholder="rgba(255,0,0,0.1)">
+								</div>
+							</div>
+							<hr>
+							<div class="row  ms-2">
+								<div class="col-4 mt-1 p-0">	
+									<labe for="d-objectsColor-model" class="form-a fs-7 fw-bold">Objects color</label>
+								</div>
+								<div class="col-8 ms-0">	
+								<input type="text" class="form-control fs-7 bg-body-secondary me-0" id="d-objectsColor-model" placeholder="">
+								</div>
+							</div>
+							<hr>
+							<div class="row  ms-2">
+								<div class="col-4 mt-1 p-0">	
+									<labe for="d-objectsBorder-model" class="form-a fs-7 fw-bold">Border color</label>
+								</div>
+								<div class="col-8 ms-0">	
+								<input type="text" class="form-control fs-7 bg-body-secondary me-0" id="d-objectsBorder-model" placeholder="">
+								</div>
+							</div>
+							
+
+
+						</form>		
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary fs-7 fw-light me-0" data-bs-dismiss="modal">Save</button>
 					</div>
 				</div>
 			</div>
