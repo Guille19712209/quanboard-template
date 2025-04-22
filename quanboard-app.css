@@ -223,5 +223,40 @@ p {
   color: #888; 
 }
 
+/* WebKit (Chrome, Safari, Edge) */
+.form-range::-webkit-slider-thumb {
+  background-color: #000000; 
+  border: 1px solid #fff;;
+ 
+}
 
+/* Firefox */
+.form-range::-moz-range-thumb {
+  background-color: #000000;
+  border: 1px;
+  border-color:  #888;
+}
 
+/* Internet Explorer / Edge */
+.form-range::-ms-thumb {
+  background-color: #000000;
+  border: 1px;
+  border-color:  #888e;
+}
+
+/* Todos los switches activados (checkeados) */
+.form-check-input[type="checkbox"][role="switch"]:checked {
+  background-color: #000000; 
+  border-color: #000000;
+}
+
+/* Color del "thumb" del switch */
+.form-check-input[type="checkbox"][role="switch"]:checked::before {
+  background-color: white;
+}
+
+/* Opcional: switches apagados */
+.form-check-input[type="checkbox"][role="switch"] {
+  background-color: #dee2e6;
+  border-color: #dee2e6;
+}
