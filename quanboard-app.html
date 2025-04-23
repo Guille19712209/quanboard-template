@@ -563,7 +563,7 @@
 									<labe for="d-bgimage-model" class="form-a fs-7 fw-bold">Background image</label>
 								</div>
 			
-								<div class="col-7 ms-0">
+								<div class="col ms-0">
 									<div class="input-group">
 										<input type="text" id="d-bgimage-model" class="form-control fs-7 bg-body-secondary" placeholder="Add image file...">
 										<button class="btn btn-outline-secondary fs-7 text-end" type="button" id="addImgModel">Load</button>
@@ -574,7 +574,7 @@
 							<hr>
 							<div class="row  ms-2">
 								<div class="col-4 mt-1 p-0">	
-									<labe for="d-textColor-model" class="form-a fs-7 fw-bold">Text color</label>
+									<labe for="d-textColor-model" class="form-a fs-7 fw-bold">Texts color</label>
 								</div>	
 								<div class="col-1 ms-0">
 									<div id="picker-2" class="mb-4"></div>
@@ -610,7 +610,7 @@
 							<hr>
 							<div class="row  ms-2">
 								<div class="col-4 mt-1 p-0">	
-									<labe for="d-objectsBorder-model" class="form-a fs-7 fw-bold">Border color</label>
+									<labe for="d-objectsBorder-model" class="form-a fs-7 fw-bold">Borders color</label>
 								</div>
 								<div class="col-1 ms-0">
 									<div id="picker-5" class="mb-4"></div>
@@ -622,36 +622,37 @@
 							<hr>
 							<div class="row  ms-2">
 								<div class="col-4 mt-1 p-0">	
-									<labe for="d-nameFontSize-model" class="form-a fs-7 fw-bold">Font Sizes (em)</label>
+									<labe for="d-nameFontSize-model" class="form-a fs-7 fw-bold">Text sizes (em)</label>
 								</div>
-								<div class="col-2 ms-0 fs-7 fw-light text-center">	
+								<div class="col ms-0 fs-7 fw-light">	
 								<input type="text" class="form-control fs-7 bg-body-secondary text-center" onchange=changeModNamFS() id="d-nameFontSize-model" placeholder="1">
 								<p class="fs-7">object</p>
 								</div>
 
 
-								<div class="col-2 ms-3  fs-7 fw-light text-center">		
+								<div class="col ms-3  fs-7 fw-light">		
 								<input type="text" class="form-control fs-7 bg-body-secondary text-center" onchange=changeModValFS() id="d-valueFontSize-model" placeholder="2">
 								<p class="fs-7">value</p>
 								</div>
 
 			
-								<div class="col-2 ms-3  fs-7 fw-light text-center">		
+								<div class="col ms-3  fs-7 fw-light">		
 								<input type="text" class="form-control fs-7 bg-body-secondary text-center" onchange=changeModUniFS() id="d-unitFontSize-model" placeholder="1">
 								<p class="fs-7">unit</p>
 								</div>
 							</div>
 							<hr>	
+								
 							<div class="row  ms-2">
-								<div class="col-4 mt-1 p-0">	
-									<labe for="d-bgimage-model" class="form-a fs-7 fw-bold">Numbers Format</label>
+								<div class="col-2 mt-1 p-0">	
+									<labe class="form-a fs-7 fw-bold">Formats</label>
 								</div>
-			
-								<div class="col-md-7">
-									<select class="form-select fs-7 bg-body-secondary text-center" id="d-numbers-format">
+
+								<div class="col  fs-7 fw-light">
+									<select class="form-select fw-light fs-7 bg-body-secondary text-center" id="d-numbers-format">
 									  <option value="1">#.###</option>
 									  <option value="2">#.###,#</option>
-									  <option value="3">#.###,##</option>
+									  <option value="3" selected> #.###,##</option>
 									  <option value="4">#.###,###</option>
 									  <option value="5">#.###,####</option>
 									  <option value="6">####</option>
@@ -660,18 +661,14 @@
 									  <option value="9">####,###</option>
 									  <option value="10">####,####</option>
 									</select>
+									<p class="fs-7">numbers</p>
 								</div>
-							
-							</div>	
-							<hr>	
-							<div class="row  ms-2">
-								<div class="col-4 mt-1 p-0">	
-									<labe for="d-bgimage-model" class="form-a fs-7 fw-bold">Date Format</label>
-								</div>
+								
+
 			
-								<div class="col-md-7">
-									<select class="form-select fs-7 bg-body-secondary text-center" id="d-date-format">
-										<option value="1">MM-DD-YY</option>
+								<div class="col ms-3  fs-7 fw-light">
+									<select class="form-select fs-7 fw-light bg-body-secondary text-center" id="d-date-format">
+										<option value="1"selected>MM-DD-YY</option>
 										<option value="2">MMM-DD-YY</option>
 										<option value="3">DD-MM-YY</option>
 										<option value="4">DD-MMM-YY</option>
@@ -680,23 +677,20 @@
 										<option value="7">MM-YY</option>
 										<option value="8">MMM-YY</option>
 									</select>
+									<p class="fs-7 text-center">dates</p>
 								</div>
 							
-							</div>	
-							<hr>	
-							<div class="row  ms-2">
-								<div class="col-4 mt-1 p-0">	
-									<labe for="d-bgimage-model" class="form-a fs-7 fw-bold">Currency</label>
-								</div>
+
 			
-								<div class="col-md-7">
-									<select class="form-select fs-7 bg-body-secondary text-center" id="d-currency-format">
-										<option value="1">$</option>
+								<div class="col-2 ms-3 fs-7 fw-light">
+									<select class="form-select fs-7 fw-light bg-body-secondary text-center" id="d-currency-format">
+										<option value="1"selected>$</option>
 										<option value="2">€</option>
 										<option value="3">¥</option>
 										<option value="4">£</option>
 										<option value="5">¢</option>
 									</select>
+									<p class="fs-7">currency</p>
 								</div>
 							
 							</div>	
