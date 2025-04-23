@@ -148,14 +148,6 @@
 					</div>
 					<hr>
 					<div class="row ms-2">
-						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-export-model">Export</a>
-					</div>
-					<hr>
-					<div class="row ms-2">
-						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-close-model">Close</a>
-					</div>
-					<hr>
-					<div class="row ms-2">
 						<a class="nav-link fs-7" href="#">Sharing</a>
 					</div>
 					<hr>
@@ -181,10 +173,6 @@
 					<div class="row ms-2">
 						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-style-model">Style</a>	
 					</div>
-					<hr>
-					<div class="row ms-2">
-						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-sizes-model">Object sizes</a>
-					</div>
 					<hr>				
 					<div class="text-end">
 						<button type="button" class="btn btn-secondary fs-7 mt-1 me-2 " data-bs-dismiss="offcanvas" aria-a="Close">Close</button>
@@ -198,6 +186,9 @@
 							</div>
 							<div class="col-5 p-1 my-auto">
 								<p class="fs-7 fw-bold" id="b-user-model">Active User</p>
+							</div>
+							<div class="col-3 p-1 text-end">
+								<button type="button" class="btn btn-outline-secondary fs-7 mt-1 me-2 " data-bs-dismiss="offcanvas" aria-a="Close">Exit</button>
 							</div>
 					
 						</div>	
@@ -543,161 +534,200 @@
 						<h5 class="modal-title fs-4 fw-light">MODEL STYLE</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
 					</div>
-					<div class="modal-body">	
-						<form class="my-1 mx-2">
+					<div class="modal-body">
+
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs" id="tabsEnModal" role="tablist">
+							<li class="nav-item" role="presentation">
+								<button class="nav-link fs-7 fw-bold active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab4" type="button" role="tab">Apparence</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link fs-7 fw-bold" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab5" type="button" role="tab">Formats</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link fs-7 fw-bold" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab6" type="button" role="tab">Object Sizes</button>
+							</li>
+						</ul>
 						
-							<div class="row  ms-2">
-								<div class="col-4 mt-1 p-0">	
-									<labe for="d-bgColor-model" class="form-a fs-7 fw-bold">Background color</label>
-								</div>
-								<div class="col-1 ms-0">
-									<div id="picker-1"class="mb-4"></div>
-								</div>
-								<div class="col-6 ms-0">
-									<input type="text" id="d-bgColor-model" onchange=changeCyBg() class="form-control fs-7 border-0" placeholder="rgba(0,0,0,0)">
-								</div>
-							</div>	
-							<hr>	
-							<div class="row  ms-2">
-								<div class="col-4 mt-1 p-0">	
-									<labe for="d-bgimage-model" class="form-a fs-7 fw-bold">Background image</label>
-								</div>
+						<div class="tab-content">
+							<div class="tab-pane fade show active" id="tab4" role="tabpanel">
+								<div class="container-fluid form-scroll">
+									<form class="my-3 mx-2">
+						
+										<div class="row  ms-2">
+											<div class="col-4 mt-1 p-0">	
+												<labe for="d-bgColor-model" class="form-a fs-7 fw-bold">Background color</label>
+											</div>
+											<div class="col-1 ms-0">
+												<div id="picker-1"class="mb-4"></div>
+											</div>
+											<div class="col-6 ms-0">
+												<input type="text" id="d-bgColor-model" onchange=changeCyBg() class="form-control fs-7 border-0" placeholder="rgba(0,0,0,0)">
+											</div>
+										</div>	
+										<hr>	
+										<div class="row  ms-2">
+											<div class="col-4 mt-1 p-0">	
+												<labe for="d-bgimage-model" class="form-a fs-7 fw-bold">Background image</label>
+											</div>
+						
+											<div class="col ms-0">
+												<div class="input-group">
+													<input type="text" id="d-bgimage-model" class="form-control fs-7 bg-body-secondary" placeholder="Add image file...">
+													<button class="btn btn-outline-secondary fs-7 text-end" type="button" id="addImgModel">Load</button>
+												</div>
+											</div>
+										
+										</div>		
+										<hr>
+										<div class="row  ms-2">
+											<div class="col-4 mt-1 p-0">	
+												<labe for="d-textColor-model" class="form-a fs-7 fw-bold">Texts color</label>
+											</div>	
+											<div class="col-1 ms-0">
+												<div id="picker-2" class="mb-4"></div>
+											</div>
+											<div class="col-6 ms-0">
+												<input type="text" id="d-textColor-model" onchange=changeCyTx() class="form-control fs-7 border-0" placeholder="rgba(100,100,100,1)">
+											</div>
+										</div>
+										<hr>
+										<div class="row  ms-2">
+											<div class="col-4 mt-1 p-0">	
+												<labe for="d-edgesColor-model" class="form-a fs-7 fw-bold">Edges color</label>
+											</div>
+											<div class="col-1 ms-0">
+												<div id="picker-3" class="mb-4"></div>
+											</div>
+											<div class="col-6 ms-0 text-center">
+												<input type="text" id="d-edgesColor-model" onchange=changeCyEg() class="form-control fs-7 border-0" placeholder="rgba(100,100,100,0.7)">
+											</div>
+										</div>
+										<hr>
+										<div class="row  ms-2">
+											<div class="col-4 mt-1 p-0">	
+												<labe for="d-objectsColor-model"class="form-a fs-7 fw-bold">Objects color</label>
+											</div>
+											<div class="col-1 ms-0">
+												<div id="picker-4" class="mb-4"></div>
+											</div>
+											<div class="col-6 ms-0">	
+												<input type="text" id="d-objectsColor-model"  onchange=changeCyOb() class="form-control fs-7 border-0" placeholder="rgba(0,128,255,0.7)">
+											</div>
+										</div>
+										<hr>
+										<div class="row  ms-2">
+											<div class="col-4 mt-1 p-0">	
+												<labe for="d-objectsBorder-model" class="form-a fs-7 fw-bold">Borders color</label>
+											</div>
+											<div class="col-1 ms-0">
+												<div id="picker-5" class="mb-4"></div>
+											</div>
+											<div class="col-6 ms-0">	
+											<input type="text" class="form-control fs-7 border-0" id="d-objectsBorder-model" onchange=changeCyBo() placeholder="rgba(100,100,100,0.7)">
+											</div>
+										</div>
+										<hr>
+										<div class="row  ms-2">
+											<div class="col-4 mt-1 p-0">	
+												<labe for="d-nameFontSize-model" class="form-a fs-7 fw-bold">Text sizes (em)</label>
+											</div>
+											<div class="col ms-0 fs-7 fw-light">	
+											<input type="text" class="form-control fs-7 bg-body-secondary text-center" onchange=changeModNamFS() id="d-nameFontSize-model" placeholder="1">
+											<p class="fs-7">object</p>
+											</div>
 			
-								<div class="col ms-0">
-									<div class="input-group">
-										<input type="text" id="d-bgimage-model" class="form-control fs-7 bg-body-secondary" placeholder="Add image file...">
-										<button class="btn btn-outline-secondary fs-7 text-end" type="button" id="addImgModel">Load</button>
-									</div>
-								</div>
-							
-							</div>		
-							<hr>
-							<div class="row  ms-2">
-								<div class="col-4 mt-1 p-0">	
-									<labe for="d-textColor-model" class="form-a fs-7 fw-bold">Texts color</label>
-								</div>	
-								<div class="col-1 ms-0">
-									<div id="picker-2" class="mb-4"></div>
-								</div>
-								<div class="col-6 ms-0">
-									<input type="text" id="d-textColor-model" onchange=changeCyTx() class="form-control fs-7 border-0" placeholder="rgba(100,100,100,1)">
-								</div>
-							</div>
-							<hr>
-							<div class="row  ms-2">
-								<div class="col-4 mt-1 p-0">	
-									<labe for="d-edgesColor-model" class="form-a fs-7 fw-bold">Edges color</label>
-								</div>
-								<div class="col-1 ms-0">
-									<div id="picker-3" class="mb-4"></div>
-								</div>
-								<div class="col-6 ms-0 text-center">
-									<input type="text" id="d-edgesColor-model" onchange=changeCyEg() class="form-control fs-7 border-0" placeholder="rgba(100,100,100,0.7)">
-								</div>
-							</div>
-							<hr>
-							<div class="row  ms-2">
-								<div class="col-4 mt-1 p-0">	
-									<labe for="d-objectsColor-model"class="form-a fs-7 fw-bold">Objects color</label>
-								</div>
-								<div class="col-1 ms-0">
-									<div id="picker-4" class="mb-4"></div>
-								</div>
-								<div class="col-6 ms-0">	
-									<input type="text" id="d-objectsColor-model"  onchange=changeCyOb() class="form-control fs-7 border-0" placeholder="rgba(0,128,255,0.7)">
-								</div>
-							</div>
-							<hr>
-							<div class="row  ms-2">
-								<div class="col-4 mt-1 p-0">	
-									<labe for="d-objectsBorder-model" class="form-a fs-7 fw-bold">Borders color</label>
-								</div>
-								<div class="col-1 ms-0">
-									<div id="picker-5" class="mb-4"></div>
-								</div>
-								<div class="col-6 ms-0">	
-								<input type="text" class="form-control fs-7 border-0" id="d-objectsBorder-model" onchange=changeCyBo() placeholder="rgba(100,100,100,0.7)">
-								</div>
-							</div>
-							<hr>
-							<div class="row  ms-2">
-								<div class="col-4 mt-1 p-0">	
-									<labe for="d-nameFontSize-model" class="form-a fs-7 fw-bold">Text sizes (em)</label>
-								</div>
-								<div class="col ms-0 fs-7 fw-light">	
-								<input type="text" class="form-control fs-7 bg-body-secondary text-center" onchange=changeModNamFS() id="d-nameFontSize-model" placeholder="1">
-								<p class="fs-7">object</p>
-								</div>
-
-
-								<div class="col ms-3  fs-7 fw-light">		
-								<input type="text" class="form-control fs-7 bg-body-secondary text-center" onchange=changeModValFS() id="d-valueFontSize-model" placeholder="2">
-								<p class="fs-7">value</p>
-								</div>
-
 			
-								<div class="col ms-3  fs-7 fw-light">		
-								<input type="text" class="form-control fs-7 bg-body-secondary text-center" onchange=changeModUniFS() id="d-unitFontSize-model" placeholder="1">
-								<p class="fs-7">unit</p>
+											<div class="col ms-3  fs-7 fw-light">		
+											<input type="text" class="form-control fs-7 bg-body-secondary text-center" onchange=changeModValFS() id="d-valueFontSize-model" placeholder="2">
+											<p class="fs-7">value</p>
+											</div>
+
+											<div class="col ms-3  fs-7 fw-light">		
+											<input type="text" class="form-control fs-7 bg-body-secondary text-center" onchange=changeModUniFS() id="d-unitFontSize-model" placeholder="1">
+											<p class="fs-7">unit</p>
+											</div>
+										</div>
+										
+									</form>		
 								</div>
 							</div>
-							<hr>	
-								
-							<div class="row  ms-2">
-								<div class="col-2 mt-1 p-0">	
-									<labe class="form-a fs-7 fw-bold">Formats</label>
-								</div>
 
-								<div class="col  fs-7 fw-light">
-									<select class="form-select fw-light fs-7 bg-body-secondary text-center" id="d-numbers-format">
-									  <option value="1">#.###</option>
-									  <option value="2">#.###,#</option>
-									  <option value="3" selected> #.###,##</option>
-									  <option value="4">#.###,###</option>
-									  <option value="5">#.###,####</option>
-									  <option value="6">####</option>
-									  <option value="7">####,#</option>
-									  <option value="8">####,##</option>
-									  <option value="9">####,###</option>
-									  <option value="10">####,####</option>
-									</select>
-									<p class="fs-7">numbers</p>
-								</div>
-								
-
+							<div class="tab-pane fade" id="tab5" role="tabpanel">
+								<div class="container-fluid">
+									<form class="my-3 mx-2">
+										<div class="row  ms-2">
+											<div class="col-4 mt-1 p-0">	
+												<labe class="form-a fs-7 fw-bold">Numbers</label>
+											</div>
 			
-								<div class="col ms-3  fs-7 fw-light">
-									<select class="form-select fs-7 fw-light bg-body-secondary text-center" id="d-date-format">
-										<option value="1"selected>MM-DD-YY</option>
-										<option value="2">MMM-DD-YY</option>
-										<option value="3">DD-MM-YY</option>
-										<option value="4">DD-MMM-YY</option>
-										<option value="5">MM-YYYY</option>
-										<option value="6">MMM-YYYY</option>
-										<option value="7">MM-YY</option>
-										<option value="8">MMM-YY</option>
-									</select>
-									<p class="fs-7 text-center">dates</p>
+											<div class="col-4 fs-7 fw-light">
+												<select class="form-select fw-light fs-7 bg-body-secondary text-center" id="d-numbers-format">
+												  <option value="1">#.###</option>
+												  <option value="2">#.###,#</option>
+												  <option value="3" selected> #.###,##</option>
+												  <option value="4">#.###,###</option>
+												  <option value="5">#.###,####</option>
+												  <option value="6">####</option>
+												  <option value="7">####,#</option>
+												  <option value="8">####,##</option>
+												  <option value="9">####,###</option>
+												  <option value="10">####,####</option>
+												</select>
+											
+											</div>
+										</div>
+										<hr>
+
+										<div class="row  ms-2">
+											<div class="col-4 mt-1 p-0">	
+												<labe class="form-a fs-7 fw-bold">Dates</label>
+											</div>
+											<div class="col-4  fs-7 fw-light">
+												<select class="form-select fs-7 fw-light bg-body-secondary text-center" id="d-date-format">
+													<option value="1"selected>MM-DD-YY</option>
+													<option value="2">MMM-DD-YY</option>
+													<option value="3">DD-MM-YY</option>
+													<option value="4">DD-MMM-YY</option>
+													<option value="5">MM-YYYY</option>
+													<option value="6">MMM-YYYY</option>
+													<option value="7">MM-YY</option>
+													<option value="8">MMM-YY</option>
+												</select>
+											</div>
+										</div>
+										<hr>
+
+										<div class="row  ms-2">
+											<div class="col-4 mt-1 p-0">	
+												<labe class="form-a fs-7 fw-bold">Currency</label>
+											</div>
+						
+											<div class="col-2 fs-7 fw-light">
+												<select class="form-select fs-7 fw-light bg-body-secondary text-center" id="d-currency-format">
+													<option value="1"selected>$</option>
+													<option value="2">€</option>
+													<option value="3">¥</option>
+													<option value="4">£</option>
+													<option value="5">¢</option>
+												</select>
+											</div>
+										
+										</div>	
+
+									</form>
+									<div class="row g-3" id="open-shared"></div>	
 								</div>
-							
+							</div>
 
-			
-								<div class="col-2 ms-3 fs-7 fw-light">
-									<select class="form-select fs-7 fw-light bg-body-secondary text-center" id="d-currency-format">
-										<option value="1"selected>$</option>
-										<option value="2">€</option>
-										<option value="3">¥</option>
-										<option value="4">£</option>
-										<option value="5">¢</option>
-									</select>
-									<p class="fs-7">currency</p>
+							<div class="tab-pane fade" id="tab6" role="tabpanel">
+								<div class="container-fluid form-scroll">
+									<div class="row g-3" id="open-library"></div>	
 								</div>
-							
-							</div>	
-							
+							</div>
+						</div>
 
-
-						</form>		
+	
 					</div>
 
 					<div class="modal-footer d-flex justify-content-start">
