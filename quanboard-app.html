@@ -65,7 +65,7 @@
 				<div class="row justify-content-start">
 					<div class="col-2">
 						<button type="button" class="btn btn-round btn-dark fs-3 mx-auto" id="d-btn-time" data-bs-toggle="modal" data-bs-target="#m-time-model"> 108
-							<span class="badge-number badge-light">120</span>
+							<span class="badge-number badge-light" id="time-badge">120</span>
 						</button>
 					</div>
 					<div class="col-7 d-flex flex-column ms-4">
@@ -73,7 +73,7 @@
 						
 						<div class="row ms-1 align-item-start">	
 
-							<div class="col-6 mt-3 ms-2 light" id="a-time-unit">YEARS</div>
+							<div class="col-6 mt-3 ms-2 light" id="label-time-unit">Years</div>
 							<div class="col-2 mt-1">
 								<button type="button" class="btn btn-time-control" id="b-timeBack-model"><</button>
 							</div>
@@ -148,7 +148,7 @@
 					</div>
 					<hr>
 					<div class="row ms-2">
-						<a class="nav-link fs-7" href="#">Share</a>
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-share-model">Share</a>
 					</div>
 					<hr>
 					<div class="row ms-2">
@@ -180,15 +180,15 @@
 
 					<div class="position-absolute bottom-0 start-0 end-0 border-top">
 						
-						<div class="row align-items-center p-1">
-							<div class="col-3 ms-2 p-2">
-								<img src="https://github.com/mdo.png" alt="" width="40" height="40" class="rounded-circle ms-3">
+						<div class="row align-items-center p-3">
+							<div class="col-2 ms-3 p-2">
+								<img src="https://github.com/mdo.png" alt="" width="40" height="40" class="rounded-circle">
 							</div>
-							<div class="col-5 p-1 my-auto">
+							<div class="col-6 p-1 my-auto">
 								<p class="fs-7 fw-bold" id="b-user-model">Active User</p>
 							</div>
 							<div class="col-3 p-1 text-end">
-								<button type="button" class="btn btn-outline-secondary fs-7 mt-1 me-2 " data-bs-dismiss="offcanvas" aria-a="Close">Exit</button>
+								<button type="button" class="btn btn-outline-secondary fs-7 mt-1 me-2 " data-bs-dismiss="offcanvas" data-bs-toggle="modal" data-bs-target="#m-exit-model" aria-a="Close">Exit</button>
 							</div>
 					
 						</div>	
@@ -227,19 +227,186 @@
 				<div class="modal-body">
 
 				
-					<div class="row ms-2">
-						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-style-model">Style</a>	
-					</div>
-					<hr>
-					<div class="row ms-2">
-						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-sizes-model">Object sizes</a>
-					</div>
-					<hr>
-					<div class="row ms-2">
-						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-format-model">Format</a>
-					</div>
-					<hr>
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" id="tabsNewObject" role="tablist">
+						<li class="nav-item" role="presentation">
+							<button class="nav-link fs-7 fw-bold active"  data-bs-toggle="tab" data-bs-target="#tab-data-object" type="button" role="tab">data</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link fs-7 fw-bold"  data-bs-toggle="tab" data-bs-target="#tab-apparence-object" type="button" role="tab">Apparence</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link fs-7 fw-bold" data-bs-toggle="tab" data-bs-target="#tab-rules-object" type="button" role="tab">Rules</button>
+						</li>
+					</ul>
 
+					<div class="tab-content">
+						<div class="tab-pane fade" id="tab-apparence-object" role="tabpanel">
+							<div class="container-fluid form-scroll">
+								<form class="my-3 mx-2">
+
+									<div class="row  ms-2">
+										<div class="col-4 mt-1 p-0">	
+											<labe for="d-objectColor-object"class="form-a fs-7 fw-bold">Object color</label>
+										</div>
+										<div class="col-1 ms-0">
+											<div id="picker-4" class="mb-4"></div>
+										</div>
+										<div class="col-6 ms-0">	
+											<input type="text" id="d-objectColor-object"  class="form-control fs-7 border-0" placeholder="rgba(0,128,255,0.7)">
+										</div>
+									</div>
+									<hr>
+						
+									<div class="row  ms-2">
+										<div class="col-4 mt-1 p-0">	
+											<labe for="d-bgimage-object" class="form-a fs-7 fw-bold">Background image</label>
+										</div>
+					
+										<div class="col ms-0">
+											<div class="input-group">
+												<input type="text" id="d-bgimage-object" class="form-control fs-7 bg-body-secondary" placeholder="Add image file...">
+												<button class="btn btn-outline-secondary fs-7 text-end" type="button" id="addImgModel">Load</button>
+											</div>
+										</div>
+									
+									</div>		
+									<hr>
+									<div class="row  ms-2">
+										<div class="col-4 mt-1 p-0">	
+											<labe for="d-textColor-object" class="form-a fs-7 fw-bold">Texts color</label>
+										</div>	
+										<div class="col-1 ms-0">
+											<div id="picker-2" class="mb-4"></div>
+										</div>
+										<div class="col-6 ms-0">
+											<input type="text" id="d-textColor-object" class="form-control fs-7 border-0" placeholder="rgba(100,100,100,1)">
+										</div>
+									</div>
+									<hr>
+									<div class="row  ms-2">
+										<div class="col-4 mt-1 p-0">	
+											<labe for="d-objectsBorder-object" class="form-a fs-7 fw-bold">Borders color</label>
+										</div>
+										<div class="col-1 ms-0">
+											<div id="picker-5" class="mb-4"></div>
+										</div>
+										<div class="col-6 ms-0">	
+										<input type="text" class="form-control fs-7 border-0" id="d-objectsBorder-model" placeholder="rgba(100,100,100,0.7)">
+										</div>
+									</div>
+									<hr>
+									<div class="row  ms-2">
+										<div class="col-4 mt-1 p-0">	
+											<labe for="d-nameFontSize-model" class="form-a fs-7 fw-bold">Text sizes (em)</label>
+										</div>
+										<div class="col ms-0 fs-7 fw-light">	
+										<input type="text" class="form-control fs-7 bg-body-secondary text-center" id="d-nameFontSize-model" placeholder="1">
+										<p class="fs-7">object</p>
+										</div>
+		
+		
+										<div class="col ms-3  fs-7 fw-light">		
+										<input type="text" class="form-control fs-7 bg-body-secondary text-center" id="d-valueFontSize-model" placeholder="2">
+										<p class="fs-7">value</p>
+										</div>
+
+										<div class="col ms-3  fs-7 fw-light">		
+										<input type="text" class="form-control fs-7 bg-body-secondary text-center" id="d-unitFontSize-model" placeholder="1">
+										<p class="fs-7">unit</p>
+										</div>
+										
+									</div>
+									
+								</form>		
+							</div>
+						</div>
+
+						<div class="tab-pane fade show active" id="tab-data-object" role="tabpanel">
+							<div class="container-fluid">
+								<form class="my-3 mx-2">
+									
+									
+									<div class="row  ms-2">
+										<div class="col-4 mt-3 p-0">	
+											<label class="form-a fs-7 fw-bold text-center">Displayed value</label>
+										</div>
+										<div class="col-4 mt-1 p-0 text-center">	
+											<label class="form-a fs-2 fw-bold text-center">1.234,55</label>
+										</div>
+									</div>
+									<hr>
+									
+									<div class="row  ms-2">
+										<div class="col-4 mt-1 p-0">	
+											<labe for="d-Name-object" class="form-a fs-7 fw-bold">Object name</label>
+										</div>
+										<div class="col-8 ms-0 ">	
+										<input type="text" class="form-control fs-7 bg-body-secondary" id="d-Name-object">
+										</div>
+									</div>
+									<hr>
+
+									<div class="row  ms-2">
+										<div class="col-4 mt-1 p-0">	
+											<labe class="form-a fs-7 fw-bold">Parent</label>
+										</div>
+										<div class="col-8 fs-7 fw-light text-center">	
+											<select class="form-select fs-7 fw-light bg-body-secondary" id="d-unit-sizeRange">
+												<option value="Object A">Object A</option> 
+												<option value="Object B" selected>Object B</option> 
+												<option value="Object C">Object D</option> 
+												<option value="Object E">Object F</option> 
+
+											</select>
+										</div>
+									</div>	
+									<hr>
+									<div class="row  ms-2">
+										<div class="col-4 mt-1 p-0">	
+											<labe class="form-a fs-7 fw-bold">unit</label>
+										</div>
+										<div class="col-3 fs-7 fw-light text-center">
+									
+											<select class="form-select fs-7 fw-light bg-body-secondary" id="d-unit-sizeRange">
+												<option value="$">$</option> 
+												<option value="m">m</option>
+												<option value="m2">m2</option>
+												<option value="gr">gr</option>
+												<option value="kg">kg</option>
+												<option value="ton">ton</option>
+												<option value="%">%</option>
+												<option value="♥">♥</option>
+											</select>
+										</div>
+									</div>	
+									<hr>
+									<div class="row  ms-2">
+										<div class="col-4 mt-1 p-0">	
+											<labe for="d-Name-object" class="form-a fs-7 fw-bold">Formula</label>
+										</div>
+										<div class="col-8 ms-0 mt-1 mb-1 p-0">	
+											<textarea class="form-control fs-7 bg-body-secondary" id="d-formula-object" rows="5" ></textarea>
+										</div>
+									</div>
+									<hr>
+									
+									
+								</form>
+									
+							</div>
+						</div>
+
+						<div class="tab-pane fade" id="tab-rules-object" role="tabpanel">
+							<div class="container-fluid">
+								<form class="my-3 mx-2">
+									
+								
+
+								</form>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Save changes</button>
@@ -350,22 +517,18 @@
 						<h5 class="modal-title fs-4 fw-light">OPEN MODEL</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
 					</div>
-					<div class="row align-item-center justify-content-center">
+					<div class="row mb-4 mt-4 justify-content-center">
 							
-								<div class="col-6 my-2">	
-									<input type="text" class="form-control fs-7 bg-body-secondary" id="d-fileSearch-open" placeholder="Search word in Names and tags..." style="height: 32px; border-bottom-right-radius: 0; border-top-right-radius: 0; ;"">
+						<div class="col-6">	
+							<input type="text" class="form-control fs-7 bg-body-secondary" id="d-fileSearch-open" placeholder="Search word in Names and tags..." style="height: 32px; border-bottom-right-radius: 0; border-top-right-radius: 0; ;"">
 
-								</div>
-								<div class="col-1 my-2">
-									<button type="button" class="btn btn-secondary" style="height: 32px; border-bottom-left-radius: 0; border-top-left-radius: 0; ;">
-										<i class="bi bi-search" style="vertical-align: top"></i>
-									</button>
-								</div>
-							<hr>
-
+						</div>
+						<div class="col-1">
+							<button type="button" class="btn btn-secondary" style="height: 32px; border-bottom-left-radius: 0; border-top-left-radius: 0; ;">
+								<i class="bi bi-search" style="vertical-align: top"></i>
+							</button>
+						</div>
 					</div>	
-
-					
 						<div class="modal-body">
 
 							<!-- Nav tabs -->
@@ -420,7 +583,10 @@
 						<h5 class="modal-title fs-4 fw-light">NEW MODEL</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
 					</div>
+					
 					<div class="modal-body">	
+						
+						
 						<form class="my-1 mx-2">
 							<div class="row  ms-2">
 								<div class="col-3 mt-1 p-0">	
@@ -449,19 +615,62 @@
 			</div>
 		</div>
 
-		<!-- m-close-model -->
-		<div class="modal fade" id="m-close-model" tabindex="-1"aria-hidden="true">
+		<!-- m-time-model -->
+		<div class="modal fade" id="m-time-model" tabindex="-1"aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title fs-4 fw-light">CLOSE MODEL</h5>
+						<h5 class="modal-title fs-4 fw-light">TIME</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
+					</div>
+					<div class="modal-body">	
+						<form class="my-1 mx-2">
+							<div class="row  ms-2">
+								<div class="col-3 mt-1 p-0">	
+									<labe for="d-newName-model" class="form-a fs-7 fw-bold">Time unit</label>
+								</div>
+								<div class="col-3 ms-0 ">	
+									<select class="form-select fs-7 bg-body-secondary me-0 text-center" id="d-timeUnit-Model">
+										<option value="Years">Years</option>
+										<option value="Months"selected>Months</option>
+										<option value="Weeks">Weeks</option>
+										<option value="Days">Days</option>
+									</select>
+								</div>
+							</div>
+							<hr>
+							<div class="row  ms-2">
+								<div class="col-3 mt-1 p-0">	
+									<labe for="d-Vers-model" class="form-a fs-7 fw-bold">Total periods 
+									</label>
+								</div>
+								<div class="col-3 ms-0">	
+								<input type="text" class="form-control fs-7 bg-body-secondary me-0 text-center" id="d-timePeriods-model" value=12 placeholder="12">
+								</div>
+							</div>		
+						</form>		
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary fs-7 fw-light me-0" data-bs-dismiss="modal" onClick="setTime()" id="b-save-time">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- m-exit-model -->
+		<div class="modal fade" id="m-exit-model" tabindex="-1"aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title fs-4 fw-light">EXIT</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
 					</div>
 					<div class="modal-body">	
 						<form class="my-1 mx-2">
 							<div class="row  ms-2">
 								<div class="col-12 mt-1 p-0 ">	
-									<p class="form-a fs-6 fw-bold justify-content-start">Are you sure you want to close this model?</p>
+									<p class="form-a fs-6 fw-bold justify-content-start">Are you sure you want to close session?</p>
 									<p class="form-a fs-7 fw-light justify-content-start">All changes are automatically saved.</p>
 									<p></p>
 								</div>
@@ -477,8 +686,7 @@
 			</div>
 		</div>
 
-		<!-- m-vers-model -->
-		 
+		<!-- m-vers-model -->	 
 		<div class="modal fade" id="m-vers-model" tabindex="-1" aria-aledby="newVersion" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -562,7 +770,7 @@
 												<div id="picker-1"class="mb-4"></div>
 											</div>
 											<div class="col-6 ms-0">
-												<input type="text" id="d-bgColor-model" onchange=changeCyBg() class="form-control fs-7 border-0" placeholder="rgba(0,0,0,0)">
+												<input type="text" id="d-bgColor-model" class="form-control fs-7 border-0" placeholder="rgba(0,0,0,0)">
 											</div>
 										</div>	
 										<hr>	
@@ -588,7 +796,7 @@
 												<div id="picker-2" class="mb-4"></div>
 											</div>
 											<div class="col-6 ms-0">
-												<input type="text" id="d-textColor-model" onchange=changeCyTx() class="form-control fs-7 border-0" placeholder="rgba(100,100,100,1)">
+												<input type="text" id="d-textColor-model" class="form-control fs-7 border-0" placeholder="rgba(100,100,100,1)">
 											</div>
 										</div>
 										<hr>
@@ -600,7 +808,7 @@
 												<div id="picker-3" class="mb-4"></div>
 											</div>
 											<div class="col-6 ms-0 text-center">
-												<input type="text" id="d-edgesColor-model" onchange=changeCyEg() class="form-control fs-7 border-0" placeholder="rgba(100,100,100,0.7)">
+												<input type="text" id="d-edgesColor-model" class="form-control fs-7 border-0" placeholder="rgba(100,100,100,0.7)">
 											</div>
 										</div>
 										<hr>
@@ -612,7 +820,7 @@
 												<div id="picker-4" class="mb-4"></div>
 											</div>
 											<div class="col-6 ms-0">	
-												<input type="text" id="d-objectsColor-model"  onchange=changeCyOb() class="form-control fs-7 border-0" placeholder="rgba(0,128,255,0.7)">
+												<input type="text" id="d-objectsColor-model"  class="form-control fs-7 border-0" placeholder="rgba(0,128,255,0.7)">
 											</div>
 										</div>
 										<hr>
@@ -624,7 +832,7 @@
 												<div id="picker-5" class="mb-4"></div>
 											</div>
 											<div class="col-6 ms-0">	
-											<input type="text" class="form-control fs-7 border-0" id="d-objectsBorder-model" onchange=changeCyBo() placeholder="rgba(100,100,100,0.7)">
+											<input type="text" class="form-control fs-7 border-0" id="d-objectsBorder-model" placeholder="rgba(100,100,100,0.7)">
 											</div>
 										</div>
 										<hr>
@@ -633,18 +841,18 @@
 												<labe for="d-nameFontSize-model" class="form-a fs-7 fw-bold">Text sizes (em)</label>
 											</div>
 											<div class="col ms-0 fs-7 fw-light">	
-											<input type="text" class="form-control fs-7 bg-body-secondary text-center" onchange=changeModNamFS() id="d-nameFontSize-model" placeholder="1">
+											<input type="text" class="form-control fs-7 bg-body-secondary text-center" id="d-nameFontSize-model" placeholder="1">
 											<p class="fs-7">object</p>
 											</div>
 			
 			
 											<div class="col ms-3  fs-7 fw-light">		
-											<input type="text" class="form-control fs-7 bg-body-secondary text-center" onchange=changeModValFS() id="d-valueFontSize-model" placeholder="2">
+											<input type="text" class="form-control fs-7 bg-body-secondary text-center" id="d-valueFontSize-model" placeholder="2">
 											<p class="fs-7">value</p>
 											</div>
 
 											<div class="col ms-3  fs-7 fw-light">		
-											<input type="text" class="form-control fs-7 bg-body-secondary text-center" onchange=changeModUniFS() id="d-unitFontSize-model" placeholder="1">
+											<input type="text" class="form-control fs-7 bg-body-secondary text-center" id="d-unitFontSize-model" placeholder="1">
 											<p class="fs-7">unit</p>
 											</div>
 										</div>
@@ -703,7 +911,7 @@
 												<labe class="form-a fs-7 fw-bold">Currency</label>
 											</div>
 						
-											<div class="col-2 fs-7 fw-light">
+											<div class="col-4 fs-7 fw-light">
 												<select class="form-select fs-7 fw-light bg-body-secondary text-center" id="d-currency-format">
 													<option value="1"selected>$</option>
 													<option value="2">€</option>
@@ -743,24 +951,20 @@
 												</select>
 											</div>
 											<div class="col fs-7 ms-3 fw-light">
-												<input type="text" class="form-control fs-7 bg-body-secondary text-center" onchange=changeModUniFS() id="d-min-sizeRange" placeholder="100">
+												<input type="text" class="form-control fs-7 bg-body-secondary text-center" id="d-min-sizeRange" placeholder="100">
 												<p class="fs-7 mb-1">min px</p>
 											</div>
 											<div class="col fs-7 ms-3 fw-light">
-												<input type="text" class="form-control fs-7 bg-body-secondary text-center" onchange=changeModUniFS() id="d-max-sizeRange" placeholder="1000">
+												<input type="text" class="form-control fs-7 bg-body-secondary text-center" id="d-max-sizeRange" placeholder="1000">
 												<p class="fs-7 mb-1">max px</p>
 											</div>
 										</div>
 										<hr>
 
-										
-
 									</form>
 								</div>
 							</div>
 						</div>
-
-	
 					</div>
 
 					<div class="modal-footer d-flex justify-content-start">
@@ -769,12 +973,120 @@
 							<P class="fs-7 fw-light text-danger ms-2">Changes here will affect all the objects in the model.</P>
 						</div>
 						<div class="col d-flex justify-content-end">	
-							<button type="button" class="btn btn-secondary fs-7 fw-light me-0" data-bs-dismiss="modal">Save</button>
+							<button type="button" class="btn btn-secondary fs-7 fw-light me-0" onClick="changeModelStyle()" data-bs-dismiss="modal">Save</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>	
+
+		<!-- m-share-model -->	 
+		<div class="modal fade" id="m-share-model" tabindex="-1" aria-aledby="share" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title fs-4 fw-light">SHARE</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form class="mx-2">
+							<div class="row mb-4 justify-content-center">
+							
+								<div class="col-8">	
+									<input type="text" class="form-control fs-7 bg-body-secondary" id="d-fileSearch-open" placeholder="Add email of person to share this model ..." style="height: 32px; border-bottom-right-radius: 0; border-top-right-radius: 0; ;">
+								</div>
+								<div class="col-1">
+									<button type="button" class="btn btn-secondary" style="height: 32px; border-bottom-left-radius: 0; border-top-left-radius: 0; ;">
+										<i class="bi bi-search" style="vertical-align: top"></i>
+									</button>
+								</div>
+								
+							</div>
+							<div class="row ms-2 align-items-center">	
+								<div class="col-md-3 m-0 p-0">				
+									<p class="fs-7 fw-bold">Shared with</p>
+								</div>
+							</div>
+							
+							<hr>
+							<div class="row ms-2 align-items-center">
+								
+								<div class="col-1 ">
+									<img src="https://github.com/mdo.png" alt="" width="40" height="40" class="rounded-circle">
+								</div>
+								<div class="col-5 ms-2">
+									<p class="fs-7 fw-bold" id="d-shared-model-1">Active User</p>
+									<p class="fs-7 fw-light" id="d-shared-mail-model-1">user@mail.com</p>
+								</div>
+								<div class="col-2 p-0">				
+									<button type="button" class="btn btn-outline-danger fs-7 fw-light ms-0">Remove</button>
+								</div>
+								<div class="col-3 ms-3 fs-7 fw-light align-item-center">	
+									<select class="form-select fs-7 fw-light bg-body-secondary" id="d-role-shared-1">
+										<option value="Viewer">Viewer</option> 
+										<option value="Editor">Editor</option>
+										<option value="Owner">Owner</option>
+										<option value="Contributor">Contributor</option>
+									</select>
+								</div>
+							</div>
+							<hr>
+							<div class="row ms-2 align-items-center">
+								
+								<div class="col-1 ">
+									<img src="https://github.com/mdo.png" alt="" width="40" height="40" class="rounded-circle">
+								</div>
+								<div class="col-5 ms-2">
+									<p class="fs-7 fw-bold" id="d-shared-model-2">Active User</p>
+									<p class="fs-7 fw-light" id="d-shared-mail-model-2">user@mail.com</p>
+								</div>
+								<div class="col-2 p-0">				
+									<button type="button" class="btn btn-outline-danger fs-7 fw-light ms-0">Remove</button>
+								</div>
+								<div class="col-3 ms-3 fs-7 fw-light align-item-center">	
+									<select class="form-select fs-7 fw-light bg-body-secondary" id="d-role-shared-2">
+										<option value="Viewer">Viewer</option> 
+										<option value="Editor">Editor</option>
+										<option value="Owner" selected>Owner</option>
+										<option value="Contributor">Contributor</option>
+									</select>
+								</div>
+							</div>
+							<hr>
+							<div class="row ms-2 align-items-center">
+								
+								<div class="col-1 ">
+									<img src="https://github.com/mdo.png" alt="" width="40" height="40" class="rounded-circle">
+								</div>
+								<div class="col-5 ms-2">
+									<p class="fs-7 fw-bold" id="d-shared-model-3">Active User</p>
+									<p class="fs-7 fw-light" id="d-shared-mail-model-3">user@mail.com</p>
+								</div>
+								<div class="col-2 p-0">				
+									<button type="button" class="btn btn-outline-danger fs-7 fw-light ms-0">Remove</button>
+								</div>
+								<div class="col-3 ms-3 fs-7 fw-light align-item-center">	
+									<select class="form-select fs-7 fw-light bg-body-secondary" id="d-role-shared-3">
+										<option value="Viewer">Viewer</option> 
+										<option value="Editor"selected>Editor</option>
+										<option value="Owner">Owner</option>
+										<option value="Contributor">Contributor</option>
+									</select>
+								</div>
+							</div>
+							<hr>
+
+							
+					
+							
+						</form>
+					</div>	
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary fs-7 fw-light me-0" data-bs-dismiss="modal">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<script src="./lib/quanboard-app.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
