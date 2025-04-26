@@ -264,3 +264,11 @@ p {
 .modal-superxl {
   max-width: 1800px; /* o el ancho que necesites */
 }
+
+.form-select {
+
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 5px ;
+bottom: 5px;
+}
