@@ -57,8 +57,8 @@
 				</div>			
 			</div>
 				
-			<div class="container-btn-outputs">
-				<button type="button" class="btn btn-round btn-dark fs-1" id="btn-outputs" data-bs-toggle="offcanvas" data-bs-target="#o-functions-model" aria-controls="offcanvasOutputs"> > </button>
+			<div class="container-btn-table">
+				<button type="button" class="btn btn-round btn-dark fs-1" id="btn-outputs" data-bs-toggle="modal" data-bs-target="#m-table-model" aria-controls="m-table-model"> > </button>
 			</div>
 
 			<div class="container-btn-time">
@@ -200,21 +200,42 @@
 		</div>
 
 
-		<!-- o-functions > -->
+		<!-- m-table-model > -->
 	
-		<div class="offcanvas offcanvas-end" tabindex="-1" id="o-functions-model" aria-aledby="o-functions-model">
-			<div class="offcanvas-header">
-				<h4 class="offcanvas-title mt-10 fw-light" id="offcanvasOutputsla">FUNCTIONS </h4>
-				<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-a="Close"></button>
-			</div>
-			<hr>
-			<div class="offcanvas-body">
-				<div>
-				Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+		<div class="modal fade" id="m-table-model" tabindex="-1">
+			<div class="modal-dialog modal-superxl">
+			  <div class="modal-content">
+				
+				<div class="modal-header">
+					<h5 class="modal-title fs-4 fw-light" id="d-label-newObject">MODEL TABLE</h5>
+				  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
 				</div>
-	
+		  
+				<div class="modal-body">
+
+				<div class="row ms-2">
+					<div class="col-10 m-0 p-0" >
+						<button type="button" id="b-save-object" class="btn btn-secondary fs-7 fw-light">Filter</button>
+					</div>
+				</div>
+
+				<hr>
+
+				  <div class="table-responsive">
+					<table id="tablaDinamica" class="table table-bordered text-center">
+					</table>
+				  </div>
+				</div>
+		  
+				<div class="modal-footer">
+				  <button type="button" id="b-export-model" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Export</button>
+				  <button type="button" id="b-save-object" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Save changes</button>
+				</div>
+		  
+			  </div>
 			</div>
-		</div>
+		  </div>
 		
 		<!-- m-new-edit-object -->
 		<div class="modal fade" id="m-new-object" tabindex="-1" aria-aledby="newModala" aria-hidden="true">
@@ -331,8 +352,22 @@
 										<div class="col-4 mt-3 p-0">	
 											<label class="form-a fs-7 fw-bold text-center">Displayed value</label>
 										</div>
-										<div class="col-4 mt-1 p-0 text-center">	
+										<div class="col-4 mt-1 p-0 text-center" >	
 											<label class="form-a fs-2 fw-bold text-center">1.234,55</label>
+										</div>
+									</div>
+									<div class="row  ms-2 align-items-center">
+										<div class="col-4 p-0">	
+											<label class="form-a fs-7 fw-bold text-center">on period</label>
+										</div>
+										<div class="col-3 p-0 text-center">	
+											<input type="text" class="form-control fs-7 bg-body-secondary" id="d-chosedPeriod-object" value="1">
+										</div>
+										<div class="col-1 mt-0">
+											<button type="button" class="btn btn-time-control" id="b-timeBack-object"><</button>
+										</div>
+										<div class="col-1 mt-0">
+											<button type="button" class="btn btn-time-control" id="b-timeForward-object">></button>
 										</div>
 									</div>
 									<hr>

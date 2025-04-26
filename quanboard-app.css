@@ -76,7 +76,7 @@ body, html {
     width: 500px;       
 }
 
-.container-btn-outputs {
+.container-btn-table {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -259,4 +259,8 @@ p {
 .form-check-input[type="checkbox"][role="switch"] {
   background-color: #dee2e6;
   border-color: #dee2e6;
+}
+
+.modal-superxl {
+  max-width: 1800px; /* o el ancho que necesites */
 }
