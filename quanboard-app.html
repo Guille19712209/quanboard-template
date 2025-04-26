@@ -319,10 +319,41 @@
 									<hr>
 									<div class="row  ms-2">
 										<div class="col-4 mt-1 p-0">	
+											<labe class="form-a fs-7 fw-bold">Shape</label>
+										</div>
+										<div class="col-8 fs-7 fw-light text-center">
+									
+											<select class="form-select fs-7 fw-light bg-body-secondary w-100" id="d-shape-object">
+												<option value='ellipse'>ellipse</option>
+												<option value='triangle'>triangle</option>
+												<option value='rectangle'>rectangle</option>
+												<option value='roundrectangle'>roundrectangle</option>
+												<option value='cutrectangle'>cutrectangle</option>
+												<option value='barrel'>barrel</option>
+												<option value='rhomboid'>rhomboid</option>
+												<option value='diamond'>diamond</option>
+												<option value='pentagon'>pentagon</option>
+												<option value='hexagon'>hexagon</option>
+												<option value='concavehexagon'>concavehexagon</option>
+												<option value='heptagon'>heptagon</option>
+												<option value='octagon'>octagon</option>
+												<option value='star'>star</option>
+												<option value='tag'>tag</option>
+												<option value='vee'>vee</option>
+												<option value='round-tag'>round-tag</option>
+												<option value='round-diamond'>round-diamond</option>
+												<option value='bottom-round-rectangle'>bottom-round-rectangle</option>
+												<option value='cut-tag'>cut-tag</option>
+											</select>
+										</div>
+									</div>	
+									<hr>
+									<div class="row  ms-2">
+										<div class="col-4 mt-1 p-0">	
 											<labe for="d-nameFontSize-model" class="form-a fs-7 fw-bold">Text sizes (em)</label>
 										</div>
-										<div class="col-2 fs-7 fw-light">	
-											<select class="form-select fs-7 fw-light bg-body-secondary text-start" id="d-name-sizeRange" id="d-nameFontSize-object">
+										<div class="col fs-7 fw-light">	
+											<select class="form-select fs-7 fw-light bg-body-secondary text-start" id="d-nameFontSize-object">
 												<option value=1>1</option> 
 												<option value=2 selected>2</option> 
 												<option value=3>3</option> 
@@ -332,12 +363,9 @@
 											</select>
 											<p class="fs-7">object</p>
 										</div>
-										
-										
 		
-		
-										<div class="col-2 ms-3 fs-7 fw-light">		
-											<select class="form-select fs-7 fw-light bg-body-secondary text-start" id="d-value-sizeRange" id="d-valueFontSize-object">
+										<div class="col ms-3 fs-7 fw-light">		
+											<select class="form-select fs-7 fw-light bg-body-secondary text-start" id="d-valueFontSize-object">
 												<option value=1>1</option> 
 												<option value=2 selected>2</option> 
 												<option value=3>3</option> 
@@ -348,8 +376,8 @@
 											<p class="fs-7">value</p>
 										</div>
 
-										<div class="col-2 ms-3 fs-7 fw-light">		
-											<select class="form-select fs-7 fw-light bg-body-secondary text-start" id="d-unit-sizeRange" id="d-unitFontSize-object">
+										<div class="col ms-3 fs-7 fw-light">		
+											<select class="form-select fs-7 fw-light bg-body-secondary text-start" id="d-unitFontSize-object">
 												<option value=1>1</option> 
 												<option value=2 selected>2</option> 
 												<option value=3>3</option> 
@@ -373,7 +401,7 @@
 									
 									<div class="row  ms-2">
 										<div class="col-4 mt-3 p-0">	
-											<label class="form-a fs-7 fw-bold text-center">Displayed value</label>
+											<label class="form-a fs-7 fw-bold text-center">Visible value</label>
 										</div>
 										<div class="col-4 mt-1 p-0 text-center" >	
 											<label class="form-a fs-2 fw-bold text-center">1.234,55</label>
@@ -381,7 +409,7 @@
 									</div>
 									<div class="row  ms-2 align-items-center">
 										<div class="col-4 p-0">	
-											<label class="form-a fs-7 fw-bold text-center">on period</label>
+											<label class="form-a fs-7 fw-bold text-center">For period</label>
 										</div>
 									
 										<div class="col-1 mt-0">
@@ -394,8 +422,8 @@
 										<div class="col-1 mt-0">
 											<button type="button" class="btn btn-time-control" id="b-timeForward-object">></button>
 										</div>
-										<div class="col-3 mt-0">
-											<button type="button" class="btn btn-outline-secondary fs-7 fw-light" id="b-tableView-object">Table view</button>
+										<div class="col-4 mt-0">
+											<button type="button" class="btn btn-outline-secondary fs-7 fw-light w-100" id="b-tableView-object">Table view</button>
 										</div>
 									
 									
@@ -418,7 +446,7 @@
 											<labe class="form-a fs-7 fw-bold">Parent</label>
 										</div>
 										<div class="col-8 fs-7 fw-light text-center">	
-											<select class="form-select fs-7 fw-light bg-body-secondary" id="d-unit-sizeRange">
+											<select class="form-select fs-7 fw-light bg-body-secondary" id="d-parent-object">
 												<option value="Object A">Object A</option> 
 												<option value="Object B" selected>Object B</option> 
 												<option value="Object C">Object D</option> 
@@ -430,16 +458,16 @@
 									<hr>
 									<div class="row  ms-2">
 										<div class="col-4 mt-1 p-0">	
-											<labe class="form-a fs-7 fw-bold">unit</label>
+											<labe class="form-a fs-7 fw-bold">Unit</label>
 										</div>
 										<div class="col-2 fs-7 fw-light text-center">
 									
-											<select class="form-select fs-7 fw-light bg-body-secondary" id="d-unit-sizeRange">
+											<select class="form-select fs-7 fw-light bg-body-secondary" id="d-unit-object">
 												<option value="Un" selected>Un</option> 
 												<option value="$">$</option> 
 												<option value="mm">mm</option>
 												<option value="mm2">mm2</option>
-												<option value="mm3">mm3</option>
+												<option value="mm3">mm</option>
 												<option value="cm">cm</option>
 												<option value="cm2">cm2</option>
 												<option value="cm3">cm3</option>
@@ -917,22 +945,74 @@
 										<hr>
 										<div class="row  ms-2">
 											<div class="col-4 mt-1 p-0">	
+												<labe class="form-a fs-7 fw-bold">Shape</label>
+											</div>
+											<div class="col-8 fs-7 fw-light text-center">
+										
+												<select class="form-select fs-7 fw-light bg-body-secondary w-100" id="d-shape-model">
+													<option value='ellipse'>ellipse</option>
+													<option value='triangle'>triangle</option>
+													<option value='rectangle'>rectangle</option>
+													<option value='roundrectangle'>roundrectangle</option>
+													<option value='cutrectangle'>cutrectangle</option>
+													<option value='barrel'>barrel</option>
+													<option value='rhomboid'>rhomboid</option>
+													<option value='diamond'>diamond</option>
+													<option value='pentagon'>pentagon</option>
+													<option value='hexagon'>hexagon</option>
+													<option value='concavehexagon'>concavehexagon</option>
+													<option value='heptagon'>heptagon</option>
+													<option value='octagon'>octagon</option>
+													<option value='star'>star</option>
+													<option value='tag'>tag</option>
+													<option value='vee'>vee</option>
+													<option value='round-tag'>round-tag</option>
+													<option value='round-diamond'>round-diamond</option>
+													<option value='bottom-round-rectangle'>bottom-round-rectangle</option>
+													<option value='cut-tag'>cut-tag</option>
+												</select>
+											</div>
+										</div>	
+										<hr>
+										<div class="row  ms-2">
+											<div class="col-4 mt-1 p-0">	
 												<labe for="d-nameFontSize-model" class="form-a fs-7 fw-bold">Text sizes (em)</label>
 											</div>
-											<div class="col ms-0 fs-7 fw-light">	
-											<input type="text" class="form-control fs-7 bg-body-secondary text-center" id="d-nameFontSize-model" placeholder="1">
-											<p class="fs-7">object</p>
+											<div class="col fs-7 fw-light">	
+												<select class="form-select fs-7 fw-light bg-body-secondary text-start" id="d-nameFontSize-model">
+													<option value=1>1</option> 
+													<option value=2 selected>2</option> 
+													<option value=3>3</option> 
+													<option value=4>4</option>
+													<option value=5>5</option> 
+													<option value=6>6</option>  
+												</select>
+												<p class="fs-7">object</p>
 											</div>
 			
-			
-											<div class="col ms-3  fs-7 fw-light">		
-											<input type="text" class="form-control fs-7 bg-body-secondary text-center" id="d-valueFontSize-model" placeholder="2">
-											<p class="fs-7">value</p>
+											<div class="col ms-3 fs-7 fw-light">		
+												<select class="form-select fs-7 fw-light bg-body-secondary text-start" id="d-valueFontSize-model">
+													<option value=1>1</option> 
+													<option value=2 selected>2</option> 
+													<option value=3>3</option> 
+													<option value=4>4</option>
+													<option value=5>5</option> 
+													<option value=6>6</option>  
+												</select>
+												<p class="fs-7">value</p>
 											</div>
-
-											<div class="col ms-3  fs-7 fw-light">		
-											<input type="text" class="form-control fs-7 bg-body-secondary text-center" id="d-unitFontSize-model" placeholder="1">
-											<p class="fs-7">unit</p>
+	
+											<div class="col ms-3 fs-7 fw-light">		
+												<select class="form-select fs-7 fw-light bg-body-secondary text-start" id="d-unitFontSize-model">
+													<option value=1>1</option> 
+													<option value=2 selected>2</option> 
+													<option value=3>3</option> 
+													<option value=4>4</option>
+													<option value=5>5</option> 
+													<option value=6>6</option>  
+												</select>
+												<p class="fs-7">unit</p>
+											</div>
 											</div>
 										</div>
 										
