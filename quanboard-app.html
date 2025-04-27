@@ -404,7 +404,7 @@
 											<label class="form-a fs-7 fw-bold text-center">Visible value</label>
 										</div>
 										<div class="col-4 mt-1 p-0 text-center" >	
-											<label class="form-a fs-2 fw-bold text-center">1.234,55</label>
+											<label class="form-a fs-2 fw-bold text-center">1234.55</label>
 										</div>
 									</div>
 									<div class="row  ms-2 align-items-center">
@@ -460,7 +460,7 @@
 										<div class="col-4 mt-1 p-0">	
 											<labe class="form-a fs-7 fw-bold">Unit</label>
 										</div>
-										<div class="col-2 fs-7 fw-light text-center">
+										<div class="col-3 fs-7 fw-light text-center">
 									
 											<select class="form-select fs-7 fw-light bg-body-secondary" id="d-unit-object">
 												<option value="Un" selected>Un</option> 
@@ -487,13 +487,33 @@
 									<hr>
 									<div class="row  ms-2">
 										<div class="col-4 mt-1 p-0">	
-											<labe for="d-Name-object" class="form-a fs-7 fw-bold">Formula</label>
+											<labe class="form-a fs-7 fw-bold">Value type</label>
+										</div>
+										<div class="col-3 fs-7 fw-light text-center">
+									
+											<select class="form-select fs-7 fw-light bg-body-secondary" id="d-type-object" onChange="modifyValueField()">
+												<option selected disabled>Define</option> 
+												<option value="Constant">Constant</option> 
+												<option value="Series">Series</option> 
+												<option value="Formula">Formula</option>
+												<option value="External">External</option>
+											</select>
+										</div>
+									</div>	
+									<p class="h5"></p>
+									<div class="row  ms-2 d-none" id="valueFieldRow">
+										<div class="col-4 mt-1 p-0">	
+											<label class="form-a fs-7 fw-bold" id="d-valueLabel-object">Value</label>
 										</div>
 										<div class="col-8 ms-0 mt-1 mb-1 p-0">	
-											<textarea class="form-control fs-7 bg-body-secondary" id="d-formula-object" rows="5" ></textarea>
+											<textarea class="form-control fs-6 bg-body-secondary" id="d-valueContent-object" rows="3" ></textarea>
+										</div>
+										<div class="col-4 mt-1 p-0 fs-7"></div>	
+										<div class="col-8 ms-0 mt-1 mb-1 p-0">	
+											<label class="form-a fs-7 fw-ligt" id="d-valueCom-object">Comment Comment Comment Comment Comment</label>
 										</div>
 									</div>
-									<hr>
+						
 									
 									
 								</form>
