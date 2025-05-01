@@ -51,7 +51,7 @@
 						</button>
 					</div>
 					<div class="col-8 mx-0">
-						<input type="text" class="form-control p-0 fw-light mt-1 lh-0.5  mx-0 border-0 fs-2 bg-transparent"  id="d-name-model" placeholder="Model Name"></input>
+						<input type="text" class="form-control p-0 fw-light mt-1 lh-0.5  mx-0 border-0 fs-2 bg-transparent"  id="d-name-model" value = "Model Name" placeholder="Model Name"></input>
 						<input type="text" class="form-control p-0 fw-light mt-0 lh-0.5 border-0 bg-transparent"  id="d-version-model" placeholder="V 1.1"></input>
 					</div>
 				</div>			
@@ -140,16 +140,14 @@
 					</div>
 					<hr>
 					<div class="row ms-2">
-						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-vers-model">New version</a>
-					</div>
-					<hr>
-					<div class="row ms-2">
 						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-info-model">Info</a>
 					</div>
 					<hr>
 					<div class="row ms-2">
 						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-share-model">Share</a>
 					</div>
+					<hr>
+					<p class="offcanvas-title fs-7 fw-bold">View</p>
 					<hr>
 					<div class="row ms-2">
 						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-style-model">Style</a>	
@@ -703,7 +701,7 @@
 		</div>
 
 		<!-- m-new-model -->
-		<div class="modal fade" id="m-new-model" tabindex="-1"aria-hidden="true">
+		<div class="modal fade" id="m-new-model" tabindex="-1">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -715,12 +713,24 @@
 						
 						
 						<form class="my-1 mx-2">
+							
+				
+
 							<div class="row  ms-2">
 								<div class="col-3 mt-1 p-0">	
 									<labe for="d-newName-model" class="form-a fs-7 fw-bold">Model name</label>
 								</div>
 								<div class="col-9 ms-0 ">	
-								<input type="text" class="form-control fs-7 bg-body-secondary" id="d-newName-model" placeholder="Your proyect name">
+									<input type="text" class="form-control fs-7 bg-body-secondary" id="d-newName-model" placeholder="New model name">
+								</div>
+							</div>
+
+							<div class="row  ms-2">
+								<div class="col-3 mt-1 p-0">	
+									
+								</div>
+								<div class="col-9 mt-3 ">	
+									<button type="button" class="btn btn-outline-secondary fs-7 fw-light w-100" onclick="newVers()">Create new version based on current model</button>
 								</div>
 							</div>
 							<hr>
@@ -729,9 +739,11 @@
 									<labe for="d-Vers-model" class="form-a fs-7 fw-bold">Version name</label>
 								</div>
 								<div class="col-4 ms-0">	
-								<input type="text" class="form-control fs-7 bg-body-secondary me-0" id="d-Vers-model" placeholder="This version name">
+								<input type="text" class="form-control fs-7 bg-body-secondary me-0" id="d-Vers-model" placeholder="Version name">
 								</div>
-							</div>		
+							</div>	
+							<hr>
+							
 						</form>		
 					</div>
 
@@ -813,7 +825,7 @@
 			</div>
 		</div>
 
-		<!-- m-vers-model -->	 
+		<!-- m-vers-model	 
 		<div class="modal fade" id="m-vers-model" tabindex="-1" aria-aledby="newVersion" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -859,7 +871,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<!-- m-style-model -->
 		<div class="modal fade" id="m-style-model" tabindex="-1"aria-hidden="true">
