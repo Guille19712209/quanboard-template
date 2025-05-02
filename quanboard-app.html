@@ -768,7 +768,7 @@
 								<div class="col-3 mt-1 p-0">	
 									<labe for="d-newName-model" class="form-a fs-7 fw-bold">Time unit</label>
 								</div>
-								<div class="col-3 ms-0 ">	
+								<div class="col-4 ms-0 ">	
 									<select class="form-select fs-7 bg-body-secondary me-0 text-center" id="d-timeUnit-Model">
 										<option value="Years">Years</option>
 										<option value="Months"selected>Months</option>
@@ -780,10 +780,19 @@
 							<hr>
 							<div class="row  ms-2">
 								<div class="col-3 mt-1 p-0">	
+									<labe for="d-newName-model" class="form-a fs-7 fw-bold">Starting date</label>
+								</div>
+								<div class="col-4 ms-0 ">	
+									<input type="date" class="form-control fs-7 bg-body-secondary me-0 text-center" id="d-timeStart-model">
+								</div>
+							</div>
+							<hr>
+							<div class="row  ms-2">
+								<div class="col-3 mt-1 p-0">	
 									<labe for="d-Vers-model" class="form-a fs-7 fw-bold">Total periods 
 									</label>
 								</div>
-								<div class="col-3 ms-0">	
+								<div class="col-4 ms-0">	
 								<input type="text" class="form-control fs-7 bg-body-secondary me-0 text-center" id="d-timePeriods-model" value=12 placeholder="12">
 								</div>
 							</div>		
@@ -1187,19 +1196,33 @@
 									<p class="fs-7 fw-bold">What to share? </p>
 								</div>
 
-								<div class="col fs-7 fw-light text-center">	
+								<div class="col-4 fs-7 fw-light text-center">	
 
-									<select class="form-select fs-7 fw-light bg-body-secondary" id="d-unit-sizeRange">
+									<select class="form-select fs-7 fw-light bg-body-secondary" id="d-shareType-model" onChange = "shareObj()">
 										<option value="Full Model" selected>Full Model</option> 
 										<option value="Single object">Single object</option>
 										<option value="Object and childs">Object and childs</option>
 									</select>
 								</div>
 							</div>
-							<hr>
-							<div class="row ms-2 align-items-center">	
+							
+							<div class="row ms-2 mt-4 d-none" id="object-row-share" >	
 								<div class="col-3 m-0 p-0">				
-									<p class="fs-7 fw-bold">New shareing </p>
+									<p class="fs-7 fw-bold">Object </p>
+								</div>
+								<div class="col m-0 p-0">		
+									<select class="form-select fs-7 fw-light bg-body-secondary" id="d-shareObject-model">
+										<option value="Object 1" selected>Object 1</option> 
+										<option value="Object 2">Object 2</option>
+										<option value="Object 3">Object 3</option>
+									</select>	
+								</div>
+							</div>
+							<hr>
+							
+							<div class="row ms-2 my-4 align-items-center">	
+								<div class="col-3 m-0 p-0">				
+									<p class="fs-7 fw-bold">With who?</p>
 								</div>
 							
 								<div class="col">	
@@ -1213,7 +1236,7 @@
 								
 							</div>
 							<hr>
-							<div class="row ms-2 align-items-center">	
+							<div class="row ms-2 mt-2 align-items-center">	
 								<div class="col-md-3 m-0 p-0">				
 									<p class="fs-7 fw-bold">Shared with</p>
 								</div>
