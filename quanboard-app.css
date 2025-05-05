@@ -273,3 +273,8 @@ padding-top: 5px ;
 bottom: 5px;
 }
 
+.fondo-disabled {
+  background-color: transparent !important; 
+  border-color: transparent !important; 
+}
+
