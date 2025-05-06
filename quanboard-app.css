@@ -176,13 +176,14 @@ hr {
 .levels {
     position: absolute;
     border-radius: 25px;
-    background-color: #b1b1b1;
+    background-color: #888888;
     opacity: .7;
     top: 100px;
     right: 25px;
     width: 50px;
     z-index: 1500;     
     padding: 5px;   
+    color: #ffffff;
 }
 
 .btn-level {
@@ -279,4 +280,17 @@ bottom: 5px;
   right: 15px;
   z-index: 1500;     
 
+}
+
+
+.scenarios {
+  position: absolute;
+  border-radius: 25px;
+  background-color: #888888;
+  opacity: .7;
+  top: 100px;
+  left: 100px;
+  z-index: 1500;     
+  padding: 5px;   
+  color: #ffffff;
 }
