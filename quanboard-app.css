@@ -282,15 +282,3 @@ bottom: 5px;
 
 }
 
-
-.scenarios {
-  position: absolute;
-  border-radius: 25px;
-  background-color: #888888;
-  opacity: .7;
-  top: 100px;
-  left: 100px;
-  z-index: 1500;     
-  padding: 5px;   
-  color: #ffffff;
-}

@@ -50,10 +50,20 @@
 								<img src="assets/qb-icon-02.svg" alt="Imagen" style="height: 100%; object-fit: cover;">
 						</button>
 					</div>
-					<div class="col-8 mx-0">
-						<input type="text" class="form-control p-0 fw-light mt-1 lh-0.5  mx-0 border-0 fs-2 bg-transparent"  id="d-name-model" value = "Model Name" placeholder="Model Name"></input>
-						<input type="text" class="form-control p-0 fw-light mt-0 lh-0.5 border-0 bg-transparent"  id="d-version-model" placeholder="V 1.1"></input>
+					<div class="col-10 mx-0">
+						<input type="text" class="form-control p-0 fw-light mt-0 mx-0 border-0 fs-2 bg-transparent" style="top: 10px" id="d-name-model" value = "Model Name" placeholder="Model Name"></input>
+
+						<label for="d-scenario-model" class="form-control p-0 fw-light mt-0 mx-0 border-0 fs-7 bg-transparent">Scenario:</label>
+						<div class="col-5">
+						<select class="form-select p-0  fs-6 fw-light bg-transparent border-0 " id="d-scenario-model">
+								<option value="Dam Good!" selected>Dam Good! 2025</option> 
+								<option value="Poronga">Poronga</option> 
+								<option value="Poronga">+</option> 
+						</select>
+						</div>
+
 					</div>
+		
 				</div>			
 			</div>
 				
@@ -109,23 +119,6 @@
 			<button type="button" class="btn btn-level btn-dark fs-3" id="b-levelDown-model">-</button>
 		</div>
 
-		<!-- Scenarios-->
-
-		<div class="conatainer scenarios">
-			<div class="row">
-				
-				<div class="col ms-3 my-auto">
-					
-					<select class="bg-transparent border-0 fs-7 fw-bold text-start text-nowrap " id="d-scenario-model">
-						<option value="Dam Good!" selected>Dam Good! 2025</option> 
-						<option value="Poronga">Poronga</option> 
-					</select>
-				</div>
-				<div class="col" style="margin-right: 12px;">
-					<button type="button" class="btn btn-level btn-dark fs-3" id="b-addScenario-model">+</button>
-				</div>
-			</div>
-		</div>
 
 
 		<!-- o-model-model -->
@@ -283,7 +276,7 @@
 
 									<div class="row  ms-2">
 										<div class="col-4 mt-1 p-0">	
-											<labe for="d-objectColor-object"class="form-a fs-7 fw-bold">Object color</label>
+											<label for="d-objectColor-object"class="form-a fs-7 fw-bold">Object color</label>
 										</div>
 										<div class="col-1 ms-0">
 											<div id="picker-6" class="mb-4"></div>
@@ -763,20 +756,10 @@
 									
 								</div>
 								<div class="col-9 mt-3 ">	
-									<button type="button" class="btn btn-outline-secondary fs-7 fw-light w-100" onclick="newVers()">Create new version based on current model</button>
+									<button type="button" class="btn btn-outline-secondary fs-7 fw-light w-100" data-bs-dismiss="modal" onclick="newVers()">Create new version based on current model</button>
 								</div>
 							</div>
-							<hr>
-							<div class="row  ms-2">
-								<div class="col-3 mt-1 p-0">	
-									<labe for="d-Vers-model" class="form-a fs-7 fw-bold">Version name</label>
-								</div>
-								<div class="col-4 ms-0">	
-								<input type="text" class="form-control fs-7 bg-body-secondary me-0" id="d-Vers-model" placeholder="Version name">
-								</div>
-							</div>	
-							<hr>
-							
+													
 						</form>		
 					</div>
 
