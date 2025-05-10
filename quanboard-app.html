@@ -53,15 +53,17 @@
 					<div class="col-10 mx-0">
 						<input type="text" class="form-control p-0 fw-light mt-0 mx-0 border-0 fs-2 bg-transparent" style="top: 10px" id="d-name-model" value = "Model Name" placeholder="Model Name"></input>
 
-						<label for="d-scenario-model" class="form-control p-0 fw-light mt-0 mx-0 border-0 fs-7 bg-transparent">Scenario:</label>
-						<div class="col-5">
-						<select class="form-select p-0  fs-6 fw-light bg-transparent border-0 " id="d-scenario-model">
-								<option value="Dam Good!" selected>Dam Good! 2025</option> 
-								<option value="Poronga">Poronga</option> 
-								<option value="Poronga">+</option> 
-						</select>
-						</div>
+						<label for="d-scenario-model" class="form-control p-2 fw-light mt-0 mx-0 border-0 fs-7 bg-transparent">Scenario:</label>
 
+						<div class="col-6">
+							<div class="input-group">
+								<select class="form-select fs-6 fw-light bg-transparent" style = "bottom: 0px" id="d-scenario-model">
+									<option value="Dam Good!" selected>Dam Good! 2025</option> 
+									<option value="Poronga">Poronga</option> 
+								</select>							
+								<button class="btn btn-outline-secondary mt-0 fs-6 text-end" type="button" id="addScenario">+</button>
+							</div>
+						</div>
 					</div>
 		
 				</div>			
@@ -114,7 +116,7 @@
 
 		<div class="levels">
 			<button type="button" class="btn btn-level btn-dark fs-3" id="b-levelUp-model">+</button>
-			<p class="mt-0 mt-1 text-center p-0 fs-7 line-height: .5">LEVEL</p>
+			<p class="mt-0 mt-1 text-center p-0 fs-7 line-height: .5">Levels</p>
 			<p class="mt-0 mb-0 text-center p-0 fs-5 fw-bold line-height: .5" id="d-level-model">1</p>
 			<button type="button" class="btn btn-level btn-dark fs-3" id="b-levelDown-model">-</button>
 		</div>
@@ -166,6 +168,20 @@
 						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-style-model">Style</a>	
 					</div>
 					<hr>
+					<div class="row  ms-2">
+						<div class="col-4 mt-1 p-0">	
+							<labe class="form-a fs-7">Layout</label>
+						</div>
+						<div class="col-7 fs-7">
+					
+							<select class="form-select fs-7 mt-1  bg-body-transparent border-0" id="d-layout-model">
+								<option value='Formula driven' selected>Formula driven</option>
+								<option value='Parent driven'>Parent driven</option>
+								<option value='Fix position'>Fix position</option>
+							</select>
+						</div>
+					</div>
+					<hr>
 					<div class="row ms-2">
 						<div class="col-10 m-0 p-0">				
 							<label class="fs-7" for="b-darkMode">Dark Mode</label>
@@ -185,6 +201,24 @@
 						</div>
 					</div>	
 					<hr>
+					<div class="row ms-2">
+						<div class="col-10 m-0 p-0" >
+							<label class="fs-7" for="b-showHidden">Parent Links</label>
+						</div>
+						<div class="col-1 m-0 p-0 form-check form-switch">
+							<input class="form-check-input" type="checkbox" role="switch" id="b-parentLinks" value="">
+						</div>
+					</div>	
+					<hr>
+					<div class="row ms-2">
+						<div class="col-10 m-0 p-0" >
+							<label class="fs-7" for="b-showHidden">Formula Links</label>
+						</div>
+						<div class="col-1 m-0 p-0 form-check form-switch">
+							<input class="form-check-input" type="checkbox" role="switch" id="b-formulaLinks" value="on" checked>
+						</div>
+					</div>	
+					<hr>	
 					<div class="text-end">
 						<button type="button" class="btn btn-secondary fs-7 mt-1" data-bs-dismiss="offcanvas" aria-a="Close">Close</button>
 					</div>
@@ -225,17 +259,23 @@
 		  
 				<div class="modal-body">
 
-				<div class="row ms-2">
-					<div class="col-10 m-0 p-0" >
-						<button type="button" class="btn btn-secondary fs-7 fw-light">Filter</button>
+					<div class="row ms-2">
+						<div class="col-10 m-0 p-0" >
+							<button type="button" class="btn btn-secondary fs-7 fw-light">Filter</button>
+						</div>
 					</div>
-				</div>
-				<hr>
-				  <div class="table-responsive">
-					<table id="tablaDinamica" class="table table-bordered text-center">
-					</table>
-				  </div>
-				</div>  
+					<hr>
+					<div class="table-responsive">
+						<table class="table table-bordered text-center" id="tablaDinamica">
+							<thead>
+							<tr id="filaNumeros"></tr>
+							<tr id="filaMeses"></tr>
+							</thead>
+							<tbody id="cuerpoTabla"></tbody>
+						</table>
+					</div> 
+				</div>		
+
 				<div class="modal-footer">
 				  <button type="button" id="b-export-model" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Export</button>
 				  <button type="button" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Save changes</button>
@@ -259,7 +299,7 @@
 					<!-- Nav tabs -->
 					<ul class="nav nav-tabs" id="tabsNewObject" role="tablist">
 						<li class="nav-item" role="presentation">
-							<button class="nav-link fs-7 fw-bold active"  data-bs-toggle="tab" data-bs-target="#tab-data-object" type="button" role="tab">data</button>
+							<button class="nav-link fs-7 fw-bold active"  data-bs-toggle="tab" data-bs-target="#tab-data-object" type="button" role="tab">Data</button>
 						</li>
 						<li class="nav-item" role="presentation">
 							<button class="nav-link fs-7 fw-bold"  data-bs-toggle="tab" data-bs-target="#tab-apparence-object" type="button" role="tab">Apparence</button>
@@ -433,15 +473,24 @@
 										<div class="col-4 mt-0">
 											<button type="button" class="btn btn-outline-secondary fs-7 fw-light w-100" id="b-tableView-object">Table view</button>
 										</div>
-									
-									
-									
+
 									</div>
 									<hr>
 									
 									<div class="row  ms-2">
 										<div class="col-4 mt-1 p-0">	
-											<labe for="d-Name-object" class="form-a fs-7 fw-bold">Object name</label>
+											<labe for="d-title-object" class="form-a fs-7 fw-bold">Title</label>
+										</div>
+										<div class="col-8 ms-0 ">	
+										<input type="text" class="form-control fs-7 bg-body-secondary" id="d-title-object">
+										</div>
+									</div>
+									<hr>
+									
+									
+									<div class="row  ms-2">
+										<div class="col-4 mt-1 p-0">	
+											<labe for="d-Name-object" class="form-a fs-7 fw-bold">Object name*</label>
 										</div>
 										<div class="col-8 ms-0 ">	
 										<input type="text" class="form-control fs-7 bg-body-secondary" id="d-Name-object">
@@ -521,9 +570,7 @@
 											<label class="form-a fs-7 fw-ligt" id="d-valueCom-object">Comment Comment Comment Comment Comment</label>
 										</div>
 									</div>
-						
-									
-									
+	
 								</form>
 									
 							</div>
@@ -533,8 +580,45 @@
 							<div class="container-fluid">
 								<form class="my-3 mx-2">
 									
-								
+									<p class="fs-7 fw-light"> Set growing</p>
+									<div class="row  mt-3 ms-2">
+										<div class="col-4 mt-1 p-0">	
+											<labe for="d-step-object" class="form-a fs-7 fw-bold">Grow step</label>
+										</div>
+										<div class="col-3 ms-0 ">	
+										<input type="text" class="form-control fs-7 bg-body-secondary" id="d-step-object">
+										</div>
+									</div>
+									<hr>
+									<p class="fs-7 fw-light"> Set alarm when value is</p>
+									<div class="row mt-3 ms-2">
 
+										<div class="col-4 mt-1 p-0">	
+											<labe for="d-minValue-object" class="form-a fs-7 fw-bold">Lower than</label>
+										</div>
+										<div class="col-3 ms-0 ">	
+										<input type="text" class="form-control fs-7 bg-body-secondary" id="d-minValue-object">
+										</div>
+									</div>
+									<hr>
+									<div class="row  ms-2">
+										<div class="col-4 mt-1 p-0">	
+											<labe for="d-equalValue-object" class="form-a fs-7 fw-bold">Equal to</label>
+										</div>
+										<div class="col-3 ms-0 ">	
+										<input type="text" class="form-control fs-7 bg-body-secondary" id="d-equalValue-object">
+										</div>
+									</div>
+									<hr>
+									<div class="row  ms-2">
+										<div class="col-4 mt-1 p-0">	
+											<labe for="d-greValue-object" class="form-a fs-7 fw-bold">Greater than</label>
+										</div>
+										<div class="col-3 ms-0 ">	
+										<input type="text" class="form-control fs-7 bg-body-secondary" id="d-greValue-object">
+										</div>
+									</div>
+									<hr>
 								</form>
 							</div>
 						</div>
@@ -571,11 +655,19 @@
 									<div class="col-4 m-0 p-0">				
 										<p class="fs-7 fw-bold" id="d-name-infoM">Model name</p>
 									</div>
-									<div class="col-3 m-0 p-0">				
-										<p class="fs-7">Version:</p>
+								</div>
+								<hr>
+								
+								<div class="row ms-2">
+									<div class="col-3 p-0">				
+										<p class="fs-7">Scenarios:</p>
 									</div>
-									<div class="col-2 m-0 p-0">				
-										<p class="fs-7 fw-bold" id="d-version-infoM">1.1</p>
+									<div class="col-4 m-0 p-0">	
+										<ul id="scenario-list" class="fs-7">
+											<li>Base</li>
+											<li>Best</li>
+											<li>Worst</li>
+										</ul>
 									</div>
 								</div>	
 
