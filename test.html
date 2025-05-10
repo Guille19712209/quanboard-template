@@ -25,11 +25,11 @@
       width: 100%;
       border: none;
       text-align: center;
-      background-color: #000; /* blanco por defecto */
+      background-color: var(--bs-body-bg); /* blanco por defecto */
       color: var(--bs-body-color);
     }
     input:enabled {
-      background-color:  #000;;
+      background-color: var(--bs-secondary-bg-subtle);
     }
   </style>
 </head>
@@ -48,7 +48,7 @@
   </div>
 
   <script>
-    const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+    const meses = ["ene", "feb", "mar", "apr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
     const mesesDesdeMayo = [...meses.slice(4), ...meses.slice(0, 4)];
     const nombresObjetos = Array.from({ length: 12 }, (_, i) => `Objeto ${i + 1}`);
 

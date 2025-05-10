@@ -282,3 +282,31 @@ bottom: 5px;
 
 }
 
+/* TABLE STYLES */
+
+.table-fixed {
+  table-layout: fixed;
+  width: 100%;
+}
+.table-fixed th,
+.table-fixed td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.col-objeto {
+  width: 150px;
+}
+.col-mes {
+  width: calc((100% - 150px) / 12);
+}
+input[type="number"] {
+  width: 100%;
+  border: none;
+  text-align: center;
+  background-color: red; 
+  color: var(--bs-body-color);
+}
+input:enabled {
+  background-color: var(--bs-secondary-bg-subtle);
+}
