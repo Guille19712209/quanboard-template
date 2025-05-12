@@ -52,20 +52,20 @@ body, html {
     justify-content: center;
 }
 
-/* Estilo del badge (número) */
 .badge-number {
     position: absolute;
     top: -5px;
     right: -5px;
-    background-color:  #343a40 ;
+    background-color: #343a40 ;
     color: #dee2e6;
     font-size: 12px;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 0px;
 }
 
 .container-btn-model {
@@ -173,30 +173,6 @@ hr {
  padding: 0px;
 }
 
-.levels {
-    position: absolute;
-    border-radius: 25px;
-    background-color: #888888;
-    opacity: .7;
-    top: 100px;
-    right: 25px;
-    width: 50px;
-    z-index: 1500;     
-    padding: 5px;   
-    color: #ffffff;
-}
-
-.btn-level {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    background-color:#495057;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .btn-time-control {
 margin-top: 5px;
 }
@@ -245,42 +221,25 @@ p {
   border-color:  #888e;
 }
 
-/* Todos los switches activados (checkeados) */
-.form-check-input[type="checkbox"][role="switch"]:checked {
-  background-color: #000000; 
-  border-color: #000000;
-}
-
-/* Color del "thumb" del switch */
-.form-check-input[type="checkbox"][role="switch"]:checked::before {
-  background-color: white;
-}
-
-/* Opcional: switches apagados */
-.form-check-input[type="checkbox"][role="switch"] {
-  background-color: #dee2e6;
-  border-color: #dee2e6;
-}
 
 .modal-superxl {
   max-width: 1800px; /* o el ancho que necesites */
 }
 
 .form-select {
-
 padding-left: 10px;
 padding-right: 10px;
 padding-top: 5px ;
 bottom: 5px;
-}
-
-.history {
-  position: absolute;
-  bottom: 80px;
-  right: 15px;
-  z-index: 1500;     
 
 }
+
+/* Todos los switches activados (checkeados) */
+.form-check-input[type="checkbox"][role="switch"]:checked {
+  background-color: var(--bs-secondary); 
+  border-color: var(--bs-secondary);
+}
+
 
 /* TABLE STYLES */
 
@@ -304,9 +263,26 @@ input[type="number"] {
   width: 100%;
   border: none;
   text-align: center;
-  background-color: red; 
+  background-color: rgb(255, 254, 254); 
   color: var(--bs-body-color);
 }
-input:enabled {
-  background-color: var(--bs-secondary-bg-subtle);
-}
+
+ /* Btn View */
+
+.semi-circle-btn {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 80px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    background-color:#495057;
+    border: none;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    z-index: 1900; 
+  }

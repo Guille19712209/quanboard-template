@@ -8,7 +8,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-	
+		
 	<!-- Color Pickr -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css"/>
 	<script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr"></script>
@@ -30,19 +30,13 @@
 		
 	<!-- OWN -->
 		<link href="quanboard-app.css" rel="stylesheet">
-		
 		<title>Quanboard App</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-   		
 	</head>
-
 	<body">
-
 		<div class="container-fluid p-0">
-			
-			<div id="cy"></div>
-					
+			<div id="cy"></div>		
 			<div class="container-btn-model ms-2">
 				<div class="row justify-content-start">
 					<div class="col-2">
@@ -50,29 +44,26 @@
 								<img src="assets/qb-icon-02.svg" alt="Imagen" style="height: 100%; object-fit: cover;">
 						</button>
 					</div>
-					<div class="col-10 mx-0">
-						<input type="text" class="form-control p-0 fw-light mt-0 mx-0 border-0 fs-2 bg-transparent" style="top: 10px" id="d-name-model" value = "Model Name" placeholder="Model Name"></input>
-
-						<label for="d-scenario-model" class="form-control p-2 fw-light mt-0 mx-0 border-0 fs-7 bg-transparent">Scenario:</label>
-
-						<div class="col-6">
-							<div class="input-group">
-								<select class="form-select fs-6 fw-light bg-transparent" style = "bottom: 0px" id="d-scenario-model">
-									<option value="Dam Good!" selected>Dam Good! 2025</option> 
-									<option value="Poronga">Poronga</option> 
-								</select>							
-								<button class="btn btn-outline-secondary mt-0 fs-6 text-end" type="button" id="addScenario">+</button>
+					<div class="col-6 mx-0">
+						<div class="row align-items-top p-0 ms-1">
+							<input type="text" class="form-control p-0 fw-light mt-0 mx-0 border-0 fs-2 bg-transparent" style="top: 10px" id="d-name-model" value = "Model Name" placeholder="Model Name"></input>
+						</div>
+						<div class="row align-items-top p-0 ms-1">	
+							<div class="col-8 fs-7 fw-light text-center">	
+									<select class="form-select fs-6 fw-light bg-transparent border-0 p-0 pe-5" id="d-scenario-model"  onchange="scenarioChange()">
+										<option value="Base Scenario" selected>Base Scenario</option> 
+										<option value="Optimist">Optimist</option>
+										<option value="High risk">High risk</option>
+									</select>
 							</div>
 						</div>
-					</div>
-		
+					</div>	
 				</div>			
-			</div>
-				
+			</div>	
 			<div class="container-btn-table">
 				<button type="button" class="btn btn-round btn-dark fs-1" id="btn-table" data-bs-toggle="modal" data-bs-target="#m-table-model" aria-controls="m-table-model"> <i class="bi bi-table"></i> </button>
 			</div>
-
+			<button class="semi-circle-btn fs-4" data-bs-toggle="offcanvas" data-bs-target="#o-view-model" aria-controls="offcanvasModel"><i class="bi bi-eye-fill"></i></button>
 			<div class="container-btn-time">
 				<div class="row justify-content-start">
 					<div class="col-2">
@@ -81,10 +72,7 @@
 						</button>
 					</div>
 					<div class="col-7 d-flex flex-column ms-4">
-						
-						
 						<div class="row ms-1 align-item-start">	
-
 							<div class="col-6 mt-3 ms-2 light" id="label-time-unit">Years</div>
 							<div class="col-2 mt-1">
 								<button type="button" class="btn btn-time-control" id="b-timeBack-model"><</button>
@@ -95,77 +83,36 @@
 							<div class="col-1 mt-1">
 								<button type="button" class="btn btn-time-control" id="b-timeRol-model">>></button>
 						</div>		
-
-						<input type="range" class="form-range ms-2" id="v-timeline-model" min="1" max="120" step="1" value="60">
-							
+						<input type="range" class="form-range ms-2" id="v-timeline-model" min="1" max="120" step="1" value="60">	
 						</div>
 					</div>
 				</div>
 			</div>
-
 			<div class="container-btn-new d-flex justyfy-items-center">	
-				
-				<button type="button" class="btn btn-level btn-dark fs-3 history" id="b-history-model"><img src="assets/history-icon.svg" alt="Logo" style="height: 32px; object-fit: cover;"></button>		
-				<button type="button" class="btn btn-round btn-dark fs-1 my-auto" id="b-new-object" onclick="backToNew()" data-bs-toggle="modal" data-bs-target="#m-new-object">+</button>
-			</div>
-			
+				<button type="button" class="btn btn-round btn-dark fs-1 my-auto" id="b-new-object" onclick="backToNew()" data-bs-toggle="modal" data-bs-target="#m-new-object">+<button class="badge-number badge-light" id="undo" onclick="undo()"><i class="bi bi-arrow-counterclockwise"></i></button></button>
+			</div>		
 		</div>
 
-		
-		<!-- Levels -->
-
-		<div class="levels">
-			<button type="button" class="btn btn-level btn-dark fs-3" id="b-levelUp-model">+</button>
-			<p class="mt-0 mt-1 text-center p-0 fs-7 line-height: .5">Levels</p>
-			<p class="mt-0 mb-0 text-center p-0 fs-5 fw-bold line-height: .5" id="d-level-model">1</p>
-			<button type="button" class="btn btn-level btn-dark fs-3" id="b-levelDown-model">-</button>
-		</div>
-
-
-
-		<!-- o-model-model -->
-
-		<div class="offcanvas offcanvas-start" tabindex="-1" id="o-model-model" aria-aledby="offcanvasModela">
+		<!-- o-view-model -->
+		<div class="offcanvas offcanvas-end" tabindex="-1" id="o-view-model" aria-aledby="offcanvasView">
 			<div class="container p-2">
-
 				<div class="offcanvas-header border-bottom">
 					
 					<div class="row mx-auto my-0">
-						<div class="col-12 p-0">
-							<img class="mt-1" src="assets/quanboard-grey.svg" alt="Logo" style="height: 45px; object-fit: cover;">
-						</div>
-
-						<div class="col-12">
-							<h6 class="fs-7 fw-light small text-end">V 1.0</h6>
-						</div>
+						<h5 class="modal-title fs-4 fw-light">MODEL VIEW</h5>
 					</div>
 				</div>	
-	
-
 				<div class="offcanvas-body">	
-					
-					<p class="offcanvas-title fs-7 fw-bold">Model</p>
-					<hr>
-					<div class="row ms-2">
-						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-open-model">Open </a>
-					</div>
-					<hr>
-					<div class="row ms-2">
-						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-new-model">New</a>
-					</div>
-					<hr>
-					<div class="row ms-2">
-						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-info-model">Info</a>
-					</div>
-					<hr>
-					<div class="row ms-2">
-						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-share-model">Share</a>
-					</div>
-					<hr>
-					<p class="offcanvas-title fs-7 fw-bold">View</p>
-					<hr>
 					<div class="row ms-2">
 						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-style-model">Style</a>	
+					</div>
+					<hr>
+					<div class="row ms-2">
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-sizes-model">Object Sizes</a>
+					</div>
+					<hr>
+					<div class="row ms-2">
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-formats-model">Formats</a>
 					</div>
 					<hr>
 					<div class="row  ms-2">
@@ -173,7 +120,6 @@
 							<labe class="form-a fs-7">Layout</label>
 						</div>
 						<div class="col-7 fs-7">
-					
 							<select class="form-select fs-7 mt-1  bg-body-transparent border-0" id="d-layout-model">
 								<option value='Formula driven' selected>Formula driven</option>
 								<option value='Parent driven'>Parent driven</option>
@@ -186,7 +132,6 @@
 						<div class="col-10 m-0 p-0">				
 							<label class="fs-7" for="b-darkMode">Dark Mode</label>
 						</div>
-
 						<div class="col-1 m-0 p-0 form-check form-switch">
 							<input class="form-check-input" type="checkbox" role="switch" id="b-darkMode" value="">
 						</div>
@@ -222,9 +167,52 @@
 					<div class="text-end">
 						<button type="button" class="btn btn-secondary fs-7 mt-1" data-bs-dismiss="offcanvas" aria-a="Close">Close</button>
 					</div>
+				</div>	
+			</div>		
+		</div>	
 
-					<div class="position-absolute bottom-0 start-0 end-0 border-top">
-						
+	<!-- o-model-model -->
+		<div class="offcanvas offcanvas-start" tabindex="-1" id="o-model-model" aria-aledby="offcanvasModela">
+			<div class="container p-2">
+				<div class="offcanvas-header border-bottom">	
+					<div class="row mx-auto my-0">
+						<div class="col-12 p-0">
+							<img class="mt-1" src="assets/quanboard-grey.svg" alt="Logo" style="height: 45px; object-fit: cover;">
+						</div>
+						<div class="col-12">
+							<h6 class="fs-7 fw-light small text-end">V 1.0</h6>
+						</div>
+					</div>
+				</div>	
+				<div class="offcanvas-body">	
+					<div class="row ms-2">
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-open-model">Open </a>
+					</div>
+					<hr>
+					<div class="row ms-2">
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-new-model">New</a>
+					</div>
+					<hr>
+					<div class="row ms-2">
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-info-model">Info</a>
+					</div>
+					<hr>
+					<div class="row ms-2">
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-share-model">Share</a>
+					</div>
+					<hr>
+					<div class="row ms-2">
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-scenarios-model">Scenarios</a>
+					</div>
+					<hr>
+					<div class="row ms-2">
+						<a class="nav-link fs-7" href="#" data-bs-toggle="modal" data-bs-target="#m-history-model">History</a>
+					</div>
+					<hr>				
+					<div class="text-end">
+						<button type="button" class="btn btn-secondary fs-7 mt-1" data-bs-dismiss="offcanvas" aria-a="Close">Close</button>
+					</div>
+					<div class="position-absolute bottom-0 start-0 end-0 border-top">	
 						<div class="row align-items-center p-3">
 							<div class="col-2 ms-3 p-2">
 								<img src="https://github.com/mdo.png" alt="" width="40" height="40" class="rounded-circle">
@@ -235,30 +223,21 @@
 							<div class="col-3 p-1 text-end">
 								<button type="button" class="btn btn-outline-secondary fs-7 mt-1 me-2 " data-bs-dismiss="offcanvas" data-bs-toggle="modal" data-bs-target="#m-exit-model" aria-a="Close">Exit</button>
 							</div>
-					
 						</div>	
 					</div>
-
 				</div>
-			
 			</div>
 		</div>
 
-
 		<!-- m-table-model > -->
-	
 		<div class="modal fade" id="m-table-model" tabindex="-1">
 			<div class="modal-dialog modal-superxl">
-			  <div class="modal-content">
-				
+			  <div class="modal-content">	
 				<div class="modal-header">
 					<h5 class="modal-title fs-4 fw-light" id="d-label-tabelModel">MODEL TABLE</h5>
-				  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 				</div>
-		  
 				<div class="modal-body">
-
 					<div class="row ms-2">
 						<div class="col-10 m-0 p-0" >
 							<button type="button" class="btn btn-secondary fs-7 fw-light">Filter</button>
@@ -277,12 +256,10 @@
 						</div>
 					</div>
 				</div>		
-
 				<div class="modal-footer">
 				  <button type="button" id="b-export-model" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Export</button>
 				  <button type="button" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Save changes</button>
 				</div>
-		  
 			  </div>
 			</div>
 		  </div>
@@ -297,7 +274,6 @@
 				</div>
 				<div class="modal-body">
 
-				
 					<!-- Nav tabs -->
 					<ul class="nav nav-tabs" id="tabsNewObject" role="tablist">
 						<li class="nav-item" role="presentation">
@@ -310,7 +286,6 @@
 							<button class="nav-link fs-7 fw-bold" data-bs-toggle="tab" data-bs-target="#tab-rules-object" type="button" role="tab">Rules</button>
 						</li>
 					</ul>
-
 					<div class="tab-content">
 						<div class="tab-pane fade" id="tab-apparence-object" role="tabpanel">
 							<div class="container-fluid form-scroll">
@@ -327,8 +302,7 @@
 											<input type="text" id="d-objectColor-object"  class="form-control fs-7 border-0" placeholder="rgba(0,128,255,0.7)">
 										</div>
 									</div>
-									<hr>
-						
+									<hr>						
 									<div class="row  ms-2">
 										<div class="col-4 mt-1 p-0">	
 											<labe for="d-bgimage-object" class="form-a fs-7 fw-bold">Background image</label>
@@ -339,8 +313,7 @@
 												<input type="text" id="d-bgimage-object" class="form-control fs-7 bg-body-secondary" placeholder="Add image file...">
 												<button class="btn btn-outline-secondary fs-7 text-end" type="button" id="addImgModel">Load</button>
 											</div>
-										</div>
-									
+										</div>									
 									</div>		
 									<hr>
 									<div class="row  ms-2">
@@ -371,8 +344,7 @@
 										<div class="col-4 mt-1 p-0">	
 											<labe class="form-a fs-7 fw-bold">Shape</label>
 										</div>
-										<div class="col-8 fs-7 fw-light text-center">
-									
+										<div class="col-8 fs-7 fw-light text-center">								
 											<select class="form-select fs-7 fw-light bg-body-secondary w-100" id="d-shape-object">
 												<option value='ellipse'>ellipse</option>
 												<option value='triangle'>triangle</option>
@@ -412,8 +384,7 @@
 												<option value=6>6</option>  
 											</select>
 											<p class="fs-7">object</p>
-										</div>
-		
+										</div>	
 										<div class="col ms-3 fs-7 fw-light">		
 											<select class="form-select fs-7 fw-light bg-body-secondary text-start" id="d-valueFontSize-object">
 												<option value=1>1</option> 
@@ -425,7 +396,6 @@
 											</select>
 											<p class="fs-7">value</p>
 										</div>
-
 										<div class="col ms-3 fs-7 fw-light">		
 											<select class="form-select fs-7 fw-light bg-body-secondary text-start" id="d-unitFontSize-object">
 												<option value=1>1</option> 
@@ -436,19 +406,24 @@
 												<option value=6>6</option>  
 											</select>
 											<p class="fs-7">unit</p>
-										</div>
-										
+										</div>									
 									</div>
-									
+									<hr>
+									<div class="row ms-2 align-item-center">
+										<div class="col-4 mt-1 p-0">	
+											<labe for="s-hidden-object" class="form-a fs-7 fw-bold">Hidden</label>
+										</div>
+										<div class="col-8 mt-1 p-0 form-check form-switch">
+											<input class="form-check-input ms-0 " type="checkbox" role="switch" id="s-hidden-object" value="">
+										</div>
+									</div>	
+									<hr>
 								</form>		
 							</div>
 						</div>
-
 						<div class="tab-pane fade show active" id="tab-data-object" role="tabpanel">
 							<div class="container-fluid">
 								<form class="my-3 mx-2">
-									
-									
 									<div class="row  ms-2">
 										<div class="col-4 mt-3 p-0">	
 											<label class="form-a fs-7 fw-bold text-center">Visible value</label>
@@ -460,25 +435,21 @@
 									<div class="row  ms-2 align-items-center">
 										<div class="col-4 p-0">	
 											<label class="form-a fs-7 fw-bold text-center">For period</label>
-										</div>
-									
+										</div>									
 										<div class="col-1 mt-0">
 											<button type="button" class="btn btn-time-control" id="b-timeBack-object"><</button>
 										</div>
 										<div class="col-2 p-0 text-center">	
 											<input type="text" class="form-control fs-7 bg-body-secondary text-center" id="d-chosedPeriod-object" value="1">
-										</div>
-									
+										</div>									
 										<div class="col-1 mt-0">
 											<button type="button" class="btn btn-time-control" id="b-timeForward-object">></button>
 										</div>
 										<div class="col-4 mt-0">
 											<button type="button" class="btn btn-outline-secondary fs-7 fw-light w-100" id="b-tableView-object">Table view</button>
 										</div>
-
 									</div>
 									<hr>
-									
 									<div class="row  ms-2">
 										<div class="col-4 mt-1 p-0">	
 											<labe for="d-title-object" class="form-a fs-7 fw-bold">Title</label>
@@ -488,8 +459,6 @@
 										</div>
 									</div>
 									<hr>
-									
-									
 									<div class="row  ms-2">
 										<div class="col-4 mt-1 p-0">	
 											<labe for="d-Name-object" class="form-a fs-7 fw-bold">Object name*</label>
@@ -499,7 +468,6 @@
 										</div>
 									</div>
 									<hr>
-
 									<div class="row  ms-2">
 										<div class="col-4 mt-1 p-0">	
 											<labe class="form-a fs-7 fw-bold">Parent</label>
@@ -510,7 +478,6 @@
 												<option value="Object B" selected>Object B</option> 
 												<option value="Object C">Object D</option> 
 												<option value="Object E">Object F</option> 
-
 											</select>
 										</div>
 									</div>	
@@ -520,7 +487,6 @@
 											<labe class="form-a fs-7 fw-bold">Unit</label>
 										</div>
 										<div class="col-3 fs-7 fw-light text-center">
-									
 											<select class="form-select fs-7 fw-light bg-body-secondary" id="d-unit-object">
 												<option value="Un" selected>Un</option> 
 												<option value="$">$</option> 
@@ -549,7 +515,6 @@
 											<labe class="form-a fs-7 fw-bold">Value type</label>
 										</div>
 										<div class="col-3 fs-7 fw-light text-center">
-									
 											<select class="form-select fs-7 fw-light bg-body-secondary" id="d-type-object" onChange="modifyValueField()">
 												<option selected disabled>Define</option> 
 												<option value="Constant">Constant</option> 
@@ -572,16 +537,12 @@
 											<label class="form-a fs-7 fw-ligt" id="d-valueCom-object">Comment Comment Comment Comment Comment</label>
 										</div>
 									</div>
-	
 								</form>
-									
 							</div>
 						</div>
-
 						<div class="tab-pane fade" id="tab-rules-object" role="tabpanel">
 							<div class="container-fluid">
-								<form class="my-3 mx-2">
-									
+								<form class="my-3 mx-2">	
 									<p class="fs-7 fw-light"> Set growing</p>
 									<div class="row  mt-3 ms-2">
 										<div class="col-4 mt-1 p-0">	
@@ -594,7 +555,6 @@
 									<hr>
 									<p class="fs-7 fw-light"> Set alarm when value is</p>
 									<div class="row mt-3 ms-2">
-
 										<div class="col-4 mt-1 p-0">	
 											<labe for="d-minValue-object" class="form-a fs-7 fw-bold">Lower than</label>
 										</div>
@@ -626,10 +586,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="modal-footer">
-					<div class="row"></div>
-						<button type="button" id="b-copy-object" class="btn btn-outline-secondary fs-7 fw-light" data-bs-dismiss="modal">Clone object</button>
-						<button type="button" id="b-save-object" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Save changes</button>
+				<div class="p-3 border-top">
+					<div class="d-flex justify-content-between align-items-center">
+						<button price="button" class="btn btn-outline-danger ms-0 text-start fs-7">Delete</button>
+						<div>
+							<button type="button" id="b-copy-object" class="btn btn-outline-secondary fs-7 fw-light me-1" data-bs-dismiss="modal">Clone object</button>
+							<button type="button" id="b-save-object" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Save changes</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -649,7 +612,6 @@
 								<p></p>
 								<p class="offcanvas-title fs-7 fw-bold">Data</p>
 								<hr>
-								
 								<div class="row ms-2">
 									<div class="col-3 p-0">				
 										<p class="fs-7">Name:</p>
@@ -659,7 +621,6 @@
 									</div>
 								</div>
 								<hr>
-								
 								<div class="row ms-2">
 									<div class="col-3 p-0">				
 										<p class="fs-7">Scenarios:</p>
@@ -672,7 +633,6 @@
 										</ul>
 									</div>
 								</div>	
-
 								<hr>	
 								<div class="row ms-2">
 									<div class="col-3 m-0 p-0">				
@@ -696,7 +656,6 @@
 									<div class="col-4 m-0 p-0">				
 										<p class="fs-7 fw-bold" id="d-date-modif-infoM">26/06/71</p>
 									</div>
-
 									<div class="col-3 m-0 p-0">				
 										<p class="fs-7">By:</p>
 									</div>
@@ -705,16 +664,13 @@
 									</div>
 								</div>
 								<hr>		
-
 								<p></p>
 								<p class="offcanvas-title fs-7 fw-bold">Notes</p>
-							
 								<div class="mb-3 mt-2">			
 									<textarea class="form-control fs-7 bg-body-secondary" id="d-notes-infoM" rows="10" placeholder="Model version comments..."></textarea>
 								</div>
 								<hr>	
 								<p class="offcanvas-title fs-7 fw-bold">Tags</p>
-								
 								<div class="row">
 									<div class="col-6 ms-2">
 										<div class="input-group mb-3 mt-2">
@@ -723,13 +679,9 @@
 										</div>
 									</div>	
 								</div>
-	
 								<div id="tagList" class="d-flex flex-wrap gap-2 mb-3"></div>
 								<input type="hidden" name="tags" id="tagsHiddenInput">
-
 							</form>
-							
-
 						</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Save changes</button>
@@ -748,27 +700,16 @@
 					</div>
 					<div class="modal-body">	
 							<div class="row mb-4 ms-2 mt-4 justify-content-center">
-
-								
-
 								<div class="col-3">				
 									<label class="fs-7" for="b-import-model">Import new model into current model</label>
 								</div>
-		
 								<div class="col-1 m-0 p-0 form-check form-switch">
 									<input class="form-check-input" type="checkbox" role="switch" id="b-import-model" value="">
 								</div>
-
-
-
-
 							</div>	
-
-							<div class="row mb-4 mt-4 justify-content-center">
-									
+							<div class="row mb-4 mt-4 justify-content-center">							
 								<div class="col-6">	
 									<input type="text" class="form-control fs-7 bg-body-secondary" id="d-fileSearch-open" placeholder="Search word in Names and tags..." style="height: 32px; border-bottom-right-radius: 0; border-top-right-radius: 0; ;"">
-
 								</div>
 								<div class="col-1">
 									<button type="button" class="btn btn-secondary" style="height: 32px; border-bottom-left-radius: 0; border-top-left-radius: 0; ;">
@@ -776,8 +717,6 @@
 									</button>
 								</div>
 							</div>
-
-						
 
 							<!-- Nav tabs -->
 							<ul class="nav nav-tabs" id="tabsEnModal" role="tablist">
@@ -790,35 +729,28 @@
 								<li class="nav-item" role="presentation">
 									<button class="nav-link fs-7 fw-bold" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab">The library</button>
 								</li>
-
 							</ul>
-
 							<div class="tab-content">
 								<div class="tab-pane fade show active" id="tab1" role="tabpanel">
 									<div class="container-fluid form-scroll">
 										<div class="row g-3" id="open-models"></div>	
 									</div>
 								</div>
-
 								<div class="tab-pane fade" id="tab2" role="tabpanel">
 									<div class="container-fluid form-scroll">
 										<div class="row g-3" id="open-shared"></div>	
 									</div>
 								</div>
-
 								<div class="tab-pane fade" id="tab3" role="tabpanel">
 									<div class="container-fluid form-scroll">
 										<div class="row g-3" id="open-library"></div>	
 									</div>
 								</div>
 							</div>
-	
-						</div>
-					
+						</div>	
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary fs-7 fw-light" data-bs-dismiss="modal">Close</button>
 					</div>
-
 				</div>
 			</div>
 		</div>
@@ -830,12 +762,9 @@
 					<div class="modal-header">
 						<h5 class="modal-title fs-4 fw-light">NEW MODEL</h5>
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
-					</div>
-					
-					<div class="modal-body">	
-											
+					</div>	
+					<div class="modal-body">							
 						<form class="my-1 mx-2">
-
 							<div class="row  ms-2">
 								<div class="col-3 mt-1 p-0">	
 									<labe for="d-newName-model" class="form-a fs-7 fw-bold">Model name</label>
@@ -844,19 +773,15 @@
 									<input type="text" class="form-control fs-7 bg-body-secondary" id="d-newName-model" placeholder="New model name">
 								</div>
 							</div>
-
 							<div class="row  ms-2">
-								<div class="col-3 mt-1 p-0">	
-									
+								<div class="col-3 mt-1 p-0">				
 								</div>
 								<div class="col-9 mt-3 ">	
 									<button type="button" class="btn btn-outline-secondary fs-7 fw-light w-100" data-bs-dismiss="modal" onclick="newVers()">Create new version based on current model</button>
 								</div>
-							</div>
-													
+							</div>									
 						</form>		
 					</div>
-
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary fs-7 fw-light me-0" data-bs-dismiss="modal">Create</button>
 					</div>
@@ -908,7 +833,6 @@
 							</div>		
 						</form>		
 					</div>
-
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary fs-7 fw-light me-0" data-bs-dismiss="modal" onClick="setTime()" id="b-save-time">Save</button>
 					</div>
@@ -935,7 +859,6 @@
 							</div>
 						</form>	
 					</div>
-
 					<div class="modal-footer">
 						<button type="button" class="btn btn-danger fs-7 fw-light ms-0" data-bs-dismiss="modal">Yes, Close it!</button>
 						<button type="button" class="btn btn-secondary fs-7 fw-light me-0" data-bs-dismiss="modal">No</button>
@@ -953,282 +876,300 @@
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
 					</div>
 					<div class="modal-body">
-
-						<!-- Nav tabs -->
-						<ul class="nav nav-tabs" id="tabsEnModal" role="tablist">
-							<li class="nav-item" role="presentation">
-								<button class="nav-link fs-7 fw-bold active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab4" type="button" role="tab">Apparence</button>
-							</li>
-							<li class="nav-item" role="presentation">
-								<button class="nav-link fs-7 fw-bold" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab5" type="button" role="tab">Formats</button>
-							</li>
-							<li class="nav-item" role="presentation">
-								<button class="nav-link fs-7 fw-bold" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab6" type="button" role="tab">Object Sizes</button>
-							</li>
-						</ul>
-						
-						<div class="tab-content">
-							<div class="tab-pane fade show active" id="tab4" role="tabpanel">
-								<div class="container-fluid form-scroll">
-									<form class="my-3 mx-2">
-						
-										<div class="row  ms-2">
-											<div class="col-4 mt-1 p-0">	
-												<labe for="d-bgColor-model" class="form-a fs-7 fw-bold">Background color</label>
-											</div>
-											<div class="col-1 ms-0">
-												<div id="picker-1"class="mb-4"></div>
-											</div>
-											<div class="col-6 ms-0">
-												<input type="text" id="d-bgColor-model" class="form-control fs-7 border-0" placeholder="rgba(0,0,0,0)">
-											</div>
-										</div>	
-										<hr>	
-										<div class="row  ms-2">
-											<div class="col-4 mt-1 p-0">	
-												<labe for="d-bgimage-model" class="form-a fs-7 fw-bold">Background image</label>
-											</div>
-						
-											<div class="col ms-0">
-												<div class="input-group">
-													<input type="text" id="d-bgimage-model" class="form-control fs-7 bg-body-secondary" placeholder="Add image file...">
-													<button class="btn btn-outline-secondary fs-7 text-end" type="button" id="addImgModel">Load</button>
-												</div>
-											</div>
-										
-										</div>		
-										<hr>
-										<div class="row  ms-2">
-											<div class="col-4 mt-1 p-0">	
-												<labe for="d-textColor-model" class="form-a fs-7 fw-bold">Texts color</label>
-											</div>	
-											<div class="col-1 ms-0">
-												<div id="picker-2" class="mb-4"></div>
-											</div>
-											<div class="col-6 ms-0">
-												<input type="text" id="d-textColor-model" class="form-control fs-7 border-0" placeholder="rgba(100,100,100,1)">
-											</div>
+						<div class="container-fluid form-scroll">
+							<form class="my-3 mx-2">
+				
+								<div class="row  ms-2">
+									<div class="col-4 mt-1 p-0">	
+										<labe for="d-bgColor-model" class="form-a fs-7 fw-bold">Background color</label>
+									</div>
+									<div class="col-1 ms-0">
+										<div id="picker-1"class="mb-4"></div>
+									</div>
+									<div class="col-6 ms-0">
+										<input type="text" id="d-bgColor-model" class="form-control fs-7 border-0" placeholder="rgba(0,0,0,0)">
+									</div>
+								</div>	
+								<hr>	
+								<div class="row  ms-2">
+									<div class="col-4 mt-1 p-0">	
+										<labe for="d-bgimage-model" class="form-a fs-7 fw-bold">Background image</label>
+									</div>
+				
+									<div class="col ms-0">
+										<div class="input-group">
+											<input type="text" id="d-bgimage-model" class="form-control fs-7 bg-body-secondary" placeholder="Add image file...">
+											<button class="btn btn-outline-secondary fs-7 text-end" type="button" id="addImgModel">Load</button>
 										</div>
-										<hr>
-										<div class="row  ms-2">
-											<div class="col-4 mt-1 p-0">	
-												<labe for="d-edgesColor-model" class="form-a fs-7 fw-bold">Edges color</label>
-											</div>
-											<div class="col-1 ms-0">
-												<div id="picker-3" class="mb-4"></div>
-											</div>
-											<div class="col-6 ms-0 text-center">
-												<input type="text" id="d-edgesColor-model" class="form-control fs-7 border-0" placeholder="rgba(100,100,100,0.7)">
-											</div>
-										</div>
-										<hr>
-										<div class="row  ms-2">
-											<div class="col-4 mt-1 p-0">	
-												<labe for="d-objectsColor-model"class="form-a fs-7 fw-bold">Objects color</label>
-											</div>
-											<div class="col-1 ms-0">
-												<div id="picker-4" class="mb-4"></div>
-											</div>
-											<div class="col-6 ms-0">	
-												<input type="text" id="d-objectsColor-model"  class="form-control fs-7 border-0" placeholder="rgba(0,128,255,0.7)">
-											</div>
-										</div>
-										<hr>
-										<div class="row  ms-2">
-											<div class="col-4 mt-1 p-0">	
-												<labe for="d-objectsBorder-model" class="form-a fs-7 fw-bold">Borders color</label>
-											</div>
-											<div class="col-1 ms-0">
-												<div id="picker-5" class="mb-4"></div>
-											</div>
-											<div class="col-6 ms-0">	
-											<input type="text" class="form-control fs-7 border-0" id="d-objectsBorder-model" placeholder="rgba(100,100,100,0.7)">
-											</div>
-										</div>
-										<hr>
-										<div class="row  ms-2">
-											<div class="col-4 mt-1 p-0">	
-												<labe class="form-a fs-7 fw-bold">Shape</label>
-											</div>
-											<div class="col-8 fs-7 fw-light text-center">
-										
-												<select class="form-select fs-7 fw-light bg-body-secondary w-100" id="d-shape-model">
-													<option value='ellipse'>ellipse</option>
-													<option value='triangle'>triangle</option>
-													<option value='rectangle'>rectangle</option>
-													<option value='roundrectangle'>roundrectangle</option>
-													<option value='cutrectangle'>cutrectangle</option>
-													<option value='barrel'>barrel</option>
-													<option value='rhomboid'>rhomboid</option>
-													<option value='diamond'>diamond</option>
-													<option value='pentagon'>pentagon</option>
-													<option value='hexagon'>hexagon</option>
-													<option value='concavehexagon'>concavehexagon</option>
-													<option value='heptagon'>heptagon</option>
-													<option value='octagon'>octagon</option>
-													<option value='star'>star</option>
-													<option value='tag'>tag</option>
-													<option value='vee'>vee</option>
-													<option value='round-tag'>round-tag</option>
-													<option value='round-diamond'>round-diamond</option>
-													<option value='bottom-round-rectangle'>bottom-round-rectangle</option>
-													<option value='cut-tag'>cut-tag</option>
-												</select>
-											</div>
-										</div>	
-										<hr>
-										<div class="row  ms-2">
-											<div class="col-4 mt-1 p-0">	
-												<labe for="d-nameFontSize-model" class="form-a fs-7 fw-bold">Text sizes (em)</label>
-											</div>
-											<div class="col fs-7 fw-light">	
-												<select class="form-select fs-7 fw-light bg-body-secondary text-start" id="d-nameFontSize-model">
-													<option value=1>1</option> 
-													<option value=2 selected>2</option> 
-													<option value=3>3</option> 
-													<option value=4>4</option>
-													<option value=5>5</option> 
-													<option value=6>6</option>  
-												</select>
-												<p class="fs-7">object</p>
-											</div>
-			
-											<div class="col ms-3 fs-7 fw-light">		
-												<select class="form-select fs-7 fw-light bg-body-secondary text-start" id="d-valueFontSize-model">
-													<option value=1>1</option> 
-													<option value=2 selected>2</option> 
-													<option value=3>3</option> 
-													<option value=4>4</option>
-													<option value=5>5</option> 
-													<option value=6>6</option>  
-												</select>
-												<p class="fs-7">value</p>
-											</div>
-	
-											<div class="col ms-3 fs-7 fw-light">		
-												<select class="form-select fs-7 fw-light bg-body-secondary text-start" id="d-unitFontSize-model">
-													<option value=1>1</option> 
-													<option value=2 selected>2</option> 
-													<option value=3>3</option> 
-													<option value=4>4</option>
-													<option value=5>5</option> 
-													<option value=6>6</option>  
-												</select>
-												<p class="fs-7">unit</p>
-											</div>
-											
-										</div>
-										
-									</form>		
+									</div>
+								</div>		
+								<hr>
+								<div class="row  ms-2">
+									<div class="col-4 mt-1 p-0">	
+										<labe for="d-textColor-model" class="form-a fs-7 fw-bold">Texts color</label>
+									</div>	
+									<div class="col-1 ms-0">
+										<div id="picker-2" class="mb-4"></div>
+									</div>
+									<div class="col-6 ms-0">
+										<input type="text" id="d-textColor-model" class="form-control fs-7 border-0" placeholder="rgba(100,100,100,1)">
+									</div>
 								</div>
-							</div>
-
-							<div class="tab-pane fade" id="tab5" role="tabpanel">
-								<div class="container-fluid">
-									<form class="my-3 mx-2">
-										<div class="row  ms-2">
-											<div class="col-4 mt-1 p-0">	
-												<labe class="form-a fs-7 fw-bold">Numbers</label>
-											</div>
-			
-											<div class="col-4 fs-7 fw-light">
-												<select class="form-select fw-light fs-7 bg-body-secondary text-center" id="d-numbers-format">
-												  <option value="1">#.###</option>
-												  <option value="2">#.###,#</option>
-												  <option value="3" selected> #.###,##</option>
-												  <option value="4">#.###,###</option>
-												  <option value="5">#.###,####</option>
-												  <option value="6">####</option>
-												  <option value="7">####,#</option>
-												  <option value="8">####,##</option>
-												  <option value="9">####,###</option>
-												  <option value="10">####,####</option>
-												</select>
-											
-											</div>
-										</div>
-										<hr>
-
-										<div class="row  ms-2">
-											<div class="col-4 mt-1 p-0">	
-												<labe class="form-a fs-7 fw-bold">Dates</label>
-											</div>
-											<div class="col-4  fs-7 fw-light">
-												<select class="form-select fs-7 fw-light bg-body-secondary text-center" id="d-date-format">
-													<option value="1"selected>MM-DD-YY</option>
-													<option value="2">MMM-DD-YY</option>
-													<option value="3">DD-MM-YY</option>
-													<option value="4">DD-MMM-YY</option>
-													<option value="5">MM-YYYY</option>
-													<option value="6">MMM-YYYY</option>
-													<option value="7">MM-YY</option>
-													<option value="8">MMM-YY</option>
-												</select>
-											</div>
-										</div>
-										<hr>
-
-										<div class="row  ms-2">
-											<div class="col-4 mt-1 p-0">	
-												<labe class="form-a fs-7 fw-bold">Currency</label>
-											</div>
-						
-											<div class="col-4 fs-7 fw-light">
-												<select class="form-select fs-7 fw-light bg-body-secondary text-center" id="d-currency-format">
-													<option value="1"selected>$</option>
-													<option value="2">€</option>
-													<option value="3">¥</option>
-													<option value="4">£</option>
-													<option value="5">¢</option>
-												</select>
-											</div>
-										
-										</div>	
-
-									</form>
-									<div class="row g-3" id="open-shared"></div>	
+								<hr>
+								<div class="row  ms-2">
+									<div class="col-4 mt-1 p-0">	
+										<labe for="d-edgesColor-model" class="form-a fs-7 fw-bold">Parent Edges color</label>
+									</div>
+									<div class="col-1 ms-0">
+										<div id="picker-3" class="mb-4"></div>
+									</div>
+									<div class="col-6 ms-0 text-center">
+										<input type="text" id="d-parentColor-model" class="form-control fs-7 border-0" placeholder="rgba(100,100,100,0.7)">
+									</div>
 								</div>
-							</div>
-
-							<div class="tab-pane fade" id="tab6" role="tabpanel">
-								<div class="container-fluid">
-									<form class="my-3 mx-2">
-										<div class="row  ms-2">
-											
-											<div class="col-2 mt-1 p-0">	
-												<labe class="form-a fs-7 fw-bold">Unit</label>
-											</div>
-											
-											<div class="col fs-7 fw-light text-center">	
-	
-												<select class="form-select fs-7 fw-light bg-body-secondary" id="d-unit-sizeRange">
-													<option value="$">$</option> 
-													<option value="m">m</option>
-													<option value="m2">m2</option>
-													<option value="gr">gr</option>
-													<option value="kg">kg</option>
-													<option value="ton">ton</option>
-													<option value="%">%</option>
-													<option value="♥">♥</option>
-												</select>
-											</div>
-											<div class="col fs-7 ms-3 fw-light">
-												<input type="text" class="form-control fs-7 bg-body-secondary text-center" id="d-min-sizeRange" placeholder="100">
-												<p class="fs-7 mb-1">min px</p>
-											</div>
-											<div class="col fs-7 ms-3 fw-light">
-												<input type="text" class="form-control fs-7 bg-body-secondary text-center" id="d-max-sizeRange" placeholder="1000">
-												<p class="fs-7 mb-1">max px</p>
-											</div>
-										</div>
-										<hr>
-
-									</form>
+								<hr>
+								<div class="row  ms-2">
+									<div class="col-4 mt-1 p-0">	
+										<labe for="d-edgesColor-model" class="form-a fs-7 fw-bold">Formula Edges color</label>
+									</div>
+									<div class="col-1 ms-0">
+										<div id="picker-9" class="mb-4"></div>
+									</div>
+									<div class="col-6 ms-0 text-center">
+										<input type="text" id="d-formulaColor-model" class="form-control fs-7 border-0" placeholder="rgba(255, 1, 1, 0.7)">
+									</div>
 								</div>
-							</div>
+								<hr>
+								<div class="row  ms-2">
+									<div class="col-4 mt-1 p-0">	
+										<labe for="d-objectsColor-model"class="form-a fs-7 fw-bold">Objects color</label>
+									</div>
+									<div class="col-1 ms-0">
+										<div id="picker-4" class="mb-4"></div>
+									</div>
+									<div class="col-6 ms-0">	
+										<input type="text" id="d-objectsColor-model"  class="form-control fs-7 border-0" placeholder="rgba(0,128,255,0.7)">
+									</div>
+								</div>
+								<hr>
+								<div class="row  ms-2">
+									<div class="col-4 mt-1 p-0">	
+										<labe for="d-objectsBorder-model" class="form-a fs-7 fw-bold">Borders color</label>
+									</div>
+									<div class="col-1 ms-0">
+										<div id="picker-5" class="mb-4"></div>
+									</div>
+									<div class="col-6 ms-0">	
+									<input type="text" class="form-control fs-7 border-0" id="d-objectsBorder-model" placeholder="rgba(100,100,100,0.7)">
+									</div>
+								</div>
+								<hr>
+								<div class="row  ms-2">
+									<div class="col-4 mt-1 p-0">	
+										<labe class="form-a fs-7 fw-bold">Shape</label>
+									</div>
+									<div class="col-8 fs-7 fw-light text-center">
+								
+										<select class="form-select fs-7 fw-light bg-body-secondary w-100" id="d-shape-model">
+											<option value='ellipse'>ellipse</option>
+											<option value='triangle'>triangle</option>
+											<option value='rectangle'>rectangle</option>
+											<option value='roundrectangle'>roundrectangle</option>
+											<option value='cutrectangle'>cutrectangle</option>
+											<option value='barrel'>barrel</option>
+											<option value='rhomboid'>rhomboid</option>
+											<option value='diamond'>diamond</option>
+											<option value='pentagon'>pentagon</option>
+											<option value='hexagon'>hexagon</option>
+											<option value='concavehexagon'>concavehexagon</option>
+											<option value='heptagon'>heptagon</option>
+											<option value='octagon'>octagon</option>
+											<option value='star'>star</option>
+											<option value='tag'>tag</option>
+											<option value='vee'>vee</option>
+											<option value='round-tag'>round-tag</option>
+											<option value='round-diamond'>round-diamond</option>
+											<option value='bottom-round-rectangle'>bottom-round-rectangle</option>
+											<option value='cut-tag'>cut-tag</option>
+										</select>
+									</div>
+								</div>	
+								<hr>
+								<div class="row  ms-2">
+									<div class="col-4 mt-1 p-0">	
+										<labe for="d-nameFontSize-model" class="form-a fs-7 fw-bold">Text sizes (em)</label>
+									</div>
+									<div class="col fs-7 fw-light">	
+										<select class="form-select fs-7 fw-light bg-body-secondary text-start" id="d-nameFontSize-model">
+											<option value=1>1</option> 
+											<option value=2 selected>2</option> 
+											<option value=3>3</option> 
+											<option value=4>4</option>
+											<option value=5>5</option> 
+											<option value=6>6</option>  
+										</select>
+										<p class="fs-7">object</p>
+									</div>
+									<div class="col ms-3 fs-7 fw-light">		
+										<select class="form-select fs-7 fw-light bg-body-secondary text-start" id="d-valueFontSize-model">
+											<option value=1>1</option> 
+											<option value=2 selected>2</option> 
+											<option value=3>3</option> 
+											<option value=4>4</option>
+											<option value=5>5</option> 
+											<option value=6>6</option>  
+										</select>
+										<p class="fs-7">value</p>
+									</div>
+									<div class="col ms-3 fs-7 fw-light">		
+										<select class="form-select fs-7 fw-light bg-body-secondary text-start" id="d-unitFontSize-model">
+											<option value=1>1</option> 
+											<option value=2 selected>2</option> 
+											<option value=3>3</option> 
+											<option value=4>4</option>
+											<option value=5>5</option> 
+											<option value=6>6</option>  
+										</select>
+										<p class="fs-7">unit</p>
+									</div>
+								</div>			
+							</form>		
+						</div>				
+					</div>
+					<div class="modal-footer d-flex justify-content-start">
+						<div class="col-9 text-start">	
+							<P class="fs-7 fw-bold text-danger ms-2">Warninrg!</P>
+							<P class="fs-7 fw-light text-danger ms-2">Changes here will affect all the objects in the model.</P>
+						</div>
+						<div class="col d-flex justify-content-end">	
+							<button type="button" class="btn btn-secondary fs-7 fw-light me-0" onClick="changeModelStyle()" data-bs-dismiss="modal">Save</button>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>	
 
+		<!-- m-sizes-model -->
+		<div class="modal fade" id="m-sizes-model" tabindex="-1"aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title fs-4 fw-light">OBJECT SIZES</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
+					</div>
+					<div class="modal-body">		
+						<div class="container-fluid">
+							<form class="my-3 mx-2">
+								<div class="row  ms-2">
+									<div class="col-2 mt-1 p-0">	
+										<labe class="form-a fs-7 fw-bold">Unit</label>
+									</div>	
+									<div class="col fs-7 fw-light text-center">	
+										<select class="form-select fs-7 fw-light bg-body-secondary" id="d-unit-sizeRange">
+											<option value="$">$</option> 
+											<option value="m">m</option>
+											<option value="m2">m2</option>
+											<option value="gr">gr</option>
+											<option value="kg">kg</option>
+											<option value="ton">ton</option>
+											<option value="%">%</option>
+											<option value="♥">♥</option>
+										</select>
+									</div>
+									<div class="col fs-7 ms-3 fw-light">
+										<input type="text" class="form-control fs-7 bg-body-secondary text-center" id="d-min-sizeRange" placeholder="100">
+										<p class="fs-7 mb-1">min px</p>
+									</div>
+									<div class="col fs-7 ms-3 fw-light">
+										<input type="text" class="form-control fs-7 bg-body-secondary text-center" id="d-max-sizeRange" placeholder="1000">
+										<p class="fs-7 mb-1">max px</p>
+									</div>
+								</div>
+								<hr>
+							</form>
+						</div>	
+					</div>
+					<div class="modal-footer d-flex justify-content-start">
+						<div class="col-9 text-start">	
+							<P class="fs-7 fw-bold text-danger ms-2">Warninrg!</P>
+							<P class="fs-7 fw-light text-danger ms-2">Changes here will affect all the objects in the model.</P>
+						</div>
+						<div class="col d-flex justify-content-end">	
+							<button type="button" class="btn btn-secondary fs-7 fw-light me-0" onClick="changeModelStyle()" data-bs-dismiss="modal">Save</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+
+		<!-- m-formats-model -->
+		<div class="modal fade" id="m-formats-model" tabindex="-1"aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title fs-4 fw-light">MODEL FORMATS</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="container-fluid">
+							<form class="my-3 mx-2">
+								<div class="row  ms-2">
+									<div class="col-4 mt-1 p-0">	
+										<labe class="form-a fs-7 fw-bold">Numbers</label>
+									</div>
+									<div class="col-4 fs-7 fw-light">
+										<select class="form-select fw-light fs-7 bg-body-secondary text-center" id="d-numbers-format">
+											<option value="1">#.###</option>
+											<option value="2">#.###,#</option>
+											<option value="3" selected> #.###,##</option>
+											<option value="4">#.###,###</option>
+											<option value="5">#.###,####</option>
+											<option value="6">####</option>
+											<option value="7">####,#</option>
+											<option value="8">####,##</option>
+											<option value="9">####,###</option>
+											<option value="10">####,####</option>
+										</select>	
+									</div>
+								</div>
+								<hr>
+								<div class="row  ms-2">
+									<div class="col-4 mt-1 p-0">	
+										<labe class="form-a fs-7 fw-bold">Dates</label>
+									</div>
+									<div class="col-4  fs-7 fw-light">
+										<select class="form-select fs-7 fw-light bg-body-secondary text-center" id="d-date-format">
+											<option value="1"selected>MM-DD-YY</option>
+											<option value="2">MMM-DD-YY</option>
+											<option value="3">DD-MM-YY</option>
+											<option value="4">DD-MMM-YY</option>
+											<option value="5">MM-YYYY</option>
+											<option value="6">MMM-YYYY</option>
+											<option value="7">MM-YY</option>
+											<option value="8">MMM-YY</option>
+										</select>
+									</div>
+								</div>
+								<hr>
+								<div class="row  ms-2">
+									<div class="col-4 mt-1 p-0">	
+										<labe class="form-a fs-7 fw-bold">Currency</label>
+									</div>
+				
+									<div class="col-4 fs-7 fw-light">
+										<select class="form-select fs-7 fw-light bg-body-secondary text-center" id="d-currency-format">
+											<option value="1"selected>$</option>
+											<option value="2">€</option>
+											<option value="3">¥</option>
+											<option value="4">£</option>
+											<option value="5">¢</option>
+										</select>
+									</div>
+								</div>	
+							</form>
+							<div class="row g-3" id="open-shared"></div>	
+						</div>
+					</div>
 					<div class="modal-footer d-flex justify-content-start">
 						<div class="col-9 text-start">	
 							<P class="fs-7 fw-bold text-danger ms-2">Warninrg!</P>
@@ -1252,7 +1193,6 @@
 					</div>
 					<div class="modal-body">
 						<form class="mx-2">
-
 							<div class="row ms-2 align-items-center">	
 								<div class="col-3 m-0 p-0">				
 									<p class="fs-7 fw-bold">What to share? </p>
@@ -1266,8 +1206,7 @@
 										<option value="Object and childs">Object and childs</option>
 									</select>
 								</div>
-							</div>
-							
+							</div>				
 							<div class="row ms-2 mt-4 d-none" id="object-row-share" >	
 								<div class="col-3 m-0 p-0">				
 									<p class="fs-7 fw-bold">Object </p>
@@ -1281,7 +1220,6 @@
 								</div>
 							</div>
 							<hr>
-							
 							<div class="row ms-2 my-4 align-items-center">	
 								<div class="col-3 m-0 p-0">				
 									<p class="fs-7 fw-bold">With who?</p>
@@ -1295,7 +1233,6 @@
 										+</i>
 									</button>
 								</div>
-								
 							</div>
 							<hr>
 							<div class="row ms-2 mt-2 align-items-center">	
@@ -1303,10 +1240,8 @@
 									<p class="fs-7 fw-bold">Shared with</p>
 								</div>
 							</div>
-							
 							<hr>
-							<div class="row ms-2 align-items-center">
-								
+							<div class="row ms-2 align-items-center">	
 								<div class="col-1 ">
 									<img src="https://github.com/mdo.png" alt="" width="40" height="40" class="rounded-circle">
 								</div>
@@ -1327,8 +1262,7 @@
 								</div>
 							</div>
 							<hr>
-							<div class="row ms-2 align-items-center">
-								
+							<div class="row ms-2 align-items-center">	
 								<div class="col-1 ">
 									<img src="https://github.com/mdo.png" alt="" width="40" height="40" class="rounded-circle">
 								</div>
@@ -1349,8 +1283,7 @@
 								</div>
 							</div>
 							<hr>
-							<div class="row ms-2 align-items-center">
-								
+							<div class="row ms-2 align-items-center">					
 								<div class="col-1 ">
 									<img src="https://github.com/mdo.png" alt="" width="40" height="40" class="rounded-circle">
 								</div>
@@ -1370,11 +1303,7 @@
 									</select>
 								</div>
 							</div>
-							<hr>
-
-							
-					
-							
+							<hr>		
 						</form>
 					</div>	
 					<div class="modal-footer">
@@ -1383,10 +1312,9 @@
 				</div>
 			</div>
 		</div>
-
 		<script src="./lib/quanboard-app.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+		<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 	</body>
 </html>
 
