@@ -13,26 +13,24 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css"/>
 	<script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr"></script>
 
-
 	<!-- Cytoscape -->
+	<script src="https://cdn.jsdelivr.net/npm/cytoscape@3.24.0/dist/cytoscape.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.24.0/cytoscape.min.js"></script>
+	<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+	<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>	
+	<script src="lib/cytoscape-node-html-label.js"></script>
 
-		<script src="https://cdn.jsdelivr.net/npm/cytoscape@3.24.0/dist/cytoscape.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.24.0/cytoscape.min.js"></script>
-		<script src="https://unpkg.com/cose-base/cose-base.js"></script>
-		<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>	
-		<script src="lib/cytoscape-node-html-label.js"></script>
-	
-	
 	<!-- FONT POPPINS-->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 		
 	<!-- OWN -->
-		<link href="quanboard-app.css" rel="stylesheet">
-		<title>Quanboard App</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="quanboard-app.css" rel="stylesheet">
+	<script src="./lib/quanboard-app.js" defer></script>
+	<title>Quanboard App</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body">
 		<div class="container-fluid p-0">
@@ -246,13 +244,17 @@
 					<hr>
 					<div class="container-fluid">
 						<div class="table-responsive">
-						<table class="table table-bordered text-center table-fixed" id="tablaDinamica">
-							<thead>
-							<tr class="fs-3 fw-bold" id="filaNumeros"></tr>
-							<tr class="fs-7 fw-light" id="filaMeses"></tr>
-							</thead>
-							<tbody id="cuerpoTabla"></tbody>
-						</table>
+							<table class="table table-bordered text-center" id="tabla-dinamica">
+								<thead>
+								<tr id="fila-numeros">
+									<th></th>
+								</tr>
+								<tr id="fila-meses">
+									<th>Objeto</th>
+								</tr>
+								</thead>
+								<tbody id="cuerpo-tabla"></tbody>
+							</table>
 						</div>
 					</div>
 				</div>		
@@ -1312,9 +1314,7 @@
 				</div>
 			</div>
 		</div>
-		<script src="./lib/quanboard-app.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 	</body>
 </html>
 

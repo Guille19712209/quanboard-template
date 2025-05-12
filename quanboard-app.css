@@ -243,46 +243,16 @@ bottom: 5px;
 
 /* TABLE STYLES */
 
-.table-fixed {
-  table-layout: fixed;
-  width: 100%;
-}
-.table-fixed th,
-.table-fixed td {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.col-objeto {
-  width: 150px;
-}
-.col-mes {
-  width: calc((100% - 150px) / 12);
-}
-input[type="number"] {
-  width: 100%;
-  border: none;
-  text-align: center;
-  background-color: rgb(255, 254, 254); 
-  color: var(--bs-body-color);
-}
-
- /* Btn View */
-
-.semi-circle-btn {
-    position: fixed;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 80px;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
-    background-color:#495057;
-    border: none;
-    color: white;
+  .editable {
+    background-color: var(--bs-secondary-bg);
+  }
+  .non-editable {
+    background-color: transparent;
+  }
+  input[type="number"] {
     text-align: center;
-    line-height: 50px;
-    cursor: pointer;
-    z-index: 1900; 
+  }
+
+  .th {
+    width: auto;
   }
