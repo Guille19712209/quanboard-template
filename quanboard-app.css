@@ -248,14 +248,9 @@ bottom: 5px;
   }
   .non-editable {
     background-color: transparent;
-  }
-  input[type="number"] {
-    text-align: center;
+    border: 0px;
   }
 
-  .th {
-    width: auto;
-  }
  
  /* Btn View */
 
@@ -276,3 +271,25 @@ bottom: 5px;
     cursor: pointer;
     z-index: 1900; 
   }
+
+      .editable {
+      background-color: var(--bs-secondary-bg-subtle);
+    }
+
+    .non-editable {
+      background-color: transparent;
+      border: none !important;
+    }
+
+    input[type="number"] {
+      text-align: center;
+    }
+
+    th.objeto-col {
+      width: 16.66%;
+      min-width: 140px;
+    }
+
+    td {
+      width: 7%;
+    }
