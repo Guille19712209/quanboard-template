@@ -256,3 +256,23 @@ bottom: 5px;
   .th {
     width: auto;
   }
+ 
+ /* Btn View */
+
+.semi-circle-btn {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 80px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    background-color:#495057;
+    border: none;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    z-index: 1900; 
+  }
