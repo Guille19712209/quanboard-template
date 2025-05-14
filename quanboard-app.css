@@ -272,6 +272,9 @@ bottom: 5px;
     z-index: 1900; 
   }
 
+
+
+  /* TABLE */
       .editable {
       background-color: var(--bs-secondary-bg-subtle);
     }
