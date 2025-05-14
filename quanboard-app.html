@@ -701,6 +701,193 @@
 			</div>
 		</div>
 
+		<!-- m-scenarios-model -->
+		<div class="modal fade" id="m-scenarios-model" tabindex="-1" aria-aledby="m-scenarios-model" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title fs-4 fw-light">SCENARIOS</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
+					</div>
+					<div class="modal-body my-auto">
+						<form class="mx-2">
+							<p></p>
+							<p class=" fs-7 fw-bold">Available on this model</p>
+						
+							<div class="row mt-3 ms-2">
+								<div class="col-3 m-0 p-0">	
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="Sc1" checked>
+										<label class="form-check-label fs-7" for="Sc1">Base Scenario</label>
+									</div>
+								</div>
+							</div>
+							<hr>
+							<div class="row ms-2">
+								<div class="col-3 m-0 p-0">	
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="Sc2">
+										<label class="form-check-label fs-7" for="Sc2">Optimist</label>
+									</div>
+								</div>
+							</div>
+							<hr>
+							<div class="row ms-2">
+								<div class="col-3 m-0 p-0">	
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="Sc3">
+										<label class="form-check-label fs-7" for="Sc3">High Risk</label>
+									</div>
+								</div>
+							</div>
+													
+						</form>
+					</div>	
+					<div class="modal-footer d-flex justify-content-start">
+						<div class="col-9 text-start">	
+							<P class="fs-7 fw-light ms-2">Use checkbox to set current scenario.</P>
+							<P class="fs-7 fw-light ms-2">Click on scenario name to edit.</P>
+						</div>
+						<div class="col d-flex justify-content-end">	
+							<button type="button" class="btn btn-secondary fs-7 fw-light me-0" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#m-newScenario-model">New Scenario</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- m-newScenarios-model -->
+		<div class="modal fade" id="m-newScenario-model" tabindex="-1" aria-aledby="m-newScenario-model" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+					<h5 class="modal-title fs-4 fw-light">NEW SCENARIO</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-a="Close"></button>
+					</div>
+						<div class="modal-body my-auto">
+							<form class=" mx-2">
+								<div class="row  ms-2">
+									<div class="col-3 mt-1 p-0">	
+										<labe for="d-newName-model" class="form-a fs-7 fw-bold">Model name</label>
+									</div>
+									<div class="col-9 ms-0 ">	
+										<input type="text" class="form-control fs-7 bg-body-secondary" id="d-newName-scenario" placeholder="New model scenario">
+									</div>
+								</div>
+								<hr>
+								<div class="row  ms-2">
+									<div class="col-3 mt-1 p-0">	
+										<labe for="d-BasedOn-scenario" class="form-a fs-7 fw-bold">Based on</label>
+									</div>
+									<div class="col-4 ms-0 ">	
+										<select class="form-select fs-7 bg-body-secondary me-0 text-start">
+											<option value="Base Scenario" selected>Base Scenario</option>
+											<option value="Opstimist">Opstimist</option>
+											<option value="High risk">High risk</option>
+										</select>
+									</div>
+								</div>	
+								<p></p>
+								<hr>
+								<p class=" fs-7 fw-bold">Variation criteria</p>
+								<div class="mb-3 mt-2">			
+									<div class="form-control fs-7 bg-body-secondary">
+										<div class="row px-2">
+											<div class="col ms-0 ">	
+												<select class="form-select fs-7 bg-body-secondary me-0 text-start">
+													<option value="Object 1" selected>Object 1</option>
+													<option value="Object 2">Object 2</option>
+													<option value="Object 3">Object 3</option>
+												</select>
+											</div>
+											<div class="col ms-0 ">	
+												<select class="form-select fs-7 bg-body-secondary me-0 text-start">
+													<option value="constant value" selected>constant value</option>
+													<option value="series values">series values</option>
+													<option value="% constant">% constant</option>
+													<option value="% series">% series</option>
+												</select>
+											</div>
+											<div class="col ms-0 ">	
+												<textarea type="text" class="form-control fs-7 bg-body-secondary text-center " rows="1" style="resize: vertical;">122</textarea>
+											</div>
+										</div>
+										<div class="row px-2">
+											<div class="col ms-0 ">	
+												<select class="form-select fs-7 bg-body-secondary me-0 text-start">
+													<option value="Object 1" selected>Object 1</option>
+													<option value="Object 2">Object 2</option>
+													<option value="Object 3">Object 3</option>
+												</select>
+											</div>
+											<div class="col ms-0 ">	
+												<select class="form-select fs-7 bg-body-secondary me-0 text-start">
+													<option value="constant value">constant value</option>
+													<option value="series values"selected>series values</option>
+													<option value="% constant">% constant</option>
+													<option value="% series">% series</option>
+												</select>
+											</div>
+											<div class="col ms-0 ">	
+												<textarea type="text" class="form-control fs-7 bg-body-secondary text-center" rows="1" style="resize: vertical;">15, 12, 13, 14, 23, 12, 12, 34, 12, 11</textarea>
+											</div>
+										</div>
+										<div class="row px-2">
+											<div class="col ms-0 ">	
+												<select class="form-select fs-7 bg-body-secondary me-0 text-start">
+													<option value="Object 1">Object 1</option>
+													<option value="Object 2"selected>Object 2</option>
+													<option value="Object 3">Object 3</option>
+												</select>
+											</div>
+											<div class="col ms-0 ">	
+												<select class="form-select fs-7 bg-body-secondary me-0 text-start">
+													<option value="constant value">constant value</option>
+													<option value="series values">series values</option>
+													<option value="% constant" selected>% constant</option>
+													<option value="% series">% series</option>
+												</select>
+											</div>
+											<div class="col ms-0 ">	
+												<textarea type="text" class="form-control fs-7 bg-body-secondary text-center " rows="1" style="resize: vertical;">- 5%</textarea>
+											</div>
+										</div>
+										<div class="row px-2">
+											<div class="col ms-0 ">	
+												<select class="form-select fs-7 bg-body-secondary me-0 text-start">
+													<option value="New Criteria" selected> + New Criteria</option>
+
+												</select>
+											</div>
+											<div class="col ms-0 ">	
+												<select class="form-select fs-7 bg-body-secondary me-0 text-start">
+													<option value="" selected></option>
+													<option value="series values">series values</option>
+													<option value="% constant">% constant</option>
+													<option value="% series">% series</option>
+												</select>
+											</div>
+											<div class="col ms-0 ">	
+												<textarea type="text" class="form-control fs-7 bg-body-secondary text-center " rows="1" style="resize: vertical;"></textarea>
+											</div>
+										</div>
+									</div>
+								</div>													
+							</form>
+						</div>	
+						<div class="modal-footer d-flex justify-content-start">
+						<div class="col-9 text-start">	
+							<P class="fs-7 fw-light ms-2">Define objects: only constant and series types allowed.</P>
+							<P class="fs-7 fw-light ms-2">Define transformation crierias.</P>
+						</div>
+						<div class="col d-flex justify-content-end">	
+							<button type="button" class="btn btn-secondary fs-7 fw-light me-0" data-bs-dismiss="modal">Save</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- m-open-model -->
 		<div class="modal fade modal-xl" id="m-open-model" tabindex="-1">
 			<div class="modal-dialog">

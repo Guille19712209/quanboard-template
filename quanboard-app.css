@@ -303,3 +303,8 @@ bottom: 5px;
 .cell-width {
   width: 120px;
 }
+
+.form-check-input:checked {
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
+}
